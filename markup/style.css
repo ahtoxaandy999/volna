@@ -1,0 +1,491 @@
+/*
+Theme Name: Base
+Author: Anonymous
+Author URI:
+Version: 1
+Description: Base theme for Wordpress
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: base
+Tags: one-column, two-columns
+Theme URI:
+*/
+.clearfix:after, .widget:after, .search-form:after, .post-password-form p:after, .navigation-single:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.comment-form input[type='text'],
+.search-form input[type='text'],
+.post-password-form input[type='text'], .comment-form
+input[type='tel'],
+.search-form
+input[type='tel'],
+.post-password-form
+input[type='tel'], .comment-form
+input[type='email'],
+.search-form
+input[type='email'],
+.post-password-form
+input[type='email'], .comment-form
+input[type='search'],
+.search-form
+input[type='search'],
+.post-password-form
+input[type='search'], .comment-form
+input[type='password'],
+.search-form
+input[type='password'],
+.post-password-form
+input[type='password'], .comment-form
+input[type='url'],
+.search-form
+input[type='url'],
+.post-password-form
+input[type='url'], .comment-form
+input[type='date'],
+.search-form
+input[type='date'],
+.post-password-form
+input[type='date'], .comment-form
+textarea,
+.search-form
+textarea,
+.post-password-form
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border: 1px solid #999;
+  padding: .5em .7em; }
+  .comment-form input[type='text']:focus,
+  .search-form input[type='text']:focus,
+  .post-password-form input[type='text']:focus, .comment-form
+  input[type='tel']:focus,
+  .search-form
+  input[type='tel']:focus,
+  .post-password-form
+  input[type='tel']:focus, .comment-form
+  input[type='email']:focus,
+  .search-form
+  input[type='email']:focus,
+  .post-password-form
+  input[type='email']:focus, .comment-form
+  input[type='search']:focus,
+  .search-form
+  input[type='search']:focus,
+  .post-password-form
+  input[type='search']:focus, .comment-form
+  input[type='password']:focus,
+  .search-form
+  input[type='password']:focus,
+  .post-password-form
+  input[type='password']:focus, .comment-form
+  input[type='url']:focus,
+  .search-form
+  input[type='url']:focus,
+  .post-password-form
+  input[type='url']:focus, .comment-form
+  input[type='date']:focus,
+  .search-form
+  input[type='date']:focus,
+  .post-password-form
+  input[type='date']:focus, .comment-form
+  textarea:focus,
+  .search-form
+  textarea:focus,
+  .post-password-form
+  textarea:focus {
+    border-color: #333; }
+  .comment-form input[type='text']::-webkit-input-placeholder,
+  .search-form input[type='text']::-webkit-input-placeholder,
+  .post-password-form input[type='text']::-webkit-input-placeholder, .comment-form
+  input[type='tel']::-webkit-input-placeholder,
+  .search-form
+  input[type='tel']::-webkit-input-placeholder,
+  .post-password-form
+  input[type='tel']::-webkit-input-placeholder, .comment-form
+  input[type='email']::-webkit-input-placeholder,
+  .search-form
+  input[type='email']::-webkit-input-placeholder,
+  .post-password-form
+  input[type='email']::-webkit-input-placeholder, .comment-form
+  input[type='search']::-webkit-input-placeholder,
+  .search-form
+  input[type='search']::-webkit-input-placeholder,
+  .post-password-form
+  input[type='search']::-webkit-input-placeholder, .comment-form
+  input[type='password']::-webkit-input-placeholder,
+  .search-form
+  input[type='password']::-webkit-input-placeholder,
+  .post-password-form
+  input[type='password']::-webkit-input-placeholder, .comment-form
+  input[type='url']::-webkit-input-placeholder,
+  .search-form
+  input[type='url']::-webkit-input-placeholder,
+  .post-password-form
+  input[type='url']::-webkit-input-placeholder, .comment-form
+  input[type='date']::-webkit-input-placeholder,
+  .search-form
+  input[type='date']::-webkit-input-placeholder,
+  .post-password-form
+  input[type='date']::-webkit-input-placeholder, .comment-form
+  textarea::-webkit-input-placeholder,
+  .search-form
+  textarea::-webkit-input-placeholder,
+  .post-password-form
+  textarea::-webkit-input-placeholder {
+    color: #ccc; }
+  .comment-form input[type='text']::-moz-placeholder,
+  .search-form input[type='text']::-moz-placeholder,
+  .post-password-form input[type='text']::-moz-placeholder, .comment-form
+  input[type='tel']::-moz-placeholder,
+  .search-form
+  input[type='tel']::-moz-placeholder,
+  .post-password-form
+  input[type='tel']::-moz-placeholder, .comment-form
+  input[type='email']::-moz-placeholder,
+  .search-form
+  input[type='email']::-moz-placeholder,
+  .post-password-form
+  input[type='email']::-moz-placeholder, .comment-form
+  input[type='search']::-moz-placeholder,
+  .search-form
+  input[type='search']::-moz-placeholder,
+  .post-password-form
+  input[type='search']::-moz-placeholder, .comment-form
+  input[type='password']::-moz-placeholder,
+  .search-form
+  input[type='password']::-moz-placeholder,
+  .post-password-form
+  input[type='password']::-moz-placeholder, .comment-form
+  input[type='url']::-moz-placeholder,
+  .search-form
+  input[type='url']::-moz-placeholder,
+  .post-password-form
+  input[type='url']::-moz-placeholder, .comment-form
+  input[type='date']::-moz-placeholder,
+  .search-form
+  input[type='date']::-moz-placeholder,
+  .post-password-form
+  input[type='date']::-moz-placeholder, .comment-form
+  textarea::-moz-placeholder,
+  .search-form
+  textarea::-moz-placeholder,
+  .post-password-form
+  textarea::-moz-placeholder {
+    opacity: 1;
+    color: #ccc; }
+  .comment-form input[type='text']:-moz-placeholder,
+  .search-form input[type='text']:-moz-placeholder,
+  .post-password-form input[type='text']:-moz-placeholder, .comment-form
+  input[type='tel']:-moz-placeholder,
+  .search-form
+  input[type='tel']:-moz-placeholder,
+  .post-password-form
+  input[type='tel']:-moz-placeholder, .comment-form
+  input[type='email']:-moz-placeholder,
+  .search-form
+  input[type='email']:-moz-placeholder,
+  .post-password-form
+  input[type='email']:-moz-placeholder, .comment-form
+  input[type='search']:-moz-placeholder,
+  .search-form
+  input[type='search']:-moz-placeholder,
+  .post-password-form
+  input[type='search']:-moz-placeholder, .comment-form
+  input[type='password']:-moz-placeholder,
+  .search-form
+  input[type='password']:-moz-placeholder,
+  .post-password-form
+  input[type='password']:-moz-placeholder, .comment-form
+  input[type='url']:-moz-placeholder,
+  .search-form
+  input[type='url']:-moz-placeholder,
+  .post-password-form
+  input[type='url']:-moz-placeholder, .comment-form
+  input[type='date']:-moz-placeholder,
+  .search-form
+  input[type='date']:-moz-placeholder,
+  .post-password-form
+  input[type='date']:-moz-placeholder, .comment-form
+  textarea:-moz-placeholder,
+  .search-form
+  textarea:-moz-placeholder,
+  .post-password-form
+  textarea:-moz-placeholder {
+    color: #ccc; }
+  .comment-form input[type='text']:-ms-input-placeholder,
+  .search-form input[type='text']:-ms-input-placeholder,
+  .post-password-form input[type='text']:-ms-input-placeholder, .comment-form
+  input[type='tel']:-ms-input-placeholder,
+  .search-form
+  input[type='tel']:-ms-input-placeholder,
+  .post-password-form
+  input[type='tel']:-ms-input-placeholder, .comment-form
+  input[type='email']:-ms-input-placeholder,
+  .search-form
+  input[type='email']:-ms-input-placeholder,
+  .post-password-form
+  input[type='email']:-ms-input-placeholder, .comment-form
+  input[type='search']:-ms-input-placeholder,
+  .search-form
+  input[type='search']:-ms-input-placeholder,
+  .post-password-form
+  input[type='search']:-ms-input-placeholder, .comment-form
+  input[type='password']:-ms-input-placeholder,
+  .search-form
+  input[type='password']:-ms-input-placeholder,
+  .post-password-form
+  input[type='password']:-ms-input-placeholder, .comment-form
+  input[type='url']:-ms-input-placeholder,
+  .search-form
+  input[type='url']:-ms-input-placeholder,
+  .post-password-form
+  input[type='url']:-ms-input-placeholder, .comment-form
+  input[type='date']:-ms-input-placeholder,
+  .search-form
+  input[type='date']:-ms-input-placeholder,
+  .post-password-form
+  input[type='date']:-ms-input-placeholder, .comment-form
+  textarea:-ms-input-placeholder,
+  .search-form
+  textarea:-ms-input-placeholder,
+  .post-password-form
+  textarea:-ms-input-placeholder {
+    color: #ccc; }
+  .comment-form input[type='text'].placeholder,
+  .search-form input[type='text'].placeholder,
+  .post-password-form input[type='text'].placeholder, .comment-form
+  input[type='tel'].placeholder,
+  .search-form
+  input[type='tel'].placeholder,
+  .post-password-form
+  input[type='tel'].placeholder, .comment-form
+  input[type='email'].placeholder,
+  .search-form
+  input[type='email'].placeholder,
+  .post-password-form
+  input[type='email'].placeholder, .comment-form
+  input[type='search'].placeholder,
+  .search-form
+  input[type='search'].placeholder,
+  .post-password-form
+  input[type='search'].placeholder, .comment-form
+  input[type='password'].placeholder,
+  .search-form
+  input[type='password'].placeholder,
+  .post-password-form
+  input[type='password'].placeholder, .comment-form
+  input[type='url'].placeholder,
+  .search-form
+  input[type='url'].placeholder,
+  .post-password-form
+  input[type='url'].placeholder, .comment-form
+  input[type='date'].placeholder,
+  .search-form
+  input[type='date'].placeholder,
+  .post-password-form
+  input[type='date'].placeholder, .comment-form
+  textarea.placeholder,
+  .search-form
+  textarea.placeholder,
+  .post-password-form
+  textarea.placeholder {
+    color: #ccc; }
+
+.widget {
+  margin-bottom: 1.2em; }
+  .widget ul {
+    padding-left: 2em; }
+  .widget select {
+    min-width: 150px; }
+
+.comment-form label {
+  display: block;
+  padding-bottom: 4px; }
+
+.comment-form textarea {
+  overflow: auto;
+  margin: 0;
+  height: 120px;
+  min-height: 120px; }
+
+.comment-form textarea,
+.comment-form input[type='text'] {
+  margin: 0 4px 0 0;
+  width: 300px; }
+
+.comment-form input[type='submit'] {
+  display: block;
+  float: none; }
+
+.post-password-form label {
+  display: block; }
+
+.post-password-form input[type='password'] {
+  margin: 0 4px 0 0;
+  width: 300px; }
+
+.search-form input {
+  float: left;
+  height: 2em; }
+  .search-form input[type='search'] {
+    margin: 0 4px 0 0;
+    width: 150px; }
+
+.post-password-form input {
+  float: left;
+  height: 2em; }
+  .post-password-form input[type='password'] {
+    width: 150px; }
+
+.comment-form input[type='submit'],
+.post-password-form input[type='submit'],
+.search-form input[type='submit'] {
+  background: #333;
+  color: #fff;
+  height: 2em;
+  border: none;
+  padding: 0 .5em; }
+  .comment-form input[type='submit']:hover,
+  .post-password-form input[type='submit']:hover,
+  .search-form input[type='submit']:hover {
+    opacity: 0.8; }
+
+.commentlist {
+  margin: 0 0 1.2em; }
+  .commentlist .edit-link {
+    margin: 0; }
+  .commentlist .avatar-holder {
+    float: left;
+    margin: 0 1.2em 4px 0; }
+
+.commentlist-item .commentlist-item {
+  padding: 0; }
+  @media (min-width: 768px) {
+    .commentlist-item .commentlist-item {
+      padding: 0 0 0 2em; } }
+
+.comment,
+.commentlist-holder {
+  overflow: hidden; }
+
+.commentlist-item .commentlist-item,
+.commentlist-item + .commentlist-item {
+  padding-top: 1.2em; }
+
+.widget_calendar #next {
+  text-align: right; }
+
+.gallery-item dt {
+  float: none;
+  padding: 0; }
+
+.navigation,
+.navigation-comments {
+  position: relative;
+  vertical-align: middle;
+  margin-bottom: 1.2em; }
+  .navigation .screen-reader-text,
+  .navigation-comments .screen-reader-text {
+    position: absolute;
+    left: -99999px; }
+  .navigation .page-numbers,
+  .navigation-comments .page-numbers {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 .4em; }
+    @media (max-width: 767px) {
+      .navigation .page-numbers,
+      .navigation-comments .page-numbers {
+        padding: 0; } }
+  .navigation .next,
+  .navigation .prev,
+  .navigation-comments .next,
+  .navigation-comments .prev {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 50%;
+    background: #666;
+    color: #fff;
+    padding: .4em;
+    text-decoration: none; }
+    @media (max-width: 767px) {
+      .navigation .next,
+      .navigation .prev,
+      .navigation-comments .next,
+      .navigation-comments .prev {
+        padding: .2em; } }
+
+.navigation-single {
+  margin-bottom: 1.2em; }
+  .navigation-single .next,
+  .navigation-single .prev {
+    float: left;
+    vertical-align: middle;
+    max-width: 50%;
+    background: #666;
+    color: #fff;
+    text-decoration: none; }
+    .navigation-single .next a,
+    .navigation-single .prev a {
+      color: inherit;
+      text-decoration: none;
+      padding: .4em;
+      display: block; }
+      @media (max-width: 767px) {
+        .navigation-single .next a,
+        .navigation-single .prev a {
+          padding: .2em; } }
+  .navigation-single .next {
+    float: right; }
+
+.wp-caption {
+  max-width: 100%;
+  clear: both;
+  border: 1px solid #ccc;
+  padding: .4em;
+  margin-bottom: 1.2em; }
+  .wp-caption img {
+    margin: 0;
+    vertical-align: top; }
+  .wp-caption p {
+    margin: .4em 0 0; }
+
+div.aligncenter {
+  margin: 0 auto 1.2em; }
+
+img.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
+.alignleft {
+  float: left;
+  margin: 0 1.2em 4px 0; }
+
+.alignright {
+  float: right;
+  margin: 0 0 4px 1.2em; }
+
+.mejs-container {
+  margin-bottom: 1.2em; }
+
+.wp-caption-text,
+.gallery,
+.alignnone,
+.gallery-caption,
+.sticky,
+.bypostauthor {
+  height: auto; }
+/*# sourceMappingURL=style.css.map */
