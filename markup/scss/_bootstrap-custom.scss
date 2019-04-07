@@ -1,29 +1,29 @@
 // custom variables and override bootstrap variables
-
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
 $body-bg: #fff;
 
 $white:  #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: #ebebeb;
+$gray-200: #9b9b9b;
+$gray-300: #caced1;
+$gray-400: #434343;
+$gray-500: #7d7d7d;
+$gray-600: #a8a8a8;
+$gray-700: #797979;
+$gray-800: #444444;
+$gray-900: #0d1b27;
 $black:  #000 !default;
 
-$blue:    #007bff !default;
+$blue:    #5393dd;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$orange:  #ff4800;
+$yellow:  #faef79;
+$green:   #1fe39c;
+$teal:    #21e19d;
+$cyan:    #3291e6;
 
 $colors: () !default;
 $colors: map-merge((
@@ -42,7 +42,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $blue !default;
+$primary:       $orange;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -51,7 +51,7 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$theme-colors: () !default;
+$theme-colors: ();
 $theme-colors: map-merge((
   "primary":    $primary,
   "secondary":  $secondary,
@@ -83,3 +83,38 @@ $base-min-width: 320px;
 
 // This is the default html and body font-size for the base rem value.
 $rem-base: 16px;
+
+$font-family-sans-serif:      "Open Sans", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-bebas:       "Bebas Neue";
+$font-family-gotham:      "Gotham Pro";
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif;
+
+$body-color:                $gray-900;
+
+
+$navbar-padding-y:                  0;
+$navbar-padding-x:                  0;
+
+$container-max-widths: () ;
+// stylelint-disable-next-line scss/dollar-variable-default
+$container-max-widths: map-merge(
+  (
+    xl: 1480px
+  ),
+  $container-max-widths
+);
+
+$carousel-transition-duration:       .5s;
+$carousel-transition:                all $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 1.8;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$btn-border-radius:           1.3rem;
+$btn-padding-y:               .2rem;
+$btn-font-size:               .9rem;

@@ -1,20 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Project Title</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-  <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" defer><\/script>')</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous" defer></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" defer></script>
-  <script src="js/jquery.main.js" defer></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Project Title</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" defer><\/script>')</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" defer></script>
+	<script src="js/jquery.main.js" defer></script>
 </head>
 <body>
-  <div id="wrapper">
+	<div id="wrapper">
+		<header id="header" class="py-2">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg text-uppercase justify-content-lg-between">
+					<div class="visual-box d-none d-lg-flex">
+						<span class="txt">Услуги</span>
+					</div>
+					<div class="address-box icon-pin d-none d-lg-block">
+						<span class=" txt">ул.Астрономическая 7A</span>
+					</div>
+					<a class="navbar-brand mb-2 mb-lg-0" href="#">
+						<img src="images/logo.svg" alt="Волна, Аква фитнес клуб">
+					</a>
+					<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarBurgerMenu" aria-controls="navbarBurgerMenu" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+					</button>
+					<div class="collapse navbar-collapse flex-wrap justify-content-lg-end py-3" id="navbarBurgerMenu">
+						<div class="address-box icon-pin d-lg-none mb-3 mb-lg-0 text-center">
+							<span class=" txt">ул.Астрономическая 7A</span>
+						</div>
+						<div class="phone-numbers mb-3 mb-lg-0 text-center">
+							<a class="opener icon-phone" data-toggle="collapse" href="#collapsePhoneNumbers" role="button" aria-expanded="false" aria-controls="collapsePhoneNumbers">
+								+38 (050) 403 34 00
+							</a>
+							<div class="collapse" id="collapsePhoneNumbers">
+								<ul class="numbers-list list-unstyled mb-0">
+									<li>+38 (050) 403 34 00</li>
+									<li>+38 (050) 403 34 00</li>
+									<li>+38 (050) 403 34 00</li>
+								</ul>
+							</div>	
+						</div>
+						<div class="search-holder mb-3 mb-lg-0 text-center ml-lg-5">
+							<a class="opener icon-search" data-toggle="collapse" href="#collapseSearch" role="button" aria-expanded="false" aria-controls="collapseSearch"></a>
+							<div class="collapse" id="collapseSearch">
+								<form class="form-inline" action="#">
+									<input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+									<button class="submit icon-search" type="submit"></button>
+								</form>
+							</div>
+						</div>
+						<ul class="social-list d-flex justify-content-center list-unstyled mb-3 mb-lg-0 ml-lg-3">
+							<li><a href="#" class="icon-fb"></a></li>
+							<li><a href="#" class="icon-insta"></a></li>
+							<li><a href="#" class="icon-youtube"></a></li>
+						</ul>
+						<ul class="navbar-nav w-100 text-center mb-3">
+							<li>
+								<a href="#">акции</a>
+							</li>
+							<li>
+								<a href="#">О нас</a>
+							</li>
+							<li>
+								<a href="#">клубные карты</a>
+							</li>
+							<li>
+								<a href="#">расписание</a>
+							</li>
+							<li>
+								<a href="#">новости</a>
+							</li>
+							<li>
+								<a href="#">контакты</a>
+							</li>
+						</ul>
+					</div>
+				</nav>  
+			</div> 
+		</header>
+		<main id="content">
+			<section class="intro-carousel line-decore-1  pt-3 mb-6 mb-md-8 mb-xl-10">
+				<div class="container">
+					<div class="bg-decore-1"></div>
+					<div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel1">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="txt-holder">
+									<h2>
+										РОЗЫСКИВАЮТСЯ <b> ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
+									</h2>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										Парикмахерская, центр визажа, маникюра и педикюра, массажный центр,
+										кабинет косметологии, горизонтальный и вертикальный солярии класса «Люкс».
+									</p>
+									<a href="#" class="btn btn-primary text-uppercase mb-3 mb-5">подробнее</a>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">1/5</span>
+										<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+									
+								</div>
+								<div class="img-holder">
+									<img src="images/img2.png" alt="Image deskription">
+								</div>
+								
+							</div>
+							<div class="carousel-item">
+								<div class="txt-holder">
+									<h2>
+										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
+									</h2>
+									<p>
+										Парикмахерская, центр визажа, маникюра и педикюра, массажный центр,
+										
+									</p>
+									<a href="#" class="btn btn-primary text-uppercase mb-3 mb-5">подробнее</a>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">2/5</span>
+										<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+									
+								</div>
+								<div class="img-holder">
+									<img src="images/img3.png" alt="Image deskription">
+								</div>
+								
+							</div>
+							<div class="carousel-item">
+								<div class="txt-holder">
+									<h2>
+										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
+									</h2>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										Парикмахерская, центр визажа, маникюра и педикюра, массажный центр,
+									</p>
+									<a href="#" class="btn btn-primary text-uppercase mb-3 mb-5">подробнее</a>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">3/5</span>
+										<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+									
+								</div>
+								<div class="img-holder">
+									<img src="images/img4.png" alt="Image deskription">
+								</div>								
+							</div>
+							<div class="carousel-item">
+								<div class="txt-holder">
+									<h2>
+										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
+									</h2>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										кабинет косметологии, горизонтальный и вертикальный солярии класса «Люкс».
+									</p>
+									<a href="#" class="btn btn-primary text-uppercase mb-3 mb-5">подробнее</a>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">4/5</span>
+										<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+									
+								</div>
+								<div class="img-holder">
+									<img src="images/img5.png" alt="Image deskription">
+								</div>	
+							</div>
+							<div class="carousel-item">
+								<div class="txt-holder">
+									<h2>
+										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
+									</h2>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+									</p>
+									<a href="#" class="btn btn-primary text-uppercase mb-3 mb-5">подробнее</a>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">5/5</span>
+										<a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+									
+								</div>
+								<div class="img-holder">
+									<img src="images/img3.png" alt="Image deskription">
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="category-section mb-6 mb-lg-8 line-decore-2">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-sm-6 col-lg-4">
+							<div class="categoty-holder text-uppercase decor-1">
+								<h2>Спорт</h2>
+								<ul class="category-list list-unstyled mb-5">
+									<li>
+										<a href="#">Каланетика</a>
+									</li>
+									<li>
+										<a href="#">Deep work</a>
+									</li>
+									<li>
+										<a href="#">Стретчинг</a>
+									</li>
+									<li>
+										<a href="#">Фитбол</a>
+									</li>
+									<li>
+										<a href="#">Фитнес МIX</a>
+									</li>
+								</ul>
+								<a href="#" class="more-btn">весь спорт</a>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-lg-4">
+							<div class="categoty-holder text-uppercase decor-2">
+								<h2>Красота</h2>
+								<ul class="category-list list-unstyled mb-5">
+									<li>
+										<a href="#">Каланетика</a>
+									</li>
+									<li>
+										<a href="#">Deep work</a>
+									</li>
+									<li>
+										<a href="#">Стретчинг</a>
+									</li>
+									<li>
+										<a href="#">Фитбол</a>
+									</li>
+									<li>
+										<a href="#">Фитнес МIX</a>
+									</li>
+								</ul>
+								<a href="#" class="more-btn">вся Красота</a>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-lg-4">
+							<div class="categoty-holder decor-3">
+								<h2>Здоровье</h2>
+								<ul class="category-list list-unstyled mb-5">
+									<li>
+										<a href="#">Каланетика</a>
+									</li>
+									<li>
+										<a href="#">Deep work</a>
+									</li>
+									<li>
+										<a href="#">Стретчинг</a>
+									</li>
+									<li>
+										<a href="#">Фитбол</a>
+									</li>
+									<li>
+										<a href="#">Фитнес МIX</a>
+									</li>
+								</ul>
+								<a href="#" class="more-btn">все здоровье</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="features-section line-decore-3">
+				<div class="container">
+					<div id="carouselFeatures" class="carousel slide carousel-fade carousel-features" data-ride="carousel2" data-interval="false">
+						<ul class="features-nav list-unstyled">
+							<li data-target="#carouselFeatures" data-slide-to="0" class="active">
+								<div class="icon-holder">
+									<img src="images/icon6.svg" alt="Image description">
+								</div>
+								<p>Для всей семьи</p>
+							</li>
+							<li data-target="#carouselFeatures" data-slide-to="1">
+								<div class="icon-holder">
+									<img src="images/icon7.svg" alt="Image description">
+								</div>
+								<p>Полный комплекс услуг</p>
+							</li>
+							<li data-target="#carouselFeatures" data-slide-to="2">
+								<div class="icon-holder">
+									<img src="images/icon8.svg" alt="Image description">
+								</div>
+								<p>детский бассейн</p>
+							</li>
+						</ul>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<h2>
+									<sman class="small-txt">для</sman>
+									<span class="lg-txt">семьи</span>
+								</h2>
+								<p>
+									Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
+									и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
+									свои тренировки. Будьте примером!
+								</p>
+								<div class="img-holder">
+									<img src="images/img6.png" alt="Image description">
+								</div>
+								<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
+							</div>
+							<div class="carousel-item">
+								<h2>
+									<sman class="small-txt">комплект</sman>
+									<span class="lg-txt">услуг</span>
+								</h2>
+								<p>
+									Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
+									и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
+									свои тренировки. Будьте примером!
+								</p>
+								<div class="img-holder">
+									<img src="images/img5.png" alt="Image description">
+								</div>
+								<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
+							</div>
+							<div class="carousel-item">
+								<h2>
+									<sman class="small-txt">детский</sman>
+									<span class="lg-txt">бассейн</span>
+								</h2>
+								<p>
+									Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
+									и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
+									свои тренировки. Будьте примером!
+								</p>
+								<div class="img-holder">
+									<img src="images/img4.png" alt="Image description">
+								</div>
+								<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="test">
 
-  </div>
+			</section>
+		</main>
+	</div>
 </body>
 </html>
