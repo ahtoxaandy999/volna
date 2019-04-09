@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Project Title</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" defer><\/script>')</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous" defer></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" defer></script>
+	<script src="js/owl.carousel.min.js" defer></script>
 	<script src="js/jquery.main.js" defer></script>
 </head>
 <body>
@@ -91,7 +92,7 @@
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="txt-holder">
-									<h2>
+									<h2 class="main-title">
 										РОЗЫСКИВАЮТСЯ <b> ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
 									</h2>
 									<p>
@@ -114,13 +115,13 @@
 									
 								</div>
 								<div class="img-holder">
-									<img src="images/img2.png" alt="Image deskription">
+									<img src="images/img2.png" alt="Image description">
 								</div>
 								
 							</div>
 							<div class="carousel-item">
 								<div class="txt-holder">
-									<h2>
+									<h2 class="main-title">
 										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
 									</h2>
 									<p>
@@ -142,13 +143,13 @@
 									
 								</div>
 								<div class="img-holder">
-									<img src="images/img3.png" alt="Image deskription">
+									<img src="images/img3.png" alt="Image description">
 								</div>
 								
 							</div>
 							<div class="carousel-item">
 								<div class="txt-holder">
-									<h2>
+									<h2 class="main-title">
 										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
 									</h2>
 									<p>
@@ -170,12 +171,12 @@
 									
 								</div>
 								<div class="img-holder">
-									<img src="images/img4.png" alt="Image deskription">
+									<img src="images/img4.png" alt="Image description">
 								</div>								
 							</div>
 							<div class="carousel-item">
 								<div class="txt-holder">
-									<h2>
+									<h2 class="main-title">
 										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
 									</h2>
 									<p>
@@ -197,12 +198,12 @@
 									
 								</div>
 								<div class="img-holder">
-									<img src="images/img5.png" alt="Image deskription">
+									<img src="images/img5.png" alt="Image description">
 								</div>	
 							</div>
 							<div class="carousel-item">
 								<div class="txt-holder">
-									<h2>
+									<h2 class="main-title">
 										РОЗЫСКИВАЮТСЯ <b>ВЛЮБЛЕННЫЕ В ФИТНЕС</b>
 									</h2>
 									<p>
@@ -223,7 +224,7 @@
 									
 								</div>
 								<div class="img-holder">
-									<img src="images/img3.png" alt="Image deskription">
+									<img src="images/img3.png" alt="Image description">
 								</div>	
 							</div>
 						</div>
@@ -280,7 +281,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-sm-6 col-lg-4">
-							<div class="categoty-holder decor-3">
+							<div class="categoty-holder text-uppercase decor-3">
 								<h2>Здоровье</h2>
 								<ul class="category-list list-unstyled mb-5">
 									<li>
@@ -305,81 +306,304 @@
 					</div>
 				</div>
 			</section>
-			<section class="features-section line-decore-3">
+			<section class="features-section line-decore-3 mb-6 mb-md-8 mb-lg-10">
 				<div class="container">
-					<div id="carouselFeatures" class="carousel slide carousel-fade carousel-features" data-ride="carousel2" data-interval="false">
-						<ul class="features-nav list-unstyled">
-							<li data-target="#carouselFeatures" data-slide-to="0" class="active">
+					<ul class="features-tabset list-unstyled">
+						<li>
+							<a href="#tab1" class="active">
 								<div class="icon-holder">
 									<img src="images/icon6.svg" alt="Image description">
 								</div>
 								<p>Для всей семьи</p>
-							</li>
-							<li data-target="#carouselFeatures" data-slide-to="1">
+							</a>
+						</li>
+						<li>
+							<a href="#tab2">
 								<div class="icon-holder">
 									<img src="images/icon7.svg" alt="Image description">
 								</div>
 								<p>Полный комплекс услуг</p>
-							</li>
-							<li data-target="#carouselFeatures" data-slide-to="2">
+							</a>
+						</li>
+						<li>
+							<a href="#tab3">
 								<div class="icon-holder">
 									<img src="images/icon8.svg" alt="Image description">
 								</div>
 								<p>детский бассейн</p>
-							</li>
-						</ul>
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<h2>
-									<sman class="small-txt">для</sman>
-									<span class="lg-txt">семьи</span>
-								</h2>
-								<p>
-									Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
-									и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
-									свои тренировки. Будьте примером!
-								</p>
-								<div class="img-holder">
-									<img src="images/img6.png" alt="Image description">
-								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-item" id="tab1">
+							<h2>
+								<span class="small-txt">для</span>
+								<span class="lg-txt">семьи</span>
+							</h2>
+							<p>
+								Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
+								и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
+								свои тренировки. Будьте примером!
+							</p>
+							<div class="img-holder">
+								<img src="images/img6.png" alt="Image description">
+							</div>
+							<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
+						</div>
+						<div class="tab-item" id="tab2">
+							<h2>
+								<span class="small-txt">комплект</span>
+								<span class="lg-txt">услуг</span>
+							</h2>
+							<p>
+								Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
+								и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
+								свои тренировки. Будьте примером!
+							</p>
+							<div class="img-holder">
+								<img src="images/img5.png" alt="Image description">
+							</div>
+							<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
+						</div>
+						<div class="tab-item" id="tab3">
+							<h2>
+								<span class="small-txt">детский</span>
+								<span class="lg-txt">бассейн</span>
+							</h2>
+							<p>
+								Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
+								и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
+								свои тренировки. Будьте примером!
+							</p>
+							<div class="img-holder">
+								<img src="images/img4.png" alt="Image description">
+							</div>
+							<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="bonus-section line-decore-4 pb-4 pb-md-5 mb-6 mb-md-7 mb-lg-8 mb-xl-10">
+				<div class="container">
+					<div class="img-holder mb-3" style="background-image: url('images/icon10.svg');">
+						<img src="images/img7.png" alt="Image description">
+					</div>
+					<div class="txt-holder">
+						<h2 class="main-title">
+							дарим <b> первое занятие</b>
+						</h2>
+						<p>
+							«Волна» - это ещё и салон красоты с полным комплексом услуг.
+							Парикмахерская, центр визажа, маникюра и педикюра,
+							массажный центр, кабинет косметологии, горизонтальный
+							и вертикальный солярии класса «Люкс».
+						</p>
+						<a href="#" class="btn btn-primary text-uppercase">хочу</a>
+					</div>
+				</div>
+			</section>
+			<section class="about-section mb-4">
+				<div class="container">
+					<div class="txt-holder mb-4">
+						<h2 class="text-uppercase">о нас</h2>
+						<h3 class="text-uppercase">Волна <b>- это семейный клуб</b></h3>
+						<p>
+							«Волна» - это ещё и салон красоты с полным комплексом услуг. Парикмахерская, центр визажа, маникюра и педикюра, массажный центр, кабинет косметологии, горизонтальный и вертикальный солярии класса «Люкс». 
+							«Волна» - это кафе с уютным интерьером и по-домашнему вкусным меню. А для тех, кто хочет путешествовать не только в мечтах – это туристическое агентство «Волна-тур».
+						</p>
+						<p>
+							«Волна» - это ещё и салон красоты с полным комплексом услуг. Парикмахерская, центр визажа, маникюра и педикюра, массажный центр, кабинет косметологии, горизонтальный и вертикальный солярии класса «Люкс».  «Волна» - это кафе с уютным интерьером и по-домашнему вкусным меню. А для тех, кто хочет путешествовать не только в мечтах
+							– это туристическое агентство «Волна-тур» «Волна» - это ещё и салон красоты с полным комплексом услуг. Парикмахерская, центр визажа, маникюра и педикюра, массажный центр, кабинет косметологии, горизонтальный и вертикальный солярии класса «Люкс».  «Волна» - это кафе с уютным интерьером и по-домашнему вкусным меню. А для тех,
+							кто хочет путешествовать не только в мечтах – это туристическое агентство «Волна-тур»
+						</p>
+					</div>
+					<div class="side-holder">
+						<article class="article-small">
+							<div class="img-holder mb-3">
+								<img src="images/img8.jpg" alt="Image description">
+							</div>
+							<div class="date mb-3">
+								<span class="date-time">28 / 03 / 2019</span>
+							</div>
+							<h3 class="text-uppercase">открытие нового комплекса</h3>
+							<p>
+								«Волна» - это ещё и салон красоты с полным комплексом услуг.
+								Парикмахерская, центр визажа, маникюра и педикюра,
+								массажный центр, кабинет косметологии, горизонтальный
+								и вертикальный солярии класса «Люкс».
+							</p>
+							<a href="#" class="icon-arrow-right"></a>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="cards-section pt-5 pb-5 pb-md-6 pb-lg-8 mb-5 line-decore-5">
+				<div class="container">
+					<h2 class="main-title text-uppercase text-light">
+						Наши <b>клубные карты</b>
+					</h2>
+					<div class="slide-holder">
+						<div class="owl-carousel">
+							<div>
+								<img src="images/img11.png" alt="Image description">
+								<h4 class="text-uppercase text-center">platinum</h4>
 								<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
 							</div>
-							<div class="carousel-item">
-								<h2>
-									<sman class="small-txt">комплект</sman>
-									<span class="lg-txt">услуг</span>
-								</h2>
-								<p>
-									Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
-									и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
-									свои тренировки. Будьте примером!
-								</p>
-								<div class="img-holder">
-									<img src="images/img5.png" alt="Image description">
-								</div>
+							<div>
+								<img src="images/img11.png" alt="Image description">
+								<h4 class="text-uppercase text-center">silver</h4>
 								<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
 							</div>
-							<div class="carousel-item">
-								<h2>
-									<sman class="small-txt">детский</sman>
-									<span class="lg-txt">бассейн</span>
-								</h2>
-								<p>
-									Вы хотите видеть своего ребёнка здоровым, целеустремлённым и уверенным в себе? Тогда отвлеките его от улицы
-									и компьютера, записав в спортивную секцию. А пока кроха тренируется, родителям тоже не следует пропускать
-									свои тренировки. Будьте примером!
-								</p>
-								<div class="img-holder">
-									<img src="images/img4.png" alt="Image description">
-								</div>
+							<div>
+								<img src="images/img11.png" alt="Image description">
+								<h4 class="text-uppercase text-center">gold</h4>
+								<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
+							</div>
+							<div>
+								<img src="images/img11.png" alt="Image description">
+								<h4 class="text-uppercase text-center">silver</h4>
 								<a href="#" class="btn btn-primary text-uppercase">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="test">
-
+			<section class="reviews-section mb-5 mb-md-6 mb-lg-8 mb-xl-10">
+				<div class="container">
+					<h2 class="main-title text-secondary text-uppercase">
+						<b>отзывы</b>
+						наших клиентов
+					</h2>
+					<div id="reviewsCarousel" class="carousel slide carousel-fade" data-ride="carousel2">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="img-holder">
+									<img src="images/img10.jpg" alt="Image description">
+								</div>
+								<div class="txt-holder">
+									<h3 class="secondary-title text-uppercase">елена иванова</h3>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										Парикмахерская, центр визажа, маникюра и педикюра,
+										массажный центр, кабинет косметологии, горизонтальный
+										и вертикальный солярии класса «Люкс». 
+									</p>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">1/5</span>
+										<a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="img-holder">
+									<img src="images/img10.jpg" alt="Image description">
+								</div>
+								<div class="txt-holder">
+									<h3 class="secondary-title text-uppercase">зелена иванова</h3>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										Парикмахерская, центр визажа, маникюра и педикюра,
+										массажный центр, кабинет косметологии, горизонтальный
+										и вертикальный солярии класса «Люкс». 
+									</p>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">2/5</span>
+										<a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="img-holder">
+									<img src="images/img10.jpg" alt="Image description">
+								</div>
+								<div class="txt-holder">
+									<h3 class="secondary-title text-uppercase">олена иванова</h3>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										Парикмахерская, центр визажа, маникюра и педикюра,
+										массажный центр, кабинет косметологии, горизонтальный
+										и вертикальный солярии класса «Люкс». 
+									</p>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">3/5</span>
+										<a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="img-holder">
+									<img src="images/img10.jpg" alt="Image description">
+								</div>
+								<div class="txt-holder">
+									<h3 class="secondary-title text-uppercase">келена иванова</h3>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										Парикмахерская, центр визажа, маникюра и педикюра,
+										массажный центр, кабинет косметологии, горизонтальный
+										и вертикальный солярии класса «Люкс». 
+									</p>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">4/5</span>
+										<a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="img-holder">
+									<img src="images/img10.jpg" alt="Image description">
+								</div>
+								<div class="txt-holder">
+									<h3 class="secondary-title text-uppercase">велена иванова</h3>
+									<p>
+										«Волна» - это ещё и салон красоты с полным комплексом услуг.
+										Парикмахерская, центр визажа, маникюра и педикюра,
+										массажный центр, кабинет косметологии, горизонтальный
+										и вертикальный солярии класса «Люкс». 
+									</p>
+									<div class="carousel-control">
+										<a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+											<span class="icon-arrow-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<span class="slide-info">5/5</span>
+										<a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+											<span class="icon-arrow-right-lg" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 	</div>

@@ -17,7 +17,8 @@ $breakpoints: (
   'phone': 576px,
   'tablet': 768px,
   'desktop': 992px,
-  'widescreen': 1200px
+  'widescreen': 1200px,
+  'xl': 1500px
 );
 
 
@@ -48,6 +49,8 @@ $media-expressions: (
 @import 'base/wp-reset';
 @import 'components/icomoon';
 @import 'components/fonts';
+@import 'components/owl.carousel';
+@import 'components/owl.theme.default';
 
 @import 'layout/header';
 @import 'layout/common';
