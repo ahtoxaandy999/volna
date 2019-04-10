@@ -1,20 +1,18 @@
 #header {
     position: relative;
     font-family: $font-family-bebas;
-}
-
-
-.navbar-brand {
-    @include media ('>=desktop') {
-        width: 16%;
-    }
-    img {
-        width: 120px;
-        @include media ('>=phone') {
-            width: 160px;
-        }
+    .navbar-brand {
         @include media ('>=desktop') {
-            width: 190px;
+            width: 16%;
+        }
+        img {
+            width: 120px;
+            @include media ('>=phone') {
+                width: 160px;
+            }
+            @include media ('>=desktop') {
+                width: 190px;
+            }
         }
     }
 }
@@ -161,7 +159,7 @@
 .social-list {
     width: 100%;
     order: 5;
-    font-size: 1.2rem;
+    font-size: 1rem;
     align-items: center;
     @include media ('>=desktop') {
         width: auto;

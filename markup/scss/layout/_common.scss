@@ -209,6 +209,10 @@ a {
         font-size: 1rem;
         padding: .3rem .6rem;
     }
+    &:hover {
+        background-color: $orange;
+        box-shadow: 0 0 20px 8px rgba(0,0,0,0.1);
+    }
 }
 
 .main-title {
@@ -984,13 +988,31 @@ a {
         display: flex;
         justify-content: center;
         padding: rem-calc(10 0 0);
+        @include media ('>=tablet') {
+            font-size: 1.2rem;
+        }
+        @include media ('>=desktop') {
+            font-size: 1.5rem;
+        }
         .owl-prev,
         .owl-next {
             margin: 0 10px;
+            @include media ('>=desktop') {
+                margin: 0 15px;
+            }
             &:before {
                 font-family: 'icomoon';
                 content: "\e904";
                 color: $white;
+                transition: $transition-base;
+            }
+            &:hover {
+                &:before {
+                    color: $blue;
+                }
+            }
+            &:focus {
+                outline: none;
             }
         }
         .owl-next {
