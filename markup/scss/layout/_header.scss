@@ -120,6 +120,23 @@
     @include media ('>=widescreen') {
         padding: rem-calc(40 0 0);
     }
+    li {
+        &.active {
+            a {
+                background-color: $white;
+                color: $blue;
+                @include media ('>=desktop') {
+                    color: $white;
+                    background: transparent;
+                }
+                &:before {
+                    @include media ('>=desktop') {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
     a {
         display: block;
         padding: rem-calc(10 15);
