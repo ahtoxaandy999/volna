@@ -268,7 +268,7 @@
     .numbers-list {
         padding: 5px 0;
         background: $white;
-        border: 2px solid $teal;
+        border: 1px solid #ced4da;
         border-radius: 5px;
     }
 }
@@ -299,7 +299,7 @@
         z-index: 999;
         @include media ('>=desktop') {
             position: absolute;
-            top: 100%;
+            top: calc(100% + 7px);
             left: 50%;
             transform: translate(-50%, 0);
             min-width: 300px;
