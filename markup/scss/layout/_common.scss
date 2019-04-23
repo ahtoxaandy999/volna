@@ -1155,6 +1155,9 @@ a {
     }
     a {
         color: inherit;
+        &:hover {
+            color: $green;
+        }
     }
     .breadcrumb-item {
         display: flex;
@@ -1202,7 +1205,6 @@ a {
         line-height: 1;
         z-index: -1;
         font-weight: 900;
-        letter-spacing: -13px;
         @include media ('>=tablet') {
             font-size: 110px;
             top: 50%;
@@ -1214,10 +1216,82 @@ a {
         @include media ('>=widescreen') {
             font-size: 240px;
             transform: translate(80%, -50%);
+            letter-spacing: -10px;
         }
     }
 }
 
+.sub-nav {
+    text-align: right;
+    text-transform: uppercase;
+    font-family: $font-family-gotham;
+    font-weight: 900;
+    font-size: 12px;
+    ul {
+        padding: 10px 0 10px 10px;
+        position: relative;
+        @include media ('>=phone') {
+            padding: 10px 0 10px 20px;
+        }
+        &:before,
+        &:after {
+            content: '';
+            display: inline-block;
+            background-color: $gray-900;
+            height: 100%;
+            width: calc(100% + 9999px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: skew(-30deg);
+        }       
+    }
+    li {
+        margin: 0 0 0 10px;
+        position: relative;
+        @include media ('>=phone') {
+            margin: 0 0 0 30px;
+        }
+        @include media ('>=tablet') {
+            margin: 0 0 0 40px;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        &:after {
+            content: '';
+            display: none;
+            width: 1px;
+            height: 20px;
+            opacity: 0.6;
+            background: $white;
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            transform: translateY(-50%) skew(-25deg);
+            @include media ('>=phone') {
+                display: inline-block;
+            }
+            @include media ('>=tablet') {
+                right: -20px;
+            }
+        }
+        &.active {
+            a {
+                color: $orange;
+            }
+        }
+    }
+    a {
+        color: $white;
+        &:hover {
+            color: $orange;
+        }
+    }
+}
 
 
 

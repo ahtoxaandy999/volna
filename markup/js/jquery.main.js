@@ -29,7 +29,7 @@ $(document).ready(function(){
 $('[id^="introCarousel, reviewsCarousel"]').carousel();
 
 ;function initTabs() {
-	jQuery('.features-tabset').tabset({
+	jQuery('.tabset').tabset({
 		tabLinks: 'a',
 		defaultTab: true
 	});

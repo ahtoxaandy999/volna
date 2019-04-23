@@ -2303,6 +2303,8 @@ a {
       margin: 90px 0 30px; } }
   .breadcrumb-wrapper a {
     color: inherit; }
+    .breadcrumb-wrapper a:hover {
+      color: #1fe39c; }
   .breadcrumb-wrapper .breadcrumb-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2358,8 +2360,7 @@ a {
     font-size: 80px;
     line-height: 1;
     z-index: -1;
-    font-weight: 900;
-    letter-spacing: -13px; }
+    font-weight: 900; }
     @media (min-width: 768px) {
       .section-head .background-text {
         font-size: 110px;
@@ -2375,7 +2376,70 @@ a {
         font-size: 240px;
         -webkit-transform: translate(80%, -50%);
             -ms-transform: translate(80%, -50%);
-                transform: translate(80%, -50%); } }
+                transform: translate(80%, -50%);
+        letter-spacing: -10px; } }
+
+.sub-nav {
+  text-align: right;
+  text-transform: uppercase;
+  font-family: "Gotham Pro";
+  font-weight: 900;
+  font-size: 12px; }
+  .sub-nav ul {
+    padding: 10px 0 10px 10px;
+    position: relative; }
+    @media (min-width: 576px) {
+      .sub-nav ul {
+        padding: 10px 0 10px 20px; } }
+    .sub-nav ul:before, .sub-nav ul:after {
+      content: '';
+      display: inline-block;
+      background-color: #0d1b27;
+      height: 100%;
+      width: calc(100% + 9999px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      -webkit-transform: skew(-30deg);
+          -ms-transform: skew(-30deg);
+              transform: skew(-30deg); }
+  .sub-nav li {
+    margin: 0 0 0 10px;
+    position: relative; }
+    @media (min-width: 576px) {
+      .sub-nav li {
+        margin: 0 0 0 30px; } }
+    @media (min-width: 768px) {
+      .sub-nav li {
+        margin: 0 0 0 40px; } }
+    .sub-nav li:last-child:after {
+      display: none; }
+    .sub-nav li:after {
+      content: '';
+      display: none;
+      width: 1px;
+      height: 20px;
+      opacity: 0.6;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      -webkit-transform: translateY(-50%) skew(-25deg);
+          -ms-transform: translateY(-50%) skew(-25deg);
+              transform: translateY(-50%) skew(-25deg); }
+      @media (min-width: 576px) {
+        .sub-nav li:after {
+          display: inline-block; } }
+      @media (min-width: 768px) {
+        .sub-nav li:after {
+          right: -20px; } }
+    .sub-nav li.active a {
+      color: #ff4800; }
+  .sub-nav a {
+    color: #fff; }
+    .sub-nav a:hover {
+      color: #ff4800; }
 
 .info-holder {
   color: #444444;
