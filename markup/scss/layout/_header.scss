@@ -121,7 +121,7 @@
         padding: rem-calc(20 20 0);
     }
     @include media ('>=widescreen') {
-        padding: rem-calc(40 0 0);
+        padding: rem-calc(40 0 0 20);
     }
     li {
         &.active {

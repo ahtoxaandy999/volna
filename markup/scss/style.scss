@@ -47,10 +47,14 @@ $media-expressions: (
 @import 'base/helpers';
 @import 'base/functions';
 @import 'base/wp-reset';
-@import 'components/icomoon';
-@import 'components/fonts';
-@import 'components/owl.carousel';
-@import 'components/owl.theme.default';
+
+
+@import 'vendors/fancybox';
+@import 'vendors/icomoon';
+@import 'vendors/fonts';
+@import 'vendors/owl.carousel';
+@import 'vendors/owl.theme.default';
+
 
 @import 'layout/header';
 @import 'layout/common';
