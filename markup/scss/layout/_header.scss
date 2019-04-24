@@ -59,6 +59,9 @@
             transform: translate(-50%, -50%);
             min-width: 112px;
         }
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 .address-box {
@@ -222,18 +225,19 @@
         position: absolute;
         z-index: 999;
         top: 100%;
-        left: 12px;
-        width: 100%;
+        left: 50%;
+        min-width: 150px;
+        transform: translateX(-50%);
         @include media ('>=tablet') {
             position: relative;
             top: 0;
-            left: 0;
         }
         @include media ('>=desktop') {
             position: absolute;
             top: 100%;
             left: 12px;
             width: 100%;
+            transform: translateX(0);
         }
     }
     .opener {
@@ -266,6 +270,7 @@
         }
     }
     .numbers-list {
+        color: $gray-900;
         padding: 5px 0;
         background: $white;
         border: 1px solid #ced4da;

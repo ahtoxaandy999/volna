@@ -1898,6 +1898,7 @@ a {
 }
 
 .trainer-card {
+    display: block;
     margin: 0 0 20px;
     @include media ('>=phone') {
         width: 50%;
@@ -1908,6 +1909,9 @@ a {
     }
     @include media ('>=desktop') {
         margin: 0 0 40px;
+    }
+    &:hover {
+        opacity: 0.9;
     }
     .img-holder {
         margin: 0 0 15px;
@@ -1978,5 +1982,12 @@ a {
         @include media ('>=widescreen') {
             margin: 0 0 60px;
         }
+    }
+}
+
+.services-popup {
+    .close {
+        float: none;
+        display: inline-block;
     }
 }

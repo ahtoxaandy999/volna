@@ -35,7 +35,6 @@ $('[id^="introCarousel, reviewsCarousel"]').carousel();
 	});
 }
 
-
 ;(function($, $win) {
 	'use strict';
 	
