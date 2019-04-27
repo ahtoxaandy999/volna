@@ -2924,84 +2924,100 @@ a {
 
 .cards-carousel {
   z-index: 5; }
-  .cards-carousel .owl-item {
+  .cards-carousel .slick-slide {
     text-align: center; }
-    .cards-carousel .owl-item.center {
+    .cards-carousel .slick-slide.slick-center {
       z-index: 10; }
       @media (min-width: 600px) {
-        .cards-carousel .owl-item.center img {
+        .cards-carousel .slick-slide.slick-center img {
           -webkit-transform: scale(1.2);
               -ms-transform: scale(1.2);
                   transform: scale(1.2);
           padding-bottom: 20px; } }
       @media (min-width: 768px) {
-        .cards-carousel .owl-item.center img {
+        .cards-carousel .slick-slide.slick-center img {
           padding-bottom: 30px; } }
       @media (min-width: 1200px) {
-        .cards-carousel .owl-item.center img {
+        .cards-carousel .slick-slide.slick-center img {
           padding-bottom: 40px; } }
-      .cards-carousel .owl-item.center .btn {
+      .cards-carousel .slick-slide.slick-center .btn {
         visibility: visible;
         opacity: 1; }
-      .cards-carousel .owl-item.center h3 {
+      .cards-carousel .slick-slide.slick-center h3 {
         color: #fff; }
-    .cards-carousel .owl-item .btn {
+    .cards-carousel .slick-slide .btn {
       visibility: hidden;
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
       opacity: 0; }
-    .cards-carousel .owl-item img {
+    .cards-carousel .slick-slide img {
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
       display: block;
       padding-bottom: 5px;
-      width: 100%; }
-    .cards-carousel .owl-item h3 {
+      width: 100%;
+      max-width: 22 0px;
+      margin: 0 auto; }
+      @media (min-width: 576px) {
+        .cards-carousel .slick-slide img {
+          max-width: none; } }
+    .cards-carousel .slick-slide h3 {
       color: #4e6070;
       font-weight: 900;
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
       letter-spacing: 4px; }
-  @media (min-width: 600px) {
-    .cards-carousel .owl-stage {
-      padding: 30px 0; } }
-
-.owl-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0.625rem 0 0; }
-  @media (min-width: 768px) {
-    .owl-nav {
-      font-size: 1.2rem; } }
-  @media (min-width: 992px) {
-    .owl-nav {
-      font-size: 1.5rem; } }
-  .owl-nav .owl-prev,
-  .owl-nav .owl-next {
-    margin: 0 10px; }
+  .cards-carousel .slick-track {
+    padding: 0 0 45px; }
+    @media (min-width: 600px) {
+      .cards-carousel .slick-track {
+        padding: 30px 0 55px; } }
+  .cards-carousel .slick-prev,
+  .cards-carousel .slick-next {
+    background: transparent;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    font-size: 1.2rem; }
     @media (min-width: 992px) {
-      .owl-nav .owl-prev,
-      .owl-nav .owl-next {
-        margin: 0 15px; } }
-    .owl-nav .owl-prev:before,
-    .owl-nav .owl-next:before {
+      .cards-carousel .slick-prev,
+      .cards-carousel .slick-next {
+        font-size: 1.5rem; } }
+    @media (min-width: 768px) {
+      .cards-carousel .slick-prev,
+      .cards-carousel .slick-next {
+        left: 45%; } }
+    @media (min-width: 1200px) {
+      .cards-carousel .slick-prev,
+      .cards-carousel .slick-next {
+        left: 48%; } }
+    .cards-carousel .slick-prev:before,
+    .cards-carousel .slick-next:before {
       font-family: 'icomoon';
       content: "\e904";
       color: #fff;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
-    .owl-nav .owl-prev:hover:before,
-    .owl-nav .owl-next:hover:before {
+    .cards-carousel .slick-prev:hover:before,
+    .cards-carousel .slick-next:hover:before {
       color: #5393dd; }
-    .owl-nav .owl-prev:focus,
-    .owl-nav .owl-next:focus {
+    .cards-carousel .slick-prev:focus,
+    .cards-carousel .slick-next:focus {
       outline: none; }
-  .owl-nav .owl-next:before {
-    content: "\e906"; }
+  .cards-carousel .slick-next {
+    left: 60%; }
+    @media (min-width: 768px) {
+      .cards-carousel .slick-next {
+        left: 55%; } }
+    @media (min-width: 1200px) {
+      .cards-carousel .slick-next {
+        left: 52%; } }
+    .cards-carousel .slick-next:before {
+      content: "\e906"; }
 
 .reviews-section {
   position: relative; }

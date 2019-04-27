@@ -10,8 +10,8 @@ function initSlickCarousel() {
 		slidesToScroll: 1,
 		rows: 0,
 		slidesToShow: 3,
-		prevArrow: '<button class="slick-prev">Previous</button>',
-		nextArrow: '<button class="slick-next">Next</button>',
+		prevArrow: '<button class="slick-prev"></button>',
+		nextArrow: '<button class="slick-next"></button>',
 		centerMode: true,
 		centerPadding: '0px',
 		responsive: [{

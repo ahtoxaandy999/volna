@@ -1075,9 +1075,9 @@ a {
 
 .cards-carousel {
     z-index: 5;
-    .owl-item {
+    .slick-slide {
         text-align: center;
-        &.center {
+        &.slick-center {
             z-index: 10;
             img {
                 @include media ('>=600px') {
@@ -1109,6 +1109,11 @@ a {
             display: block;
             padding-bottom: 5px;
             width: 100%;
+            max-width: 22 0px;
+            margin: 0 auto;
+            @include media ('>=phone') {
+                max-width: none;
+            }
         }
         h3 {
             color: #4e6070;
@@ -1117,28 +1122,29 @@ a {
             letter-spacing: 4px;
         }
     }
-    .owl-stage {
+    .slick-track {
+        padding: 0 0 45px;
         @include media ('>=600px') {
-            padding: 30px 0;
+            padding: 30px 0 55px;
         }
     }
-}
-
-.owl-nav {
-    display: flex;
-    justify-content: center;
-    padding: rem-calc(10 0 0);
-    @include media ('>=tablet') {
+    .slick-prev,
+    .slick-next {
+        background: transparent;
+        border: none;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+        transform: translate(-50%, 0);
         font-size: 1.2rem;
-    }
-    @include media ('>=desktop') {
-        font-size: 1.5rem;
-    }
-    .owl-prev,
-    .owl-next {
-        margin: 0 10px;
         @include media ('>=desktop') {
-            margin: 0 15px;
+            font-size: 1.5rem;
+        }
+        @include media ('>=tablet') {
+            left: 45%;
+        }
+        @include media ('>=widescreen') {
+            left: 48%;
         }
         &:before {
             font-family: 'icomoon';
@@ -1155,7 +1161,14 @@ a {
             outline: none;
         }
     }
-    .owl-next {
+    .slick-next {
+        left: 60%;
+        @include media ('>=tablet') {
+            left: 55%;
+        }
+        @include media ('>=widescreen') {
+            left: 52%;
+        }
         &:before {
             content: "\e906";
         }
@@ -1319,7 +1332,7 @@ a {
         }
     }
 }
-    
+
 .sub-nav {
     text-align: right;
     text-transform: uppercase;
@@ -2133,7 +2146,7 @@ a {
         margin: 0 0 10px;
     }
     .owl-nav .owl-prev:before,
-     .owl-nav .owl-next:before {
+    .owl-nav .owl-next:before {
         color: #aaaaaa;
         font-size: 1.4rem;
         @include media ('>=desktop') {
