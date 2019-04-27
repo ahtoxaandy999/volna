@@ -52,9 +52,9 @@ $media-expressions: (
 @import 'vendors/fancybox';
 @import 'vendors/icomoon';
 @import 'vendors/fonts';
-@import 'vendors/owl.carousel';
-@import 'vendors/owl.theme.default';
+@import 'vendors/slick';
 
+@import 'components/vacancy';
 
 @import 'layout/header';
 @import 'layout/common';
