@@ -2374,6 +2374,7 @@ a {
 
 .blog-control-panel {
     padding: 20px 0;
+    
     @include media ('>=tablet') {
         padding: 40px 0;
         display: flex;
