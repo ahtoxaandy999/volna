@@ -4,6 +4,7 @@ jQuery(function() {
 	initSlickCarousel();
 	initAccordion();
 	initBackgroundText();
+	initCardsIsLast();
 });
 
 ;function initBackgroundText() {
@@ -14,6 +15,17 @@ jQuery(function() {
 		backgroundTextItem.className = 'background-text';
 		backgroundTextItem.innerText = backgroundText;
 		titleItem.append(backgroundTextItem);
+	}
+}
+
+;function initCardsIsLast() {
+	var contentSection = document.querySelector('#content');
+	var footerSection = document.querySelector('#footer');
+	var contentItems = contentSection.children;
+	var cardsSection = document.querySelector('.cards-section');
+	var lastContentItem = contentSection.lastElementChild;
+	if (lastContentItem === cardsSection) {
+		footerSection.classList.add('cards-is-last');
 	}
 }
 

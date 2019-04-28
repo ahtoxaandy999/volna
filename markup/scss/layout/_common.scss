@@ -366,6 +366,34 @@ a {
     }
 }
 
+.line-decore-10 {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100vw;
+        height: 50px;
+        background-image: url('images/decore-line6.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        @include media ('>=phone') {
+            bottom: 35px;
+        }
+        @include media ('>=tablet') {
+            bottom: 140px;
+        }
+        @include media ('>=desktop') {
+            bottom: 195px;
+        }
+        @include media ('>=widescreen') {
+            bottom: 315px;
+        }
+    }
+}
+
 .js-tab-hidden {
     display: block !important;
     left: -9999px !important;
@@ -1081,6 +1109,25 @@ a {
 .cards-section {
     background-color: $indigo;
     position: relative;
+    &.subscribe-style {
+        padding: 30px 0;
+        @include media ('>=phone') {
+            padding: 50px 0;
+        }
+        @include media ('>=tablet') {
+            padding: 50px 0 150px;
+        }
+        @include media ('>=desktop') {
+            padding: 80px 0 200px;
+        }
+        @include media ('>=widescreen') {
+            padding: 150px 0 320px;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 5;
+    }
     .slide-holder {
         max-width: 350px;
         margin: 0 auto;
@@ -1314,7 +1361,7 @@ a {
         margin: 0 0 30px;
     }
     @include media ('>=widescreen') {
-        margin: 0 0 30px;
+        margin: 0 0 50px;
     }
     &:before {
         content: '';
@@ -2245,5 +2292,179 @@ a {
         @include media ('>=desktop') {
             width: 25%;
         }
+    }
+}
+
+.banner-subscribe-form {
+    color: #acacac;
+    font-size: 14px;
+    .input-row {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 750px;
+        margin: 0 auto;
+        .input-col {
+            width: 100%;
+            margin: 0 auto 15px;
+            max-width: 400px;
+            @include media ('>=tablet') {
+                width: 50%;
+                padding: 0 30px;
+            }
+            @include media ('>=widescreen') {
+                margin: 0 auto 60px;
+            }
+        }
+        input {
+            color: $white;
+            width: 100%;
+            font-family: $font-family-bebas;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $white;
+            font-size: 1.1rem;
+            line-height: 1;
+            width: 100%;
+            margin: rem-calc(0 0 10);
+            &::placeholder {
+                color: $white;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    input[type='submit'] {
+        font-family: $font-family-gotham;
+        min-width: rem-calc(120);
+        border: 0;
+        color: #fff;
+        background-color: #ff4800;
+        border-color: #ff4800;
+        line-height: 1.5;
+        border-radius: 1.3rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        @include media ('>=tablet') {
+            font-size: 1rem;
+            padding: .3rem .6rem;
+        }
+        @include media ('>=desktop') {
+            padding: .5rem .6rem;
+        }
+        &:hover {
+            background-color: $orange;
+            box-shadow: 0 0 20px 8px rgba(0,0,0,0.1);
+        }
+    }
+    p {
+        max-width: 500px;
+        margin: 0 auto 30px;
+        @include media ('>=phone') {
+            margin: 0 auto 40px;
+        }
+        @include media ('>=widescreen') {
+            margin: 0 auto 60px;
+        }
+    }
+}
+
+.blog-section {
+    
+}
+
+.blog-control-panel {
+    padding: 20px 0;
+    @include media ('>=tablet') {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include media ('>=desktop') {
+        padding: 40px 0 70px;
+    }
+    @include media ('>=widescreen') {
+        padding: 50px 0 90px;
+    }
+    &.bg-text {
+        .background-text {
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 40%);
+            @include media ('>=tablet') {
+                left: 15px;
+                bottom: 0;
+                transform: translate(0, -16%);
+            }
+        }
+    }
+    .control-btn {
+        color: #818181;
+        font-family: $font-family-gotham;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 11px;
+    }
+}
+
+.directions-list {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $font-family-bebas;
+    @include media ('>=tablet') {
+        font-size: 16px;
+        display: flex;
+    }
+    @include media ('>=desktop') {
+        font-size: 18px;
+    }
+    li {
+        margin: 0 0 10px;
+        @include media ('>=tablet') {
+            margin: 0 25px 0 0;
+        }
+        @include media ('>=desktop') {
+            margin: 0 35px 0 0;
+        }
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 0 8px -2px 0;
+            @include media ('>=tablet') {
+                width: 19px;
+                height: 19px;
+                margin: 0 13px -4px 0;
+            }
+        }
+        &.style-1 {
+            color: $blue;
+            &:before {
+                background-color: $blue;
+            }
+        }
+        &.style-2 {
+            color: $orange;
+            &:before {
+                background-color: $orange;
+            }
+        }
+        &.style-3 {
+            color: $green;
+            &:before {
+                background-color: $green;
+            }
+        }
+        &.style-4 {
+            color: $red;
+            &:before {
+                background-color: $red;
+            }
+        }
+    }
+    a {
+        color: inherit;
     }
 }
