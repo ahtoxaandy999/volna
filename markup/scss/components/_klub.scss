@@ -1,0 +1,243 @@
+.club-section {
+	padding-bottom: 15px;
+	margin-bottom: 75px;
+	@include media ('>=tablet') {
+		padding-bottom: 40px;
+		margin-bottom: 100px;
+	}
+	@include media ('>=widescreen') {
+		padding-bottom: 100px;
+		margin-bottom: 60px;
+	}
+	.section-head {
+		align-items: flex-start;
+		h2 {
+			width: 580px;
+		}
+		p {
+			width: 105%;
+		}
+		.head-title {
+			color: $black;
+			font-family: $font-family-bebas;
+			font-size: 30px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.background-text {
+			transform: translate(0, 22%);
+			@include media ('>=tablet') {
+				transform: translate(53%, -72%);
+			}
+			@include media ('>=desktop') {
+				transform: translate(50%, -50%);
+			}
+			@include media ('>=widescreen') {
+				-webkit-transform: translate(80%, -65%);
+				transform: translate(68%, -65%);
+			}
+		}
+	}
+
+	.about-club-wrap {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 -8px 50px;
+		@include media ('>=tablet') {
+			margin: 0 -8px 70px;
+		}
+		@include media ('>=desktop') {
+			margin: 0 -8px 100px;
+		}
+	}
+
+	.about-link {
+		width: 205px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 8px 20px;
+		@include media ('>=tablet') {
+			margin: 0 8px 30px;
+		}
+		img {
+			width: 100%;
+			margin-bottom: 20px;
+			@include media ('>=tablet') {
+				margin-bottom: 30px;
+			}
+		}
+		span {
+			color: #4e6070;
+			font-size: 22px;
+			font-family: $font-family-bebas;
+			text-transform: uppercase;
+		}
+	}
+
+	.advantages-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include media ('>=phone') {
+			flex-direction: row;
+			justify-content: center;
+		}
+		@include media ('>=tablet') {
+			margin-bottom: 100px;
+		}
+		@include media ('>=desktop') {
+			margin-bottom: 140px;
+		}
+	}
+
+	.advantage {
+		width: 210px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 0 75px;
+		@include media ('>=tablet') {
+			margin: 0 12px;
+		}
+		@include media ('>=desktop') {
+			margin: 0 60px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-42%, -50%) skew(-35deg);
+			width: 80px;
+			height: 180px;
+			z-index: -1;
+			@include media ('>=tablet') {
+				width: 120px;
+				height: 270px;
+			}
+		}
+		&:nth-child(1) {
+			&:before {
+				background: #1fe39c;
+			}
+		}
+		&:nth-child(2) {
+			&:before {
+				background: #ff4800;
+			}
+		}
+		&:nth-child(3) {
+			&:before {
+				background: #5393dd;
+			}
+		}
+		img {
+			max-width: 80px;
+			width: 100%;
+			height: 75px;
+			margin-bottom: 20px;
+			@include media ('>=tablet') {
+				margin-bottom: 40px;
+			}
+		}
+		span {
+			color: $black;
+			font-size: 20px;
+			font-family: $font-family-bebas;
+			font-weight: bold;
+			text-transform: uppercase;
+			@include media ('>=tablet') {
+				font-size: 26px;
+			}
+		}
+	}
+
+	.about-club-text {
+		color: #696969;
+		font-size: 14px;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+		@include media ('>=tablet') {
+			width: 90%;
+		}
+		@include media ('>=desktop') {
+			width: 75%;
+		}
+	}
+}
+
+.video-photo-section {
+	.main-title {
+		margin-bottom: 12px;
+		font-weight: bold;
+	}
+	.trainer-title {
+		color: $black;
+		font-size: 30px;
+		font-family: $font-family-bebas;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		@include media ('>=tablet') {
+			margin-bottom: 45px;
+		}
+		@include media ('>=desktop') {
+			margin-bottom: 70px;
+		}
+	}
+
+	.video-wrap {
+		display: block;
+		margin-bottom: 25px;
+		@include media ('>=tablet') {
+			margin-bottom: 55px;
+		}
+		@include media ('>=desktop') {
+			margin-bottom: 90px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	.txt-holder {
+		max-width: 1200px;
+		position: relative;
+		font-size: 14px;
+		margin: 0 0 40px 0;
+		@include media ('>=tablet') {
+			padding: 0 50px 0 0;
+			margin: 0 0 60px 0;
+		}
+		@include media ('>=desktop') {
+			padding: 0 90px 0 0;
+			margin: 0 0 80px 0;
+		}
+		@include media ('>=widescreen') {
+			margin: 0 0 130px 0;
+		}
+		&:before,
+		&:after {
+			@include media ('>=tablet') {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				height: 100%;
+				width: 1px;
+				background-color: #d7d7d7;
+			}
+		}
+		&:after {
+			@include media ('>=tablet') {
+				bottom: 28%;
+				height: 47px;
+				background-color: $orange;
+			}
+		}
+	}
+}

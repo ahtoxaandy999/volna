@@ -1830,6 +1830,251 @@ body.compensate-for-scrollbar {
         .simple-accordion .text-wrap:before {
           font-size: 45px; } }
 
+.club-section {
+  padding-bottom: 15px;
+  margin-bottom: 75px; }
+  @media (min-width: 768px) {
+    .club-section {
+      padding-bottom: 40px;
+      margin-bottom: 100px; } }
+  @media (min-width: 1200px) {
+    .club-section {
+      padding-bottom: 100px;
+      margin-bottom: 60px; } }
+  .club-section .section-head {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .club-section .section-head h2 {
+      width: 580px; }
+    .club-section .section-head p {
+      width: 105%; }
+    .club-section .section-head .head-title {
+      color: #000;
+      font-family: "Bebas Neue";
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: bold; }
+    .club-section .section-head .background-text {
+      -webkit-transform: translate(0, 22%);
+          -ms-transform: translate(0, 22%);
+              transform: translate(0, 22%); }
+      @media (min-width: 768px) {
+        .club-section .section-head .background-text {
+          -webkit-transform: translate(53%, -72%);
+              -ms-transform: translate(53%, -72%);
+                  transform: translate(53%, -72%); } }
+      @media (min-width: 992px) {
+        .club-section .section-head .background-text {
+          -webkit-transform: translate(50%, -50%);
+              -ms-transform: translate(50%, -50%);
+                  transform: translate(50%, -50%); } }
+      @media (min-width: 1200px) {
+        .club-section .section-head .background-text {
+          -webkit-transform: translate(80%, -65%);
+          -ms-transform: translate(68%, -65%);
+              transform: translate(68%, -65%); } }
+  .club-section .about-club-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -8px 50px; }
+    @media (min-width: 768px) {
+      .club-section .about-club-wrap {
+        margin: 0 -8px 70px; } }
+    @media (min-width: 992px) {
+      .club-section .about-club-wrap {
+        margin: 0 -8px 100px; } }
+  .club-section .about-link {
+    width: 205px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 8px 20px; }
+    @media (min-width: 768px) {
+      .club-section .about-link {
+        margin: 0 8px 30px; } }
+    .club-section .about-link img {
+      width: 100%;
+      margin-bottom: 20px; }
+      @media (min-width: 768px) {
+        .club-section .about-link img {
+          margin-bottom: 30px; } }
+    .club-section .about-link span {
+      color: #4e6070;
+      font-size: 22px;
+      font-family: "Bebas Neue";
+      text-transform: uppercase; }
+  .club-section .advantages-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (min-width: 576px) {
+      .club-section .advantages-wrap {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    @media (min-width: 768px) {
+      .club-section .advantages-wrap {
+        margin-bottom: 100px; } }
+    @media (min-width: 992px) {
+      .club-section .advantages-wrap {
+        margin-bottom: 140px; } }
+  .club-section .advantage {
+    width: 210px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 75px; }
+    @media (min-width: 768px) {
+      .club-section .advantage {
+        margin: 0 12px; } }
+    @media (min-width: 992px) {
+      .club-section .advantage {
+        margin: 0 60px; } }
+    .club-section .advantage:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-42%, -50%) skew(-35deg);
+          -ms-transform: translate(-42%, -50%) skew(-35deg);
+              transform: translate(-42%, -50%) skew(-35deg);
+      width: 80px;
+      height: 180px;
+      z-index: -1; }
+      @media (min-width: 768px) {
+        .club-section .advantage:before {
+          width: 120px;
+          height: 270px; } }
+    .club-section .advantage:nth-child(1):before {
+      background: #1fe39c; }
+    .club-section .advantage:nth-child(2):before {
+      background: #ff4800; }
+    .club-section .advantage:nth-child(3):before {
+      background: #5393dd; }
+    .club-section .advantage img {
+      max-width: 80px;
+      width: 100%;
+      height: 75px;
+      margin-bottom: 20px; }
+      @media (min-width: 768px) {
+        .club-section .advantage img {
+          margin-bottom: 40px; } }
+    .club-section .advantage span {
+      color: #000;
+      font-size: 20px;
+      font-family: "Bebas Neue";
+      font-weight: bold;
+      text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .club-section .advantage span {
+          font-size: 26px; } }
+  .club-section .about-club-text {
+    color: #696969;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .club-section .about-club-text {
+        width: 90%; } }
+    @media (min-width: 992px) {
+      .club-section .about-club-text {
+        width: 75%; } }
+
+.video-photo-section .main-title {
+  margin-bottom: 12px;
+  font-weight: bold; }
+
+.video-photo-section .trainer-title {
+  color: #000;
+  font-size: 30px;
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .video-photo-section .trainer-title {
+      margin-bottom: 45px; } }
+  @media (min-width: 992px) {
+    .video-photo-section .trainer-title {
+      margin-bottom: 70px; } }
+
+.video-photo-section .video-wrap {
+  display: block;
+  margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .video-photo-section .video-wrap {
+      margin-bottom: 55px; } }
+  @media (min-width: 992px) {
+    .video-photo-section .video-wrap {
+      margin-bottom: 90px; } }
+  .video-photo-section .video-wrap img {
+    width: 100%; }
+
+.video-photo-section .txt-holder {
+  max-width: 1200px;
+  position: relative;
+  font-size: 14px;
+  margin: 0 0 40px 0; }
+  @media (min-width: 768px) {
+    .video-photo-section .txt-holder {
+      padding: 0 50px 0 0;
+      margin: 0 0 60px 0; } }
+  @media (min-width: 992px) {
+    .video-photo-section .txt-holder {
+      padding: 0 90px 0 0;
+      margin: 0 0 80px 0; } }
+  @media (min-width: 1200px) {
+    .video-photo-section .txt-holder {
+      margin: 0 0 130px 0; } }
+  @media (min-width: 768px) {
+    .video-photo-section .txt-holder:before, .video-photo-section .txt-holder:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #d7d7d7; } }
+  @media (min-width: 768px) {
+    .video-photo-section .txt-holder:after {
+      bottom: 28%;
+      height: 47px;
+      background-color: #ff4800; } }
+
 #header {
   position: relative;
   font-family: "Bebas Neue"; }
