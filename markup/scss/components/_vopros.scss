@@ -1,0 +1,231 @@
+.vopros-section {
+	padding-bottom: 20px;
+	margin-bottom: 75px;
+	@include media ('>=desktop') {
+		padding-bottom: 30px;
+		margin-bottom: 75px;
+	}
+	@include media ('>=widescreen') {
+		padding-bottom: 70px;
+		margin-bottom: 70px;
+	}
+	.section-head {
+		max-width: 100% !important;
+		padding: 20px 0;
+		margin: 0;
+		@include media ('>=desktop') {
+			padding: 30px 0;
+		}
+		@include media ('>=widescreen') {
+			padding: 40px 0;
+		}
+		
+		.main-title {
+			width: 100%;
+			margin-bottom: 10px;
+			@include media ('>=tablet') {
+				width: 400px;
+				margin-bottom: 0;
+			}
+			@include media ('>=widescreen') {
+				width: 500px;
+			}
+		}
+		
+		p {
+			max-width: 100%;
+			margin-bottom: 0;
+			@include media ('>=tablet') {
+				max-width: 600px;
+			}
+		}
+		.background-text {
+			right: 0;
+			transform: translate(0, 0);
+			@include media ('>=tablet') {
+				right: 0;
+				transform: translate(0, -50%);
+			}
+			
+		}
+	}
+	
+	.vopros-holder {
+		padding-top: 20px;
+		position: relative;
+		@include media ('>=tablet') {
+			padding-top: 40px;
+		}
+		@include media ('>=desktop') {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 60px;
+		}
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			width: 300px;
+			height: 700px;
+			background-color: #e7faf3;
+			z-index: -2;
+			transform: skewX(32deg);
+			@include media ('>=widescreen') {
+				height: 840px;
+				left: 45%;
+				width: 500px;
+			}
+		}
+	}
+	
+	.tabset {
+		padding: 0;
+	}
+	
+	.tab-content {
+		margin: 0 auto;
+		flex-grow: 1;
+		@include media ('>=desktop') {
+			margin: 0 20px 0 100px;
+		}
+	}
+	
+	.tab-item {
+		margin: 0;
+	}	
+}
+
+.simple-accordion {
+	width: 100%;
+	display: block;
+	li {
+		background-color: #fff;
+		padding: 8px;
+		margin-bottom: 10px;
+		border: 1px solid #e0e0e0;
+		border-radius: 10px;
+		box-shadow: 0 0 20px 1px rgba(0,0,0,0.1);
+		@include media ('>=phone') {
+			padding: 20px 20px 20px 30px;
+		}
+		&.active {
+			.accordion-btn {
+				border: 2px solid transparent;
+				&:after {
+					opacity: 0;
+				}
+				&:before {
+					transform: rotate(180deg) translate(50%, 50%);
+				}
+			}
+		}
+	}
+	.opener {
+		display: flex;
+		align-items: flex-start;
+		line-height: 1.7;
+		p {
+			margin: 0;
+			padding: 0 10px 0 0;
+			color: #797979;
+			font-size: 14px;
+			width: 80%;
+			@include media ('>=tablet') {
+				width: 70%;
+			}
+		}
+	}
+	.title-img {
+		font-family: $font-family-bebas;
+		font-size: 35px;
+		font-weight: bold;
+		color: #d8d8d8;
+		margin-right: 15px;
+		line-height: 1.1;
+		@include media ('>=phone') {
+			margin-right: 24px;
+		}
+		@include media ('>=tablet') {
+			font-size: 45px;
+		}
+	}
+
+	.slide {
+		padding: 20px 0 0 30px;
+		@include media ('>=phone') {
+			padding: 25px 0 0 50px;
+		}
+		@include media ('>=tablet') {
+			padding: 35px 0 0 100px;
+		}
+	}
+	.accordion-btn {
+		position: relative;
+		top: 5px;
+		width: 25px;
+		height: 25px;
+		border: 1px solid #5393dd;
+		border-radius: 50%;
+		margin-left: auto;
+		transition: all .3s ease-in-out;
+		flex-shrink: 0;
+		@include media ('>=tablet') {
+			width: 33px;
+			height: 33px;
+		}
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			width: 12px;
+			height: 1px;
+			background: #5393dd;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: all .3s ease-in-out;
+			@include media ('>=tablet') {
+				width: 17px;
+			}
+		}
+		&:after {
+			width: 1px;
+			height: 12px;
+			@include media ('>=tablet') {
+				height: 17px;
+			}
+		}
+	}
+	.text-wrap {
+		position: relative;
+		width: 100%;
+		font-size: 14px;
+		color: #000;
+		font-style: italic;
+		font-family: $font-family-sans-serif;
+		margin: 0;
+		@include media ('>=phone') {
+			width: 80%;
+		}
+
+		&:before {
+			content: '!';
+			font-style: normal;
+			position: absolute;
+			left: -23px;
+			top: -10px;
+			font-family: $font-family-bebas;
+			font-size: 35px;
+			font-weight: bold;
+			color: #5393dd;
+			@include media ('>=phone') {
+				left: -30px;
+			}
+			@include media ('>=tablet') {
+				font-size: 45px;
+			}
+		}
+	}
+}

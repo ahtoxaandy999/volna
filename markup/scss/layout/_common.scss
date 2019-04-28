@@ -330,6 +330,33 @@ a {
     }
 }
 
+.line-decore-9 {
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        height: 50px;
+        background-image: url('images/decore-line2.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: -10;
+        @include media ('>=desktop') {
+            top: 100%;
+        }
+        @include media ('>=widescreen') {
+            top: 96%;
+        }
+    }
+    &:after {
+        background-image: url('images/decore-line10.svg');
+        z-index: -1;
+    }
+}
+
 .js-tab-hidden {
     display: block !important;
     left: -9999px !important;
@@ -1130,6 +1157,7 @@ a {
     }
     .slick-prev,
     .slick-next {
+        z-index: 99;
         background: transparent;
         border: none;
         position: absolute;
