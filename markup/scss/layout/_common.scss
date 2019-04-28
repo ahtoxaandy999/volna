@@ -14,6 +14,15 @@ body {
     min-height: 1000px;
 }
 
+#content {
+    @include media ('>=desktop') {
+        margin: 55px 0 0;
+    }
+    @include media ('>=widescreen') {
+        margin: 90px 0 0;
+    }
+}
+
 h2 {
     color: $gray-900;
     @include media ('>=tablet') {
@@ -1300,27 +1309,53 @@ a {
     font-size: 0.7rem;
     color: #818181;
     text-transform: uppercase;
+    position: relative;
     @include media ('>=desktop') {
-        margin: 55px 0 30px;
+        margin: 0 0 30px;
     }
     @include media ('>=widescreen') {
-        margin: 90px 0 30px;
+        margin: 0 0 30px;
     }
-    a {
-        color: inherit;
-        &:hover {
-            color: $green;
-        }
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 84vw;
+        background-color: $gray;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, 0) skew(-25deg);
     }
-    .breadcrumb-item {
+}
+
+.breadcrumb {
+    display: flex;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    li {
         display: flex;
         align-items: center;
+        &.current-item {
+            color: $orange;
+        }
+    }
+    li + li {
+        padding-left: 0.5rem;
         &:before {
+            content: '';
             background-color: $gray-900;
             width: 3px;
             height: 3px;
             padding: 0;
             margin: 0 0.5rem 0 0;
+        }
+    }
+    a {
+        color: inherit;
+        &:hover {
+            color: $green;
         }
     }
 }
