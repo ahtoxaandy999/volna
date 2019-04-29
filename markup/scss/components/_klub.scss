@@ -38,7 +38,7 @@
 			}
 		}
 	}
-
+	
 	.about-club-wrap {
 		display: flex;
 		justify-content: center;
@@ -98,7 +98,7 @@
 			}
 		}
 	}
-
+	
 	.advantages-wrap {
 		display: flex;
 		flex-direction: column;
@@ -117,7 +117,7 @@
 			margin-bottom: 140px;
 		}
 	}
-
+	
 	.advantage {
 		width: 210px;
 		position: relative;
@@ -180,7 +180,7 @@
 			}
 		}
 	}
-
+	
 	.about-club-text {
 		width: 100%;
 		margin: 0 auto;
@@ -202,21 +202,41 @@
 	.main-title {
 		margin-bottom: 12px;
 	}
-
+	
 	.video-wrap {
 		display: block;
 		margin: 25px 0 25px;
+		position: relative;
 		@include media ('>=tablet') {
 			margin: 45px 0 55px;
 		}
 		@include media ('>=desktop') {
 			margin: 70px 0 90px;
 		}
+		&:before {
+			content: url('');
+			background: url('images/icon30.svg');
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);  
+			transform-origin: 50%;
+			transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+			background-size: cover;
+			width: 50px;
+			height: 50px;
+		}
+		&:hover {
+			&:before {
+				transform: scale(1.1) translate(-50%, -50%);
+				opacity: 0.9;
+			}
+		}
 		img {
 			width: 100%;
 		}
 	}
-
+	
 	.txt-holder {
 		max-width: 1200px;
 		position: relative;

@@ -2065,13 +2065,38 @@ body.compensate-for-scrollbar {
 
 .video-photo-section .video-wrap {
   display: block;
-  margin: 25px 0 25px; }
+  margin: 25px 0 25px;
+  position: relative; }
   @media (min-width: 768px) {
     .video-photo-section .video-wrap {
       margin: 45px 0 55px; } }
   @media (min-width: 992px) {
     .video-photo-section .video-wrap {
       margin: 70px 0 90px; } }
+  .video-photo-section .video-wrap:before {
+    content: url("");
+    background: url("images/icon30.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform-origin: 50%;
+        -ms-transform-origin: 50%;
+            transform-origin: 50%;
+    -webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    background-size: cover;
+    width: 50px;
+    height: 50px; }
+  .video-photo-section .video-wrap:hover:before {
+    -webkit-transform: scale(1.1) translate(-50%, -50%);
+        -ms-transform: scale(1.1) translate(-50%, -50%);
+            transform: scale(1.1) translate(-50%, -50%);
+    opacity: 0.9; }
   .video-photo-section .video-wrap img {
     width: 100%; }
 
