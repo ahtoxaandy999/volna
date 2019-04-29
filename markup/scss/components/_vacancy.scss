@@ -98,14 +98,18 @@
 }
 
 .vacancy-box {
-	padding: 35px 40px 60px;
+	padding: 20px;
 	border: 1px solid #e0e0e0;
 	border-radius: 15px;
 	background-color: #fff;
 	font-family: $font-family-gotham;
 	font-weight: 900;
+	@include media ('>=tablet') {
+		padding: 30px;
+	}
 	@include media ('>=desktop') {
 		margin: 0 0 30px;
+		padding: 35px 40px 40px;
 	}
 	p {
 		margin: 0;
@@ -114,7 +118,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
+		@include media ('>=tablet') {
+			margin-bottom: 25px;
+		}
 	}
 	&__name-wrap {
 		color: #5393dd;
@@ -122,20 +129,32 @@
 		line-height: 1;
 	}
 	&__trainer {
-		font-size: 38px;
+		font-size: 28px;
+		@include media ('>=tablet') {
+			font-size: 38px;
+		}
 	}
 	&__profession {
-		font-size: 24px;
+		font-size: 18px;
+		@include media ('>=tablet') {
+			font-size: 24px;
+		}
 	}
 	&__employment {
 		color: #939393;
 		font-size: 14px;
 		font-weight: 900;
 		text-transform: uppercase;
-		margin-bottom: 48px !important;
+		margin-bottom: 20px !important;
+		@include media ('>=tablet') {
+			margin-bottom: 48px !important;
+		}
 	}
 	&__desc-wrap {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
+		@include media ('>=tablet') {
+			margin-bottom: 50px;
+		}
 	}
 	&__desc-img {
 		margin-right: 25px;
@@ -158,14 +177,18 @@
 		width: 100%;
 		display: block;
 		color: #ff4800;
-		font-size: 16px;
+		font-size: 14px;
 		text-transform: uppercase;
 		text-align: center;
-		padding: 20px;
+		padding: 10px;
 		border: 1px solid #ff4800;
 		border-radius: 40px;
 		transition: all .3s ease-in-out;
 		cursor: pointer;
+		@include media ('>=tablet') {
+			padding: 15px;
+			font-size: 16px;
+        }
 		&:hover {
 			color: #fff;
 			background-color: #ff4800;

@@ -18,7 +18,7 @@
 			<div class="container">
 				<nav class="navbar navbar-expand-lg text-uppercase justify-content-lg-between">
 					<div class="visual-box d-none d-lg-flex">
-						<a href="#" data-toggle="modal" data-target="#servise-popup" class="txt">Услуги</a>
+						<a href="#servise-popup" class="txt lightbox">Услуги</a>
 					</div>
 					<div class="address-box icon-pin d-none d-lg-block">
 						<span class=" txt">ул.Астрономическая 7A</span>
@@ -155,7 +155,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -198,7 +198,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -241,7 +241,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -284,7 +284,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -327,7 +327,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -370,7 +370,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -413,7 +413,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -456,7 +456,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 							<div class="vacancy-box">
 								<div class="vacancy-box__info">
@@ -499,7 +499,7 @@
 									</div>
 								</div>
 								
-								<a href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
+								<a data-fancybox href="#vacancy-popup" class="vacancy-box__btn lightbox">Отправить резюме</a>  
 							</div>
 						</div>
 					</div>
@@ -569,26 +569,29 @@
 			</div>
 		</footer>
 	</div>
-	<div class="modal fade" id="servise-popup" tabindex="-1" role="dialog" aria-labelledby="servise popup" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
+	<div class="popups-holder">
+		<div class="servise-popup" id="servise-popup">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Modal title</h5>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="modal fade" id="vacancy-popup" tabindex="-1" role="dialog" aria-labelledby="servise-popup" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
+		<div class="vacancy-popup" id="vacancy-popup">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<h3 class="main-title">
+						<b>Прикрепите своё резюме</b>
+						и мы вам перезвоним
+					</h3>
+					<form action="#">
+						<div class="file-row">
+							<input type="file" name="resume" id="resume">
+						</div>
+						<input type="submit" value="ОТПРАВИТЬ" class="btn btn-primary">
+					</form>
 				</div>
 			</div>
 		</div>

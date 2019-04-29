@@ -1539,15 +1539,19 @@ body.compensate-for-scrollbar {
           justify-content: center; }
 
 .vacancy-box {
-  padding: 35px 40px 60px;
+  padding: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 15px;
   background-color: #fff;
   font-family: "Gotham Pro";
   font-weight: 900; }
+  @media (min-width: 768px) {
+    .vacancy-box {
+      padding: 30px; } }
   @media (min-width: 992px) {
     .vacancy-box {
-      margin: 0 0 30px; } }
+      margin: 0 0 30px;
+      padding: 35px 40px 40px; } }
   .vacancy-box p {
     margin: 0; }
   .vacancy-box__info {
@@ -1560,23 +1564,38 @@ body.compensate-for-scrollbar {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 25px; }
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .vacancy-box__info {
+        margin-bottom: 25px; } }
   .vacancy-box__name-wrap {
     color: #5393dd;
     text-transform: uppercase;
     line-height: 1; }
   .vacancy-box__trainer {
-    font-size: 38px; }
+    font-size: 28px; }
+    @media (min-width: 768px) {
+      .vacancy-box__trainer {
+        font-size: 38px; } }
   .vacancy-box__profession {
-    font-size: 24px; }
+    font-size: 18px; }
+    @media (min-width: 768px) {
+      .vacancy-box__profession {
+        font-size: 24px; } }
   .vacancy-box__employment {
     color: #939393;
     font-size: 14px;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 48px !important; }
+    margin-bottom: 20px !important; }
+    @media (min-width: 768px) {
+      .vacancy-box__employment {
+        margin-bottom: 48px !important; } }
   .vacancy-box__desc-wrap {
-    margin-bottom: 50px; }
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .vacancy-box__desc-wrap {
+        margin-bottom: 50px; } }
   .vacancy-box__desc-img {
     margin-right: 25px; }
   .vacancy-box__desc {
@@ -1598,15 +1617,19 @@ body.compensate-for-scrollbar {
     width: 100%;
     display: block;
     color: #ff4800;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ff4800;
     border-radius: 40px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     cursor: pointer; }
+    @media (min-width: 768px) {
+      .vacancy-box__btn {
+        padding: 15px;
+        font-size: 16px; } }
     .vacancy-box__btn:hover {
       color: #fff;
       background-color: #ff4800; }
@@ -4828,6 +4851,18 @@ a {
         background-color: #f6052d; }
   .directions-list a {
     color: inherit; }
+
+.vacancy-popup .modal-content {
+  background: #fff; }
+
+.vacancy-popup .file-row {
+  padding: 15px 0; }
+  @media (min-width: 992px) {
+    .vacancy-popup .file-row {
+      margin: 0 0 20px; } }
+
+.popups-holder {
+  display: none; }
 
 #footer {
   position: relative; }
