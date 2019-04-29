@@ -72,6 +72,9 @@
 			width: 100%;
 			overflow: hidden;
 			margin-bottom: 20px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
 			@include media ('>=tablet') {
 				margin-bottom: 30px;
 			}

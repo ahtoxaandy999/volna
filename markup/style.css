@@ -1275,8 +1275,8 @@ body.compensate-for-scrollbar {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?aqhx3i");
-  src: url("fonts/icomoon.eot?aqhx3i#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?aqhx3i") format("truetype"), url("fonts/icomoon.woff?aqhx3i") format("woff"), url("fonts/icomoon.svg?aqhx3i#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?cexbq6");
+  src: url("fonts/icomoon.eot?cexbq6#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?cexbq6") format("truetype"), url("fonts/icomoon.woff?cexbq6") format("woff"), url("fonts/icomoon.svg?cexbq6#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1292,6 +1292,18 @@ body.compensate-for-scrollbar {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-clock:before {
+  content: "\e908"; }
+
+.icon-facebook-circle:before {
+  content: "\e909"; }
+
+.icon-instagram-circle:before {
+  content: "\e90a"; }
+
+.icon-youtube-circle:before {
+  content: "\e90b"; }
 
 .icon-insta:before {
   content: "\e900"; }
@@ -1314,11 +1326,11 @@ body.compensate-for-scrollbar {
 .icon-arrow-right:before {
   content: "\e906"; }
 
-.icon-fb:before {
-  content: "\e907"; }
-
 .icon-youtube:before {
   content: "\ea9d"; }
+
+.icon-fb:before {
+  content: "\e907"; }
 
 @font-face {
   font-family: 'Bebas Neue';
@@ -1931,7 +1943,10 @@ body.compensate-for-scrollbar {
       min-height: 128px;
       width: 100%;
       overflow: hidden;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
       @media (min-width: 768px) {
         .club-section .about-club-wrap .about-img {
           margin-bottom: 30px; } }
@@ -2134,17 +2149,15 @@ body.compensate-for-scrollbar {
 
 .contact-section .contact-img-wrap {
   width: 100%;
-  height: 120px;
-  margin-bottom: 30px; }
-  @media (min-width: 576px) {
+  min-height: 28vw;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  @media (min-width: 1200px) {
     .contact-section .contact-img-wrap {
-      height: 200px; } }
-  @media (min-width: 768px) {
-    .contact-section .contact-img-wrap {
-      height: 280px; } }
-  @media (min-width: 992px) {
-    .contact-section .contact-img-wrap {
-      height: 360px; } }
+      min-height: 365px; } }
+
 .contact-section .contact-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2156,7 +2169,8 @@ body.compensate-for-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-size: 14px; }
   @media (min-width: 768px) {
     .contact-section .contact-info {
       margin-bottom: 75px;
@@ -2165,7 +2179,6 @@ body.compensate-for-scrollbar {
           -ms-flex-direction: row;
               flex-direction: row; } }
   .contact-section .contact-info a {
-    font-size: 14px;
     color: #000;
     font-weight: bold;
     font-family: "Gotham Pro"; }
@@ -2178,11 +2191,13 @@ body.compensate-for-scrollbar {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-bottom: 30px; }
     @media (min-width: 768px) {
       .contact-section .contact-info .info-wrap {
         padding-right: 20px;
-        margin-right: 20px; }
+        margin-right: 20px;
+        margin-bottom: 0; }
         .contact-section .contact-info .info-wrap:after {
           content: '';
           position: absolute;
@@ -2190,6 +2205,7 @@ body.compensate-for-scrollbar {
           height: 130%;
           top: 50%;
           -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
                   transform: translateY(-50%);
           right: 0;
           background: #e0e0e0; } }
@@ -2202,7 +2218,8 @@ body.compensate-for-scrollbar {
         padding-right: 80px;
         margin-right: 60px; } }
   .contact-section .contact-info .contact-img {
-    margin-right: 20px; }
+    margin-right: 20px;
+    font-size: 30px; }
   .contact-section .contact-info .contact-links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2214,15 +2231,11 @@ body.compensate-for-scrollbar {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 30px; }
-    @media (min-width: 768px) {
-      .contact-section .contact-info .contact-links {
-        margin-bottom: 0; } }
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Gotham Pro"; }
     .contact-section .contact-info .contact-links a {
-      font-size: 14px;
-      color: #000;
-      font-weight: bold;
-      font-family: "Gotham Pro"; }
+      color: #000; }
       .contact-section .contact-info .contact-links a:hover {
         color: #21e19d; }
     .contact-section .contact-info .contact-links span {
@@ -2250,16 +2263,17 @@ body.compensate-for-scrollbar {
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row; } }
-  .contact-section .contact-info .soc-wrap {
+  .contact-section .contact-info .social-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 30px;
     margin-top: 30px; }
     @media (min-width: 992px) {
-      .contact-section .contact-info .soc-wrap {
+      .contact-section .contact-info .social-list {
         margin: 0 0 0 15px; } }
     @media (min-width: 1200px) {
-      .contact-section .contact-info .soc-wrap {
+      .contact-section .contact-info .social-list {
         margin: 0 0 0 40px; } }
 
 .contacts-form-section h2 {
@@ -2270,6 +2284,7 @@ body.compensate-for-scrollbar {
   @media (min-width: 992px) {
     .contacts-form-section h2 {
       margin-bottom: 100px; } }
+
 .contacts-form-section .banner-subscribe-form .contacts-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2295,6 +2310,7 @@ body.compensate-for-scrollbar {
   @media (min-width: 992px) {
     .contacts-form-section .banner-subscribe-form .contacts-form {
       padding-bottom: 100px; } }
+
 .contacts-form-section .banner-subscribe-form .textarea-wrap,
 .contacts-form-section .banner-subscribe-form .input-wrap {
   width: 280px;
@@ -2317,14 +2333,17 @@ body.compensate-for-scrollbar {
     .contacts-form-section .banner-subscribe-form .textarea-wrap .input-col:last-child,
     .contacts-form-section .banner-subscribe-form .input-wrap .input-col:last-child {
       margin-bottom: 0; }
+
 .contacts-form-section .banner-subscribe-form .input-wrap {
   margin: 0 0 40px; }
   @media (min-width: 768px) {
     .contacts-form-section .banner-subscribe-form .input-wrap {
       margin: 0 25px; } }
+
 @media (min-width: 768px) {
   .contacts-form-section .banner-subscribe-form .textarea-wrap {
     margin: 0 25px; } }
+
 .contacts-form-section .banner-subscribe-form textarea {
   color: #fff;
   width: 100%;
@@ -2342,8 +2361,6 @@ body.compensate-for-scrollbar {
   .contacts-form-section .banner-subscribe-form textarea::-webkit-input-placeholder {
     color: #fff; }
   .contacts-form-section .banner-subscribe-form textarea:-ms-input-placeholder {
-    color: #fff; }
-  .contacts-form-section .banner-subscribe-form textarea::-ms-input-placeholder {
     color: #fff; }
   .contacts-form-section .banner-subscribe-form textarea::placeholder {
     color: #fff; }
@@ -2726,8 +2743,7 @@ body {
 
 #wrapper {
   position: relative;
-  overflow: hidden;
-  min-height: 1000px; }
+  overflow: hidden; }
 
 @media (min-width: 992px) {
   #content {
@@ -3139,7 +3155,7 @@ a {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
               transform: scale(1.2);
-      max-width: auto; } }
+      max-width: none; } }
   @media (min-width: 1200px) {
     .intro-carousel .carousel .img-holder img {
       -webkit-transform: scale(1.4);
@@ -3833,7 +3849,7 @@ a {
       display: block;
       padding-bottom: 5px;
       width: 100%;
-      max-width: 22 0px;
+      max-width: 220px;
       margin: 0 auto; }
       @media (min-width: 576px) {
         .cards-carousel .slick-slide img {
