@@ -43,36 +43,44 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin: 0 -8px 50px;
+		padding: 0;
+		margin: 0 -10px;
 		@include media ('>=tablet') {
-			margin: 0 -8px 70px;
+			margin: 0 -10px;
 		}
 		@include media ('>=desktop') {
-			margin: 0 -8px 100px;
+			margin: 0 -10px;
 		}
-	}
-
-	.about-link {
-		width: 205px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 0 8px 20px;
-		@include media ('>=tablet') {
-			margin: 0 8px 30px;
+		li {
+			width: 183px;
+			list-style: none;
+			margin: 0 10px 20px;
+			@include media ('>=tablet') {
+				margin: 0 10px 30px;
+			}
 		}
-		img {
-			width: 100%;
+		.about-img {
+			width: 188px;
+			min-height: 128px;
+			overflow: hidden;
 			margin-bottom: 20px;
 			@include media ('>=tablet') {
 				margin-bottom: 30px;
 			}
+			img {
+				width: 100%;
+			}
 		}
-		span {
-			color: #4e6070;
-			font-size: 22px;
-			font-family: $font-family-bebas;
-			text-transform: uppercase;
+		.about-link {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			span {
+				color: #4e6070;
+				font-size: 22px;
+				font-family: $font-family-bebas;
+				text-transform: uppercase;
+			}
 		}
 	}
 
@@ -80,14 +88,17 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		padding-top: 50px;
 		@include media ('>=phone') {
 			flex-direction: row;
 			justify-content: center;
 		}
 		@include media ('>=tablet') {
+			padding-top: 70px;
 			margin-bottom: 100px;
 		}
 		@include media ('>=desktop') {
+			padding-top: 100px;
 			margin-bottom: 140px;
 		}
 	}
@@ -156,10 +167,7 @@
 	}
 
 	.about-club-text {
-		color: #696969;
-		font-size: 14px;
 		width: 100%;
-		text-align: center;
 		margin: 0 auto;
 		@include media ('>=tablet') {
 			width: 90%;
@@ -167,36 +175,27 @@
 		@include media ('>=desktop') {
 			width: 75%;
 		}
+		p {
+			color: #696969;
+			font-size: 14px;
+			text-align: center;
+		}
 	}
 }
 
 .video-photo-section {
 	.main-title {
 		margin-bottom: 12px;
-		font-weight: bold;
-	}
-	.trainer-title {
-		color: $black;
-		font-size: 30px;
-		font-family: $font-family-bebas;
-		text-transform: uppercase;
-		margin-bottom: 25px;
-		@include media ('>=tablet') {
-			margin-bottom: 45px;
-		}
-		@include media ('>=desktop') {
-			margin-bottom: 70px;
-		}
 	}
 
 	.video-wrap {
 		display: block;
-		margin-bottom: 25px;
+		margin: 25px 0 25px;
 		@include media ('>=tablet') {
-			margin-bottom: 55px;
+			margin: 45px 0 55px;
 		}
 		@include media ('>=desktop') {
-			margin-bottom: 90px;
+			margin: 70px 0 90px;
 		}
 		img {
 			width: 100%;
