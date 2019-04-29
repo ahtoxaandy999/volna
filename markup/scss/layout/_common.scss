@@ -1367,13 +1367,19 @@ a {
         content: '';
         display: inline-block;
         height: 100%;
-        width: 84vw;
+        width: 160vw;
         background-color: $gray;
         position: absolute;
         z-index: -1;
         top: 0;
         left: 0;
         transform: translate(-50%, 0) skew(-25deg);
+        @include media ('>=phone') {
+            width: 110vw;
+        }
+        @include media ('>=tablet') {
+            width: 84vw;
+        }
     }
 }
 
@@ -2339,11 +2345,11 @@ a {
         &.is-video {
             position: relative;
             &:before {
-             content: url('images/icon30.svg');
-             position: absolute;
-             top: 50%;
-             left: 50%;
-             transform: translate(-50%, -50%);   
+                content: url('images/icon30.svg');
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);   
             }
         }
     }
@@ -2428,12 +2434,11 @@ a {
 
 .blog-control-panel {
     padding: 20px 0;
-
+    
     @include media ('>=tablet') {
         padding: 40px 0;
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
     @include media ('>=desktop') {
         padding: 40px 0 70px;
@@ -2467,7 +2472,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     font-family: $font-family-bebas;
-    @include media ('>=tablet') {
+    @include media ('>=phone') {
         font-size: 16px;
         display: flex;
     }
@@ -2476,7 +2481,7 @@ a {
     }
     li {
         margin: 0 0 10px;
-        @include media ('>=tablet') {
+        @include media ('>=phone') {
             margin: 0 25px 0 0;
         }
         @include media ('>=desktop') {
@@ -2524,6 +2529,29 @@ a {
     }
 }
 
+.articles-nav {
+    @include media ('>=phone') {
+        display: flex;
+        margin: 0 0 15px;
+    }
+    li {
+        margin: 0 0 10px;
+        @include media ('>=phone') {
+            margin: 0 25px 0 0;
+        }
+        @include media ('>=desktop') {
+            margin: 0 35px 0 0;
+        }
+    }
+    a {
+        color: #818181;
+        font-family: $font-family-gotham;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 11px;
+    }
+}
+
 .vacancy-popup {
     .modal-content {
         background: $white;
@@ -2538,4 +2566,80 @@ a {
 
 .popups-holder {
     display: none;
+}
+
+.articles-holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.article-lg {
+    position: relative;
+    @include media ('>=tablet') {
+        display: flex;
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 180px;
+        height: 100%;
+        background-color: $blue;
+        z-index: -2;
+        transform: skewX(-35deg) translateX(-120%);
+        @include media ('>=phone') {
+            transform: skewX(-35deg) translateX(-150%);
+        }
+        @include media ('>=tablet') {
+            top: -10px;
+            transform: skewX(-35deg) translateX(-50%);
+            height: 102%;
+        }
+    }
+    .img-holder {
+        min-height: 60vw;
+        width: 100%;
+        background-size: cover;
+        margin: 0 0 15px;
+        @include media ('>=tablet') {
+            width: 50%;
+            min-height: auto;
+        }
+    }
+    .txt-holder {
+        @include media ('>=tablet') {
+            width: 50%;
+            padding: 0 0 0 30px;
+        }
+        .article-content {
+            background-color: $white;
+            padding: 20px 30px;
+            margin: 0 0 0 -60px;
+            box-shadow: 0 0 20px 8px rgba(0,0,0,0.1);
+            p {
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    h5 {
+        font-family: $font-family-bebas;
+        font-weight: 700;
+        margin: 0;
+    }
+    .category-txt {
+        font-family: $font-family-bebas;
+        font-weight: 700;
+        font-size: 18px;
+        color: $white;
+    }
+    .date {
+        font-family: $font-family-bebas;
+        font-weight: 700;
+        font-size: 18px;
+    }
 }

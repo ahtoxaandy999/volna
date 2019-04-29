@@ -3739,7 +3739,7 @@ a {
     content: '';
     display: inline-block;
     height: 100%;
-    width: 84vw;
+    width: 160vw;
     background-color: #fafafa;
     position: absolute;
     z-index: -1;
@@ -3748,6 +3748,12 @@ a {
     -webkit-transform: translate(-50%, 0) skew(-25deg);
         -ms-transform: translate(-50%, 0) skew(-25deg);
             transform: translate(-50%, 0) skew(-25deg); }
+    @media (min-width: 576px) {
+      .breadcrumb-wrapper:before {
+        width: 110vw; } }
+    @media (min-width: 768px) {
+      .breadcrumb-wrapper:before {
+        width: 84vw; } }
 
 .breadcrumb {
   display: -webkit-box;
@@ -4770,10 +4776,7 @@ a {
       display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; } }
+              justify-content: space-between; } }
   @media (min-width: 992px) {
     .blog-control-panel {
       padding: 40px 0 70px; } }
@@ -4805,7 +4808,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Bebas Neue"; }
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     .directions-list {
       font-size: 16px;
       display: -webkit-box;
@@ -4816,7 +4819,7 @@ a {
       font-size: 18px; } }
   .directions-list li {
     margin: 0 0 10px; }
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       .directions-list li {
         margin: 0 25px 0 0; } }
     @media (min-width: 992px) {
@@ -4852,6 +4855,29 @@ a {
   .directions-list a {
     color: inherit; }
 
+@media (min-width: 576px) {
+  .articles-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 15px; } }
+
+.articles-nav li {
+  margin: 0 0 10px; }
+  @media (min-width: 576px) {
+    .articles-nav li {
+      margin: 0 25px 0 0; } }
+  @media (min-width: 992px) {
+    .articles-nav li {
+      margin: 0 35px 0 0; } }
+
+.articles-nav a {
+  color: #818181;
+  font-family: "Gotham Pro";
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 11px; }
+
 .vacancy-popup .modal-content {
   background: #fff; }
 
@@ -4863,6 +4889,82 @@ a {
 
 .popups-holder {
   display: none; }
+
+.articles-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.article-lg {
+  position: relative; }
+  @media (min-width: 768px) {
+    .article-lg {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .article-lg:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 180px;
+    height: 100%;
+    background-color: #5393dd;
+    z-index: -2;
+    -webkit-transform: skewX(-35deg) translateX(-120%);
+        -ms-transform: skewX(-35deg) translateX(-120%);
+            transform: skewX(-35deg) translateX(-120%); }
+    @media (min-width: 576px) {
+      .article-lg:before {
+        -webkit-transform: skewX(-35deg) translateX(-150%);
+            -ms-transform: skewX(-35deg) translateX(-150%);
+                transform: skewX(-35deg) translateX(-150%); } }
+    @media (min-width: 768px) {
+      .article-lg:before {
+        top: -10px;
+        -webkit-transform: skewX(-35deg) translateX(-50%);
+            -ms-transform: skewX(-35deg) translateX(-50%);
+                transform: skewX(-35deg) translateX(-50%);
+        height: 102%; } }
+  .article-lg .img-holder {
+    min-height: 60vw;
+    width: 100%;
+    background-size: cover;
+    margin: 0 0 15px; }
+    @media (min-width: 768px) {
+      .article-lg .img-holder {
+        width: 50%;
+        min-height: auto; } }
+  @media (min-width: 768px) {
+    .article-lg .txt-holder {
+      width: 50%;
+      padding: 0 0 0 30px; } }
+  .article-lg .txt-holder .article-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    margin: 0 0 0 -60px;
+    box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.1); }
+    .article-lg .txt-holder .article-content p:last-child {
+      margin: 0; }
+  .article-lg h5 {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    margin: 0; }
+  .article-lg .category-txt {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff; }
+  .article-lg .date {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    font-size: 18px; }
 
 #footer {
   position: relative; }
