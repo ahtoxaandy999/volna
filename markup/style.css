@@ -1691,6 +1691,14 @@ body.compensate-for-scrollbar {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      .club-section .about-club-wrap .about-link:hover .about-img {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        opacity: .8; }
+      .club-section .about-club-wrap .about-link:hover span {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        color: #21e19d; }
       .club-section .about-club-wrap .about-link span {
         color: #4e6070;
         font-size: 22px;
