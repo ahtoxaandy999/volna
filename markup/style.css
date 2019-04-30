@@ -2168,7 +2168,9 @@ body.compensate-for-scrollbar {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  font-size: 14px; }
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Gotham Pro"; }
   @media (min-width: 768px) {
     .contact-section .contact-info {
       margin-bottom: 75px;
@@ -2178,10 +2180,7 @@ body.compensate-for-scrollbar {
               flex-direction: row; } }
   .contact-section .contact-info a {
     display: block;
-    font-size: 14px;
-    color: #000;
-    font-weight: bold;
-    font-family: "Gotham Pro"; }
+    color: #000; }
     .contact-section .contact-info a:hover {
       color: #21e19d; }
   .contact-section .contact-info .info-wrap {
@@ -2191,7 +2190,8 @@ body.compensate-for-scrollbar {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-bottom: 30px; }
     @media (min-width: 768px) {
       .contact-section .contact-info .info-wrap {
         padding-right: 20px;
@@ -2275,6 +2275,7 @@ body.compensate-for-scrollbar {
     @media (min-width: 1200px) {
       .contact-section .contact-info .social-list {
         margin: 0 0 0 40px; } }
+
 .contacts-form-section h2 {
   margin-bottom: 30px; }
   @media (min-width: 768px) {
