@@ -82,7 +82,6 @@
 	
 	.tab-content {
 		margin: 0 auto;
-		flex-grow: 1;
 		@include media ('>=desktop') {
 			margin: 0 20px 0 100px;
 		}
@@ -167,6 +166,7 @@
 		margin-left: auto;
 		transition: all .3s ease-in-out;
 		flex-shrink: 0;
+		display: inline-block;
 		@include media ('>=tablet') {
 			width: 33px;
 			height: 33px;

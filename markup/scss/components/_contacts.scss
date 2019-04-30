@@ -23,6 +23,7 @@
 			flex-direction: row;
 		}
 		a {
+			display: block;
 			font-size: 14px;
 			color: $black;
 			font-weight: bold;
@@ -39,6 +40,7 @@
 				padding-right: 20px;
 				margin-right: 20px;
 				&:after {
+					display: inline-block;
 					content: '';
 					position: absolute;
 					width: 1px;
@@ -81,6 +83,7 @@
 			span {
 				font-size: 14px;
 				color: $black;
+				display: block;
 				font-weight: bold;
 				font-family: $font-family-gotham;
 			}

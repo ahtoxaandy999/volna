@@ -14,7 +14,7 @@ jQuery(function() {
 		var backgroundTextItem = document.createElement('span');
 		backgroundTextItem.className = 'background-text';
 		backgroundTextItem.innerText = backgroundText;
-		titleItem.append(backgroundTextItem);
+		titleItem.appendChild(backgroundTextItem);
 	}
 }
 
