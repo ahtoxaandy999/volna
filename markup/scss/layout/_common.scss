@@ -2333,6 +2333,28 @@ a {
         margin: 0 0 20px;
         width: 100%;
         text-align: center;
+        &.is-video {
+            position: relative;
+            &:before {
+                content: url('');
+                background: url('images/icon30.svg');
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);  
+                transform-origin: 50%;
+                transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+                background-size: cover;
+                width: 40px;
+                height: 40px;
+            }
+            &:hover {
+                &:before {
+                    transform: scale(1.1) translate(-50%, -50%);
+                    opacity: 0.9;
+                }
+            }
+        }
         @include media ('>=phone') {
             width: 50%;
         }
@@ -2386,7 +2408,7 @@ a {
             }
         }
     }
-
+    
     input[type='submit'] {
         font-family: $font-family-gotham;
         min-width: rem-calc(120);
@@ -2423,7 +2445,7 @@ a {
 
 .blog-control-panel {
     padding: 20px 0;
-
+    
     @include media ('>=tablet') {
         padding: 40px 0;
         display: flex;

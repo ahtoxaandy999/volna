@@ -5075,6 +5075,32 @@ a {
     margin: 0 0 20px;
     width: 100%;
     text-align: center; }
+    .gallery-holder .gallery-item.is-video {
+      position: relative; }
+      .gallery-holder .gallery-item.is-video:before {
+        content: url("");
+        background: url("images/icon30.svg");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        -webkit-transform-origin: 50%;
+            -ms-transform-origin: 50%;
+                transform-origin: 50%;
+        -webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+        transition: transform .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        background-size: cover;
+        width: 40px;
+        height: 40px; }
+      .gallery-holder .gallery-item.is-video:hover:before {
+        -webkit-transform: scale(1.1) translate(-50%, -50%);
+            -ms-transform: scale(1.1) translate(-50%, -50%);
+                transform: scale(1.1) translate(-50%, -50%);
+        opacity: 0.9; }
     @media (min-width: 576px) {
       .gallery-holder .gallery-item {
         width: 50%; } }
