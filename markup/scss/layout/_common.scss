@@ -1257,6 +1257,52 @@ a {
         }
     }
 }
+.slick-prev,
+.slick-next {
+    z-index: 99;
+    background: transparent;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translate(-50%, 0);
+    font-size: 1.2rem;
+    @include media ('>=desktop') {
+        font-size: 1.5rem;
+    }
+    @include media ('>=tablet') {
+        left: 45%;
+    }
+    @include media ('>=widescreen') {
+        left: 48%;
+    }
+    &:before {
+        font-family: 'icomoon';
+        content: "\e904";
+        color: $white;
+        transition: $transition-base;
+    }
+    &:hover {
+        &:before {
+            color: $blue;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.slick-next {
+    left: 60%;
+    @include media ('>=tablet') {
+        left: 55%;
+    }
+    @include media ('>=widescreen') {
+        left: 52%;
+    }
+    &:before {
+        content: "\e906";
+    }
+}
 
 .reviews-section {
     position: relative;
@@ -1366,19 +1412,13 @@ a {
         content: '';
         display: inline-block;
         height: 100%;
-        width: 160vw;
+        width: 84vw;
         background-color: $gray;
         position: absolute;
         z-index: -1;
         top: 0;
         left: 0;
         transform: translate(-50%, 0) skew(-25deg);
-        @include media ('>=phone') {
-            width: 110vw;
-        }
-        @include media ('>=tablet') {
-            width: 84vw;
-        }
     }
 }
 
@@ -2252,69 +2292,25 @@ a {
         padding: 0 0 80px;
         margin: 0 0 55px;
     }
-    .slick-slide {
+    .owl-stage {
+        @include media ('>=600px') {
+            margin: 0 -10px;
+        }  
+    }
+    .owl-item {
         @include media ('>=600px') {
             padding: 0 10px;
         }
     }
     .img-holder {
         margin: 0 0 10px;
-        img {
-            width: 100%;
-        }
     }
-    .slick-track {
-        padding: 0 0 45px;
-        @include media ('>=600px') {
-            padding: 30px 0 55px;
-            margin: 0 -10px;
-        }
-    }
-    .slick-prev,
-    .slick-next {
-        z-index: 99;
-        background: transparent;
-        border: none;
-        position: absolute;
-        bottom: 40px;
-        left: 40%;
-        transform: translate(-50%, 0);
-        font-size: 1.2rem;
-        @include media ('>=tablet') {
-            left: 45%;
-            bottom: 60px;
-        }
+    .owl-nav .owl-prev:before,
+    .owl-nav .owl-next:before {
+        color: #aaaaaa;
+        font-size: 1.4rem;
         @include media ('>=desktop') {
-            font-size: 1.5rem;
-        }
-        @include media ('>=widescreen') {
-            left: 48%;
-        }
-        &:before {
-            font-family: 'icomoon';
-            content: "\e904";
-            color: #aaaaaa;
-            transition: $transition-base;
-        }
-        &:hover {
-            &:before {
-                color: $blue;
-            }
-        }
-        &:focus {
-            outline: none;
-        }
-    }
-    .slick-next {
-        left: 60%;
-        @include media ('>=tablet') {
-            left: 55%;
-        }
-        @include media ('>=widescreen') {
-            left: 52%;
-        }
-        &:before {
-            content: "\e906";
+            font-size: 1.6rem;
         }
     }
 }
@@ -2346,26 +2342,13 @@ a {
         @include media ('>=desktop') {
             width: 25%;
         }
-        &.is-video {
-            position: relative;
-            &:before {
-                content: url('images/icon30.svg');
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);   
-            }
-        }
     }
 }
 
 .banner-subscribe-form {
     color: #acacac;
     font-size: 14px;
-    .contacts-form {
-        display: flex;
-        justify-content: center;
-    }
+    
     .input-row {
         display: flex;
         flex-wrap: wrap;
@@ -2403,7 +2386,7 @@ a {
             }
         }
     }
-    
+
     input[type='submit'] {
         font-family: $font-family-gotham;
         min-width: rem-calc(120);
@@ -2440,11 +2423,12 @@ a {
 
 .blog-control-panel {
     padding: 20px 0;
-    
+
     @include media ('>=tablet') {
         padding: 40px 0;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     @include media ('>=desktop') {
         padding: 40px 0 70px;
@@ -2481,7 +2465,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     font-family: $font-family-bebas;
-    @include media ('>=phone') {
+    @include media ('>=tablet') {
         font-size: 16px;
         display: flex;
     }
@@ -2490,7 +2474,7 @@ a {
     }
     li {
         margin: 0 0 10px;
-        @include media ('>=phone') {
+        @include media ('>=tablet') {
             margin: 0 25px 0 0;
         }
         @include media ('>=desktop') {
