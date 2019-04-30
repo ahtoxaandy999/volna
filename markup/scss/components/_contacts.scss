@@ -1,16 +1,13 @@
 .contact-section {
 	.contact-img-wrap {
 		width: 100%;
-		height: 120px;
+		min-height: 28vw;
 		margin-bottom: 30px;
-		@include media ('>=phone') {
-			height: 200px;
-		}
-		@include media ('>=tablet') {
-			height: 280px;
-		}
-		@include media ('>=desktop') {
-			height: 360px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		@include media ('>=widescreen') {
+			min-height: 365px;
 		}
 	}
 	.contact-info {
@@ -18,11 +15,13 @@
 		flex-direction: column;
 		align-items: center;
 		margin-bottom: 30px;
+		font-size: 14px;
 		@include media ('>=tablet') {
 			margin-bottom: 75px;
 			flex-direction: row;
 		}
 		a {
+  display: block;
 			font-size: 14px;
 			color: $black;
 			font-weight: bold;
@@ -35,10 +34,12 @@
 			position: relative;
 			display: flex;
 			align-items: center;
+			margin-bottom: 30px;
 			@include media ('>=tablet') {
 				padding-right: 20px;
 				margin-right: 20px;
 				&:after {
+					display: inline-block;
 					content: '';
 					position: absolute;
 					width: 1px;
@@ -60,20 +61,17 @@
 		}
 		.contact-img {
 			margin-right: 20px;
+			font-size: 30px;
 		}
 		.contact-links {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			margin-bottom: 30px;
-			@include media ('>=tablet') {
-				margin-bottom: 0;
-			}
+			font-size: 14px;
+			font-weight: bold;
+			font-family: $font-family-gotham;
 			a {
-				font-size: 14px;
 				color: $black;
-				font-weight: bold;
-				font-family: $font-family-gotham;
 				&:hover {
 					color: #21e19d;
 				}
@@ -81,6 +79,7 @@
 			span {
 				font-size: 14px;
 				color: $black;
+				display: block;
 				font-weight: bold;
 				font-family: $font-family-gotham;
 			}
@@ -96,8 +95,9 @@
 				flex-direction: row;
 			}
 		}
-		.soc-wrap {
+		.social-list {
 			display: flex;
+			font-size: 30px;
 			margin-top: 30px;
 			@include media ('>=desktop') {
 				margin: 0 0 0 15px;
