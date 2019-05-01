@@ -16,16 +16,15 @@
 		align-items: center;
 		margin-bottom: 30px;
 		font-size: 14px;
+		font-weight: bold;
+		font-family: $font-family-gotham;
 		@include media ('>=tablet') {
 			margin-bottom: 75px;
 			flex-direction: row;
 		}
 		a {
-  display: block;
-			font-size: 14px;
+			display: block;
 			color: $black;
-			font-weight: bold;
-			font-family: $font-family-gotham;
 			&:hover {
 				color: #21e19d;
 			}
