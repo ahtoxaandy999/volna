@@ -111,6 +111,26 @@ function initSlickCarousel() {
 		centerPadding: '0px',
 		focusOnSelect: true
 	});
+
+
+	jQuery('.functional-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.functional-nav'
+	});
+	jQuery('.functional-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.functional-slider',
+		dots: false,
+		centerMode: true,
+		prevArrow: '<button class="slick-prev"></button>',
+		nextArrow: '<button class="slick-next"></button>',
+		centerPadding: '0px',
+		focusOnSelect: true
+	});
 }
 
 // accordion init
