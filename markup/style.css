@@ -2345,16 +2345,21 @@ body.compensate-for-scrollbar {
         left: 55%; }
   @media (min-width: 992px) {
     .func-trening-section .functional-info {
-      width: 50%;
+      width: 32%;
       padding-top: 45px; } }
+  .func-trening-section .main-title {
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      .func-trening-section .main-title {
+        margin-bottom: 40px; } }
   .func-trening-section .vacancy-box {
-    margin: 20px 0 20px;
+    margin: 0 0 20px;
     padding: 0;
     border: none;
     background-color: transparent; }
     @media (min-width: 992px) {
       .func-trening-section .vacancy-box {
-        margin: 40px 0 50px; } }
+        margin: 0 0 50px; } }
     .func-trening-section .vacancy-box img {
       max-width: 27px;
       height: 27px; }
