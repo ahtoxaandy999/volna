@@ -1,6 +1,1 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="26px" height="25px">
-<text kerning="auto" font-family="Bebas Neue" fill="rgb(13, 27, 39)" transform="matrix( 2.68324215105688, 0, 0, 2.63679507350741,0.44242673305382, 1.32658087601237)" font-weight="bold" font-size="12.549px">&#51;&#43;</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25"><text font-family="Bebas Neue" fill="#0D1B27" transform="matrix(2.68324 0 0 2.6368 .442 1.327)" font-weight="bold" font-size="12.549">3+</text></svg>
