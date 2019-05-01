@@ -100,18 +100,25 @@
 
 	.functional-info {
 		@include media ('>=desktop') {
-			width: 50%;
+			width: 32%;
 			padding-top: 45px;
 		}
 	}
 
+	.main-title {
+		margin-bottom: 20px;
+		@include media ('>=desktop') {
+			margin-bottom: 40px;
+		}
+	}
+
 	.vacancy-box {
-		margin: 20px 0 20px;
+		margin: 0 0 20px;
 		padding: 0;
 		border: none;
 		background-color: transparent;
 		@include media ('>=desktop') {
-			margin: 40px 0 50px;
+			margin: 0 0 50px;
 		}
 		img {
 			max-width: 27px;
