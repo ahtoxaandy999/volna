@@ -18,7 +18,7 @@
 			max-width: 100%;
 		}
 	}
-	.tabset {
+	.category-tabset {
 		display: flex;
 		flex-direction: column;
 		padding: 0;
@@ -47,6 +47,9 @@
 			background-size: cover;
 			background-position: center;
 			@include media ('>=widescreen') {
+				height: 600px;
+			}
+			@include media ('>=1400px') {
 				height: 800px;
 			}
 		}

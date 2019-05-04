@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?cexbq6');
-  src:  url('fonts/icomoon.eot?cexbq6#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?cexbq6') format('truetype'),
-    url('fonts/icomoon.woff?cexbq6') format('woff'),
-    url('fonts/icomoon.svg?cexbq6#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?hdpdfy');
+  src:  url('fonts/icomoon.eot?hdpdfy#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hdpdfy') format('truetype'),
+    url('fonts/icomoon.woff?hdpdfy') format('woff'),
+    url('fonts/icomoon.svg?hdpdfy#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-blanks:before {
+  content: "\e90c";
+}
+.icon-discount:before {
+  content: "\e90d";
+}
+.icon-fitness:before {
+  content: "\e90e";
+}
+.icon-gym:before {
+  content: "\e90f";
+}
+.icon-infinity:before {
+  content: "\e910";
+}
+.icon-man:before {
+  content: "\e911";
+}
+.icon-mans:before {
+  content: "\e912";
+}
+.icon-massage:before {
+  content: "\e913";
+}
+.icon-medecine:before {
+  content: "\e914";
+}
+.icon-snow:before {
+  content: "\e915";
+}
+.icon-sun:before {
+  content: "\e916";
+}
+.icon-swimming:before {
+  content: "\e917";
+}
+.icon-towel:before {
+  content: "\e918";
+}
+.icon-trainer:before {
+  content: "\e919";
+}
+.icon-vip:before {
+  content: "\e91a";
+}
 .icon-clock:before {
   content: "\e908";
 }
