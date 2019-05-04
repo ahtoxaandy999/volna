@@ -53,6 +53,7 @@
         transform: translate(-50%, 0);
 		font-size: 1.2rem;
 		z-index: 99;
+		cursor: pointer;
         @include media ('>=desktop') {
             font-size: 1.5rem;
         }

@@ -191,6 +191,7 @@
 			height: 12px;
 			@include media ('>=tablet') {
 				height: 17px;
+				width: 1px;
 			}
 		}
 	}
