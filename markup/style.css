@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /*
-Theme Name: Base
+Theme Name: Volna
 Author: Anonymous
 Author URI:
 Version: 1
 Description: Base theme for Wordpress
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: base
+Text Domain: volna
 Tags: one-column, two-columns
 Theme URI:
 */
@@ -655,10 +655,13 @@ body.compensate-for-scrollbar {
   max-width: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 44px;
+  padding: 20px;
   position: relative;
   text-align: left;
   vertical-align: middle; }
+  @media (min-width: 1200px) {
+    .fancybox-content {
+      padding: 40px; } }
 
 .fancybox-slide--image .fancybox-content {
   -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.14, 1);
@@ -1280,7 +1283,7 @@ body.compensate-for-scrollbar {
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -3185,6 +3188,8 @@ body.compensate-for-scrollbar {
     background: #fff;
     border: 1px solid #ced4da;
     border-radius: 5px; }
+    .phone-numbers .numbers-list a:hover {
+      color: #1fe39c; }
 
 .search-holder {
   width: 100%;
@@ -4360,16 +4365,16 @@ a {
     .cards-carousel .slick-slide.slick-center {
       z-index: 10; }
       @media (min-width: 600px) {
-        .cards-carousel .slick-slide.slick-center img {
+        .cards-carousel .slick-slide.slick-center .slick-slide {
           -webkit-transform: scale(1.2);
               -ms-transform: scale(1.2);
                   transform: scale(1.2);
           padding-bottom: 20px; } }
       @media (min-width: 768px) {
-        .cards-carousel .slick-slide.slick-center img {
+        .cards-carousel .slick-slide.slick-center .slick-slide {
           padding-bottom: 30px; } }
       @media (min-width: 1200px) {
-        .cards-carousel .slick-slide.slick-center img {
+        .cards-carousel .slick-slide.slick-center .slick-slide {
           padding-bottom: 40px; } }
       .cards-carousel .slick-slide.slick-center .btn {
         visibility: visible;
@@ -5560,6 +5565,12 @@ a {
     @media (min-width: 768px) {
       .banner-subscribe-form .mailpoet_form .mailpoet_paragraph {
         margin: 0 0 50px; } }
+    .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input::-webkit-input-placeholder {
+      color: #fff; }
+    .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input:-ms-input-placeholder {
+      color: #fff; }
+    .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input::placeholder {
+      color: #fff; }
   .banner-subscribe-form input {
     color: #fff;
     width: 100%;

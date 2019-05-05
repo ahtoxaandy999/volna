@@ -172,10 +172,13 @@ body.compensate-for-scrollbar {
   max-width: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 44px;
+  padding: 20px;
   position: relative;
   text-align: left;
   vertical-align: middle;
+  @include media ('>=widescreen') {
+    padding: 40px;
+}
 }
 
 .fancybox-slide--image .fancybox-content {
