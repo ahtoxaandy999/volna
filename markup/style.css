@@ -5554,25 +5554,25 @@ a {
     @media (min-width: 768px) {
       .banner-subscribe-form .mailpoet_form .mailpoet_paragraph {
         margin: 0 0 50px; } }
-    .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email] {
-      color: #fff;
-      width: 100%;
-      font-family: "Bebas Neue";
-      background-color: transparent;
-      border: none;
-      border-bottom: 2px solid #fff;
-      font-size: 1.1rem;
-      line-height: 1;
-      width: 100%;
-      margin: 0 0 0.625rem; }
-      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]::-webkit-input-placeholder {
-        color: #fff; }
-      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]:-ms-input-placeholder {
-        color: #fff; }
-      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]::placeholder {
-        color: #fff; }
-      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]:focus {
-        outline: none; }
+  .banner-subscribe-form input {
+    color: #fff;
+    width: 100%;
+    font-family: "Bebas Neue";
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+    width: 100%;
+    margin: 0 0 0.625rem; }
+    .banner-subscribe-form input::-webkit-input-placeholder {
+      color: #fff; }
+    .banner-subscribe-form input:-ms-input-placeholder {
+      color: #fff; }
+    .banner-subscribe-form input::placeholder {
+      color: #fff; }
+    .banner-subscribe-form input:focus {
+      outline: none; }
   .banner-subscribe-form input[type='submit'] {
     font-family: "Gotham Pro";
     min-width: 7.5rem;
@@ -5583,6 +5583,7 @@ a {
     line-height: 1.5;
     border-radius: 1.3rem;
     cursor: pointer;
+    width: auto;
     -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out; }
     @media (min-width: 768px) {
