@@ -2353,6 +2353,9 @@ a {
                 }
             }
         }
+        &:hover {
+            opacity: 0.8;
+        }
         @include media ('>=phone') {
             width: 50%;
         }
@@ -2385,8 +2388,23 @@ a {
             @include media ('>=widescreen') {
                 margin: 0 auto 60px;
             }
+            &:last-child {
+                input {
+                    @include media ('>=tablet') {
+                        margin: 0;
+                    }
+                }
+            }
         }
-        input {
+    }
+
+    .mailpoet_form .mailpoet_paragraph {
+        width: 100%;
+        margin: 0 0 30px;
+        @include media ('>=tablet') {
+            margin: 0 0 50px;
+        }
+        input[type=email] {
             color: $white;
             width: 100%;
             font-family: $font-family-bebas;
@@ -2706,6 +2724,15 @@ a {
         @include media ('>=widescreen') {
             margin: 0 0 15px;
         }
+        a {
+            color: $gray-900;
+            &:before {
+                display: none;
+            }
+            &:hover {
+                color: $green;
+            }
+        }
     }
     .category-txt {
         font-family: $font-family-bebas;
@@ -2783,6 +2810,15 @@ a {
         font-family: $font-family-bebas;
         font-weight: 700;
         text-transform: uppercase;
+        a {
+            color: $gray-900;
+            &:before {
+                display: none;
+            }
+            &:hover {
+                color: $green;
+            }
+        }
     }
     a {
         &:before {
@@ -2805,13 +2841,16 @@ a {
         color: #ececec;
         font-family: $font-family-bebas;
         font-weight: 700;
-        font-size: 25px;
+        font-size: 22px;
         text-transform: uppercase;
         line-height: 1;
         @include media ('>=phone') {
-            font-size: 30px;
+            font-size: 25px;
             right: 15px;
             bottom: 10px;
+        }
+        a {
+            margin-left: 10px;
         }
     }
 }
@@ -3097,10 +3136,11 @@ a {
         position: relative;
         z-index: 3;
         font-weight: 600;
-        .servise-row {
-            display: flex;
-            margin: 0 0 20px;
-        }
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
         .servise-col {
             width: 33.33%;
         }
@@ -3124,6 +3164,9 @@ a {
         }
         h5 {
             color: $yellow;
+            a {
+                color: inherit; 
+            }
         }
         a {
             color: inherit;
@@ -3369,5 +3412,15 @@ a {
     .icon {
         display: inline-block;
         min-width: 35px;
+    }
+}
+
+.pagination {
+    font-family: $font-family-gotham;
+    font-weight: 700;
+    .next,
+    .prev {
+        background-color: $orange;
+        border-radius: 10px;
     }
 }

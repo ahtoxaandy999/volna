@@ -1924,7 +1924,7 @@ body.compensate-for-scrollbar {
         -ms-flex-align: start;
             align-items: flex-start; }
     .club-section .section-head h2 {
-      min-width: 590px; }
+      min-width: 30%; }
     .club-section .section-head p {
       width: 105%; }
     .club-section .section-head .head-title {
@@ -2415,7 +2415,7 @@ body.compensate-for-scrollbar {
     outline: none; }
   @media (min-width: 768px) {
     .contacts-form-section .banner-subscribe-form textarea {
-      height: 117px;
+      height: 118px;
       margin: 0; } }
 
 .gallery-section {
@@ -5511,6 +5511,8 @@ a {
             -ms-transform: scale(1.1) translate(-50%, -50%);
                 transform: scale(1.1) translate(-50%, -50%);
         opacity: 0.9; }
+    .gallery-holder .gallery-item:hover {
+      opacity: 0.8; }
     @media (min-width: 576px) {
       .gallery-holder .gallery-item {
         width: 50%; } }
@@ -5543,7 +5545,16 @@ a {
       @media (min-width: 1200px) {
         .banner-subscribe-form .input-row .input-col {
           margin: 0 auto 60px; } }
-    .banner-subscribe-form .input-row input {
+      @media (min-width: 768px) {
+        .banner-subscribe-form .input-row .input-col:last-child input {
+          margin: 0; } }
+  .banner-subscribe-form .mailpoet_form .mailpoet_paragraph {
+    width: 100%;
+    margin: 0 0 30px; }
+    @media (min-width: 768px) {
+      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph {
+        margin: 0 0 50px; } }
+    .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email] {
       color: #fff;
       width: 100%;
       font-family: "Bebas Neue";
@@ -5554,13 +5565,13 @@ a {
       line-height: 1;
       width: 100%;
       margin: 0 0 0.625rem; }
-      .banner-subscribe-form .input-row input::-webkit-input-placeholder {
+      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]::-webkit-input-placeholder {
         color: #fff; }
-      .banner-subscribe-form .input-row input:-ms-input-placeholder {
+      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]:-ms-input-placeholder {
         color: #fff; }
-      .banner-subscribe-form .input-row input::placeholder {
+      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]::placeholder {
         color: #fff; }
-      .banner-subscribe-form .input-row input:focus {
+      .banner-subscribe-form .mailpoet_form .mailpoet_paragraph input[type=email]:focus {
         outline: none; }
   .banner-subscribe-form input[type='submit'] {
     font-family: "Gotham Pro";
@@ -5850,6 +5861,12 @@ a {
     @media (min-width: 1200px) {
       .article-lg h5 {
         margin: 0 0 15px; } }
+    .article-lg h5 a {
+      color: #0d1b27; }
+      .article-lg h5 a:before {
+        display: none; }
+      .article-lg h5 a:hover {
+        color: #1fe39c; }
   .article-lg .category-txt {
     font-family: "Bebas Neue";
     font-weight: 700;
@@ -5918,6 +5935,12 @@ a {
     font-family: "Bebas Neue";
     font-weight: 700;
     text-transform: uppercase; }
+    .article-sm h5 a {
+      color: #0d1b27; }
+      .article-sm h5 a:before {
+        display: none; }
+      .article-sm h5 a:hover {
+        color: #1fe39c; }
   .article-sm a:before {
     content: "\e906";
     display: inline-block;
@@ -5934,14 +5957,16 @@ a {
     color: #ececec;
     font-family: "Bebas Neue";
     font-weight: 700;
-    font-size: 25px;
+    font-size: 22px;
     text-transform: uppercase;
     line-height: 1; }
     @media (min-width: 576px) {
       .article-sm .category-txt {
-        font-size: 30px;
+        font-size: 25px;
         right: 15px;
         bottom: 10px; } }
+    .article-sm .category-txt a {
+      margin-left: 10px; }
 
 .blog-section {
   padding: 0 0 30px;
@@ -6214,12 +6239,15 @@ a {
   .servise-popup .servise-content {
     position: relative;
     z-index: 3;
-    font-weight: 600; }
-    .servise-popup .servise-content .servise-row {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin: 0 0 20px; }
+    font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .servise-popup .servise-content .servise-col {
       width: 33.33%; }
     .servise-popup .servise-content .category-title {
@@ -6242,6 +6270,8 @@ a {
         margin: 0 0 12px; }
     .servise-popup .servise-content h5 {
       color: #faef79; }
+      .servise-popup .servise-content h5 a {
+        color: inherit; }
     .servise-popup .servise-content a {
       color: inherit; }
       .servise-popup .servise-content a:hover {
@@ -6450,6 +6480,14 @@ a {
   .club-cards-holder .icon {
     display: inline-block;
     min-width: 35px; }
+
+.pagination {
+  font-family: "Gotham Pro";
+  font-weight: 700; }
+  .pagination .next,
+  .pagination .prev {
+    background-color: #ff4800;
+    border-radius: 10px; }
 
 #footer {
   position: relative; }
