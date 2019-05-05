@@ -2449,6 +2449,13 @@ a {
             opacity: 0.8;
         }
     }
+    .wpcf7-form-control-wrap {
+        input {
+            @include media ('>=tablet') {
+                margin: 0;
+            }
+        }
+    }
     p {
         max-width: 500px;
         margin: 0 auto 30px;
@@ -3424,5 +3431,27 @@ a {
     .prev {
         background-color: $orange;
         border-radius: 10px;
+    }
+}
+
+div.wpcf7-response-output {
+    margin: 1em auto 3em;
+    border-radius: 5px;
+    border-color: $orange;
+    color: $white;
+    max-width: 460px;
+    font-family: $font-family-bebas;
+}
+
+span.wpcf7-not-valid-tip {
+    font-family: $font-family-bebas;
+    padding: 8px 0 0;
+}
+
+.sharethis-holder {
+    display: flex;
+    font-size: 20px;
+    .share-button {
+        margin: 0 10px;
     }
 }

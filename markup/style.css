@@ -1275,12 +1275,12 @@ body.compensate-for-scrollbar {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?hdpdfy");
-  src: url("fonts/icomoon.eot?hdpdfy#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?hdpdfy") format("truetype"), url("fonts/icomoon.woff?hdpdfy") format("woff"), url("fonts/icomoon.svg?hdpdfy#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?s1dh6m");
+  src: url("fonts/icomoon.eot?s1dh6m#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?s1dh6m") format("truetype"), url("fonts/icomoon.woff?s1dh6m") format("woff"), url("fonts/icomoon.svg?s1dh6m#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -1373,6 +1373,12 @@ body.compensate-for-scrollbar {
 
 .icon-youtube:before {
   content: "\ea9d"; }
+
+.icon-twitter:before {
+  content: "\ea96"; }
+
+.icon-linkedin:before {
+  content: "\eaca"; }
 
 .icon-fb:before {
   content: "\e907"; }
@@ -5595,6 +5601,9 @@ a {
         padding: .5rem .6rem; } }
     .banner-subscribe-form input[type='submit']:hover {
       opacity: 0.8; }
+  @media (min-width: 768px) {
+    .banner-subscribe-form .wpcf7-form-control-wrap input {
+      margin: 0; } }
   .banner-subscribe-form p {
     max-width: 500px;
     margin: 0 auto 30px; }
@@ -6489,6 +6498,26 @@ a {
   .pagination .prev {
     background-color: #ff4800;
     border-radius: 10px; }
+
+div.wpcf7-response-output {
+  margin: 1em auto 3em;
+  border-radius: 5px;
+  border-color: #ff4800;
+  color: #fff;
+  max-width: 460px;
+  font-family: "Bebas Neue"; }
+
+span.wpcf7-not-valid-tip {
+  font-family: "Bebas Neue";
+  padding: 8px 0 0; }
+
+.sharethis-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px; }
+  .sharethis-holder .share-button {
+    margin: 0 10px; }
 
 #footer {
   position: relative; }
