@@ -4361,20 +4361,29 @@ a {
 .cards-carousel {
   z-index: 5; }
   .cards-carousel .slick-slide {
-    text-align: center; }
+    text-align: center;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    padding-bottom: 5px;
+    max-width: 220px;
+    border-radius: 10px;
+    overflow: hidden; }
+    @media (min-width: 576px) {
+      .cards-carousel .slick-slide {
+        max-width: none; } }
     .cards-carousel .slick-slide.slick-center {
       z-index: 10; }
       @media (min-width: 600px) {
-        .cards-carousel .slick-slide.slick-center .slick-slide {
+        .cards-carousel .slick-slide.slick-center {
           -webkit-transform: scale(1.2);
               -ms-transform: scale(1.2);
                   transform: scale(1.2);
           padding-bottom: 20px; } }
       @media (min-width: 768px) {
-        .cards-carousel .slick-slide.slick-center .slick-slide {
+        .cards-carousel .slick-slide.slick-center {
           padding-bottom: 30px; } }
       @media (min-width: 1200px) {
-        .cards-carousel .slick-slide.slick-center .slick-slide {
+        .cards-carousel .slick-slide.slick-center {
           padding-bottom: 40px; } }
       .cards-carousel .slick-slide.slick-center .btn {
         visibility: visible;
@@ -4387,16 +4396,7 @@ a {
       transition: all .3s ease-in-out;
       opacity: 0; }
     .cards-carousel .slick-slide img {
-      -webkit-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
-      display: block;
-      padding-bottom: 5px;
-      width: 100%;
-      max-width: 220px;
-      margin: 0 auto; }
-      @media (min-width: 576px) {
-        .cards-carousel .slick-slide img {
-          max-width: none; } }
+      width: 100%; }
     .cards-carousel .slick-slide h3 {
       color: #4e6070;
       font-weight: 900;
@@ -6521,14 +6521,6 @@ div.wpcf7-response-output {
 span.wpcf7-not-valid-tip {
   font-family: "Bebas Neue";
   padding: 8px 0 0; }
-
-.sharethis-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 20px; }
-  .sharethis-holder .share-button {
-    margin: 0 10px; }
 
 #footer {
   position: relative; }

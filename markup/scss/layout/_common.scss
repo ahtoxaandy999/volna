@@ -1150,19 +1150,25 @@ a {
     z-index: 5;
     .slick-slide {
         text-align: center;
+        transition: all .3s ease-in-out;
+        padding-bottom: 5px;
+        max-width: 220px;
+        border-radius: 10px;
+        overflow: hidden;
+        @include media ('>=phone') {
+            max-width: none;
+        }
         &.slick-center {
             z-index: 10;
-            .slick-slide {
-                @include media ('>=600px') {
-                    transform: scale(1.2);
-                    padding-bottom: 20px;
-                }
-                @include media ('>=tablet') {
-                    padding-bottom: 30px;
-                }
-                @include media ('>=widescreen') {
-                    padding-bottom: 40px;
-                }
+            @include media ('>=600px') {
+                transform: scale(1.2);
+                padding-bottom: 20px;
+            }
+            @include media ('>=tablet') {
+                padding-bottom: 30px;
+            }
+            @include media ('>=widescreen') {
+                padding-bottom: 40px;
             }
             .btn {
                 visibility: visible;
@@ -1178,15 +1184,7 @@ a {
             opacity: 0; 
         }
         img {
-            transition: all .3s ease-in-out;
-            display: block;
-            padding-bottom: 5px;
             width: 100%;
-            max-width: 220px;
-            margin: 0 auto;
-            @include media ('>=phone') {
-                max-width: none;
-            }
         }
         h3 {
             color: #4e6070;
@@ -3451,12 +3449,4 @@ div.wpcf7-response-output {
 span.wpcf7-not-valid-tip {
     font-family: $font-family-bebas;
     padding: 8px 0 0;
-}
-
-.sharethis-holder {
-    display: flex;
-    font-size: 20px;
-    .share-button {
-        margin: 0 10px;
-    }
 }
