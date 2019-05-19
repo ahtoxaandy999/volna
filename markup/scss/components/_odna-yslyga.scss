@@ -177,7 +177,7 @@
 			width: 45%;
 		}
 		&:before {
-			content: url('');
+			content: '';
 			background: url('images/icon30.svg');
 			position: absolute;
 			top: 50%;
@@ -319,12 +319,14 @@
 			}
 			.img-holder {
 				width: 100%;
-				min-height: 30vw;
+				min-height: 50vw;
 				background-size: cover;
 				background-repeat: no-repeat;
 				margin-bottom: 30px;
 				@include media ('>=tablet') {
 					margin: 0 20px 0 0;
+					width: 50%;
+					min-height: 30vw;
 				}
 				@include media ('>=desktop') {
 					margin: 0 50px 0 0;
@@ -338,6 +340,9 @@
 				padding: 0;
 				width: 100%;
 				position: relative;
+				@include media ('>=tablet') {
+					width: 50%;
+				}
 				.background-text {
 					position: absolute;
 					top: -10px;

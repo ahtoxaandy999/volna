@@ -22,50 +22,31 @@
         width: 9%;
         text-align: center;
     }
-    @include media ('>=1900px') {
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        width: 134px;
-        min-height: 110px;
-        background-color: $gray-900;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    &:before {
-        @include media ('>=1900px') {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(0, -50%);
-            width: 56px;
-            height: 46px;
-            background-image: url(images/icon1.svg);
-            background-repeat: no-repeat;
-        }
-    }
     .txt {
-        background-color: $orange;
-        color: $white;
+        color: $white; 
         font-size: rem-calc(18);
-        padding: rem-calc(8 15);
-        @include media ('>=1900px') {
-            position: absolute;
-            top: 50%;
-            left: 100%;
-            transform: translate(-50%, -50%);
-            min-width: 112px;
-        }
+        padding: rem-calc(8 20);
+        position: relative; 
         &:hover {
             opacity: 0.8;
+        }
+        &:before {
+            content: '';
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) skewX(-30deg);
+            height: 100%;
+            background-color: $orange;
+            transition: $transition-base;
+            z-index: -1;
         }
     }
 }
 .address-box {
     width: 50%;
+    font-size: 1rem;
     @include media ('>=tablet') {
         width: 33%;
     }
@@ -73,12 +54,7 @@
         font-size: rem-calc(20);
         text-align: center;
         letter-spacing: 1.4px;
-    }
-    @include media ('>=1900px') {
-        font-size: rem-calc(24);
-        text-align: left;
-        letter-spacing: 2.4px;
-        width: 42%;
+        font-size: 1.2rem;
     }
     &:before {
         margin: rem-calc(0 5 0 0);
@@ -100,7 +76,7 @@
         margin: 0;
         align-items: center;
         flex-grow: 0;
-        width: 42%;
+        width: 45%;
     }
     a {
         color: inherit;
@@ -172,7 +148,6 @@
                 z-index: -1;
             }
         }
-        
     }
 }
 
@@ -208,6 +183,7 @@
     position: relative;
     text-align: center;
     line-height: 1.5;
+    font-size: 1rem;
     @include media ('>=tablet') {
         width: 33.33%;
     }
@@ -215,9 +191,9 @@
         width: auto;
         font-size: rem-calc(20);
         letter-spacing: 1.8px;
+        font-size: 1.2rem;
     }
-    @include media ('>=widescreen') {
-        width: auto;
+    @include media ('>=1900px') {
         font-size: rem-calc(24);
         letter-spacing: 2.8px;
     }

@@ -29,7 +29,7 @@
 		}
 		li {
 			@include media ('>=tablet') {
-				margin: 0 10px;
+				margin: 0 20px;
 			}
 		}
 	}
@@ -65,34 +65,19 @@
 		}
 		.slick-list {
 			margin: 0 -5px;
-			position: relative;
-			
 			@include media ('>=tablet') {
 				margin: 0 -15px;
-				&:after,
-				&:before {
-					content: '';
-					position: absolute;
-					top: -16px;
-					right: 33.2%;
-					width: 1px;
-					height: 26.5vw;
-					background: #e0e0e0;
-					z-index: -1;
-					@include media ('>=widescreen') {
-						height: 336px;
-					}
-				}
-				&:after {
-					left: 33.2%;
-				}
 			}
 		}
 		.slide-nav-holder {
 			height: 17vw;
 			background-repeat: no-repeat;
 			background-size: cover;
-			
+			cursor: pointer;
+			transition: opacity .3s ease-in-out;
+			&:hover {
+				opacity: 0.8;
+			}
 			@include media ('>=widescreen') {
 				height: 250px;
 			}
@@ -100,14 +85,38 @@
 		.slick-slide {
 			margin: 0 5px;
 			transition: transform .5s;
+			position: relative;
 			@include media ('>=tablet') {
-				margin: 0 15px;
+				padding: 0 15px;
+				&:after,
+				&:before {
+					content: '';
+					position: absolute;
+					top: -16px;
+					right: 0;
+					width: 1px;
+					height: 26.5vw;
+					background: #e0e0e0;
+					z-index: -1;
+					opacity: 0;
+					transition: opacity .5s;
+					@include media ('>=widescreen') {
+						height: 336px;
+					}
+				}
+				&:after {
+					left: 0;
+				}
 			}
 		}
 		.slick-center {
 			transform: translateY(10px);
 			@include media ('>=tablet') {
 				transform: translateY(30px);
+			}
+			&:before,
+			&:after {
+				opacity: 1;
 			}
 		}
 		.slick-prev, 

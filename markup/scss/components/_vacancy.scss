@@ -105,6 +105,7 @@
 	background-color: #fff;
 	font-family: $font-family-gotham;
 	font-weight: 900;
+	text-align: center;
 	@include media ('>=tablet') {
 		padding: 30px;
 	}
@@ -116,6 +117,7 @@
 		margin: 0;
 	}
 	&__info {
+		text-align: left;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -138,10 +140,11 @@
 	&__profession {
 		font-size: 18px;
 		@include media ('>=tablet') {
-			font-size: 24px;
+			font-size: 22px;
 		}
 	}
 	&__employment {
+		text-align: left;
 		color: #939393;
 		font-size: 14px;
 		font-weight: 900;
@@ -152,6 +155,7 @@
 		}
 	}
 	&__desc-wrap {
+		text-align: left;
 		margin-bottom: 20px;
 		@include media ('>=tablet') {
 			margin-bottom: 50px;
@@ -175,21 +179,20 @@
 		font-weight: 400;
 	}
 	&__btn {
-		width: 100%;
-		display: block;
+		display: inline-block;
 		color: #ff4800;
 		font-size: 14px;
 		text-transform: uppercase;
 		text-align: center;
-		padding: 10px;
+		padding: .6rem 1rem .4rem;
 		border: 1px solid #ff4800;
 		border-radius: 40px;
 		transition: all .3s ease-in-out;
+		margin: 0 auto;
 		cursor: pointer;
 		@include media ('>=tablet') {
-			padding: 15px;
-			font-size: 16px;
-        }
+			padding: .5rem .6rem;
+		}
 		&:hover {
 			color: #fff;
 			background-color: #ff4800;

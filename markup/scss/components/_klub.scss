@@ -17,7 +17,7 @@
 		p {
 			width: 105%;
 		}
-		.head-title {
+		h3 {
 			color: $black;
 			font-family: $font-family-bebas;
 			font-size: 30px;
@@ -70,6 +70,7 @@
 		.about-img {
 			min-height: 128px;
 			width: 100%;
+			display: block;
 			overflow: hidden;
 			margin-bottom: 20px;
 			background-repeat: no-repeat;
@@ -217,7 +218,7 @@
 			margin: 70px 0 90px;
 		}
 		&:before {
-			content: url('');
+			content: '';
 			background: url('images/icon30.svg');
 			position: absolute;
 			top: 50%;
@@ -256,25 +257,8 @@
 		@include media ('>=widescreen') {
 			margin: 0 0 130px 0;
 		}
-		&:before,
-		&:after {
-			@include media ('>=tablet') {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				height: 100%;
-				width: 1px;
-				background-color: #d7d7d7;
-			}
-		}
-		&:after {
-			@include media ('>=tablet') {
-				bottom: 28%;
-				height: 47px;
-				background-color: $orange;
-			}
+		.jcf-scrollable {
+			max-height: 150px;
 		}
 	}
 }
