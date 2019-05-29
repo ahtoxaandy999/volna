@@ -3347,6 +3347,60 @@ a {
     }
 }
 
+.club-card-popup {
+    width: 100vw;
+    overflow: hidden;
+    .cards-section {
+        min-height: 100vh;
+        &.subscribe-style {
+            padding: 50px 0;
+        }
+    }
+    .line-decore-10 {
+        &:after {
+            bottom: 50px;
+        }
+    }
+    .fancybox-close-small {
+        display: none;
+    }
+    .close-btn {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background-color: $orange;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 99;
+        border-radius: 50%;
+        @include media ('>=tablet') {
+            top: 20px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+        }
+        &:before,
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 2px;
+            height: 18px;
+            background-color: $white;
+        }
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
 .club-cards-section {
     position: relative;
     &:before {
@@ -3730,4 +3784,12 @@ span.wpcf7-not-valid-tip {
 .jcf-focus,
 .jcf-focus * {
     border-color: #f00 !important;
+}
+
+.fancybox-content {
+    padding: 0 !important;
+}
+
+.fancybox-slide {
+    padding: 0 !important;
 }

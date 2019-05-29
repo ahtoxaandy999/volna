@@ -5832,6 +5832,64 @@ a:hover {
 	color: #fff;
 }
 
+.club-card-popup {
+	width: 100vw;
+	overflow: hidden;
+}
+
+.club-card-popup .cards-section {
+	min-height: 100vh;
+}
+
+.club-card-popup .cards-section.subscribe-style {
+	padding: 50px 0;
+}
+
+.club-card-popup .line-decore-10:after {
+	bottom: 50px;
+}
+
+.club-card-popup .fancybox-close-small {
+	display: none;
+}
+
+.club-card-popup .close-btn {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color: #ff4800;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 99;
+	border-radius: 50%;
+}
+
+.club-card-popup .close-btn:before,
+.club-card-popup .close-btn:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%) rotate(45deg);
+	-ms-transform: translate(-50%, -50%) rotate(45deg);
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 2px;
+	height: 18px;
+	background-color: #fff;
+}
+
+.club-card-popup .close-btn:after {
+	-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+	-ms-transform: translate(-50%, -50%) rotate(-45deg);
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.club-card-popup .close-btn:hover {
+	opacity: .7;
+}
+
 .club-cards-section {
 	position: relative;
 }
@@ -6210,6 +6268,14 @@ span.wpcf7-not-valid-tip {
 .jcf-focus,
 .jcf-focus * {
 	border-color: #f00 !important;
+}
+
+.fancybox-content {
+	padding: 0 !important;
+}
+
+.fancybox-slide {
+	padding: 0 !important;
 }
 
 #footer {
@@ -7677,6 +7743,13 @@ span.wpcf7-not-valid-tip {
 
 	.related-services .content-wrap .img-holder {
 		min-height: 20vw;
+	}
+
+	.club-card-popup .close-btn {
+		top: 20px;
+		right: 30px;
+		width: 45px;
+		height: 45px;
 	}
 
 	.club-cards-section .section-head .background-text {
