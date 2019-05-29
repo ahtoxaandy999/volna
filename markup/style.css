@@ -2678,6 +2678,11 @@ body.compensate-for-scrollbar {
 	margin-bottom: 20px;
 }
 
+.func-trening-section .functional-slider-wrap .functional-nav.without-nav .slick-prev,
+.func-trening-section .functional-slider-wrap .functional-nav.without-nav .slick-next {
+	display: none !important;
+}
+
 .func-trening-section .functional-slider-wrap .functional-nav .slick-list {
 	margin: 0 -5px;
 }
@@ -2948,7 +2953,7 @@ body.compensate-for-scrollbar {
 .visual-box .txt {
 	color: #fff;
 	font-size: 1.125rem;
-	padding: .5rem 1.25rem;
+	padding: .5rem 1rem;
 	position: relative;
 }
 

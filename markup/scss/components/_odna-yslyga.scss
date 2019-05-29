@@ -3,7 +3,7 @@
 	@include media ('>=desktop') {
 		padding: 0 0 100px;
 	}
-
+	
 	.container {
 		position: relative;
 		@include media ('>=desktop') {
@@ -50,6 +50,12 @@
 			position: relative;
 			padding-bottom: 50px;
 			margin-bottom: 20px;
+			&.without-nav {
+				.slick-prev, 
+				.slick-next {
+					display: none !important;
+				}
+			}
 			.slick-list {
 				margin: 0 -5px;
 				@include media ('>=tablet') {
@@ -72,7 +78,7 @@
 					margin: 0 10px;
 				}
 			}
-
+			
 			.slick-prev, 
 			.slick-next {
 				bottom: 10px;
@@ -97,21 +103,21 @@
 			}
 		}
 	}
-
+	
 	.functional-info {
 		@include media ('>=desktop') {
 			width: 32%;
 			padding-top: 45px;
 		}
 	}
-
+	
 	.main-title {
 		margin-bottom: 20px;
 		@include media ('>=desktop') {
 			margin-bottom: 40px;
 		}
 	}
-
+	
 	.vacancy-box {
 		margin: 0 0 20px;
 		padding: 0;
@@ -131,13 +137,13 @@
 			align-items: flex-start;
 		}
 	}
-
+	
 	.btn {
 		@include media ('>=desktop') {
 			padding: 11px 31px;
 		}
 	}
-
+	
 	.functional-text {
 		font-size: 14px;
 		color: #434343;
@@ -169,7 +175,7 @@
 			margin: 0 60px 55px 0;
 		}
 	}
-
+	
 	.video-wrap {
 		display: block;
 		position: relative;
