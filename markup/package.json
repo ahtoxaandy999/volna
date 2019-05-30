@@ -10,6 +10,7 @@
     "grunt-combine-media-queries": "1.0.20",
     "grunt-contrib-clean": "1.1.0",
     "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-imagemin": "2.0.1",
     "grunt-contrib-watch": "1.0.0",
     "grunt-csscomb": "3.1.1",
@@ -22,8 +23,8 @@
     "grunt-svg2string": "0.2.1",
     "grunt-svgmin": "4.0.0",
     "grunt-svgstore": "1.0.0",
-    "load-grunt-tasks": "3.5.2",
     "jquery": ">=3.0.0",
+    "load-grunt-tasks": "3.5.2",
     "popper.js": "^1.14.3"
   }
 }

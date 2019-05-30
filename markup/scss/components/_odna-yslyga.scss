@@ -26,8 +26,8 @@
 	.functional-slider-wrap {
 		width: 100%;
 		@include media ('>=desktop') {
-			width: 50%;
-			margin-right: 60px;
+			width: 55%;
+			padding-right: 60px;
 		}
 		.functional-slider {
 			width: 100%;
@@ -106,8 +106,14 @@
 	
 	.functional-info {
 		@include media ('>=desktop') {
-			width: 32%;
+			width: 45%;
 			padding-top: 45px;
+		}
+		.vacancy-box {
+			text-align: left;
+			@include media ('>=desktop') {
+				max-width: 400px;
+			}
 		}
 	}
 	
@@ -157,15 +163,13 @@
 .func-video-section {
 	padding-top: 30px;
 	@include media ('>=desktop') {
-		padding: 0;
-		margin-top: -60px;
+		padding-top: 100px;
 		position: relative;
 		z-index: 10;
 	}
 	.container {
 		@include media ('>=desktop') {
 			display: flex;
-			align-items: flex-end;
 		}
 	}
 	.functional-text {

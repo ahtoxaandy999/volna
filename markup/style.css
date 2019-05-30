@@ -2726,6 +2726,10 @@ body.compensate-for-scrollbar {
 	left: 55%;
 }
 
+.func-trening-section .functional-info .vacancy-box {
+	text-align: left;
+}
+
 .func-trening-section .main-title {
 	margin-bottom: 20px;
 }
@@ -7943,8 +7947,8 @@ span.wpcf7-not-valid-tip {
 	}
 
 	.func-trening-section .functional-slider-wrap {
-		width: 50%;
-		margin-right: 60px;
+		width: 55%;
+		padding-right: 60px;
 	}
 
 	.func-trening-section .functional-slider-wrap .functional-slider {
@@ -7965,8 +7969,12 @@ span.wpcf7-not-valid-tip {
 	}
 
 	.func-trening-section .functional-info {
-		width: 32%;
+		width: 45%;
 		padding-top: 45px;
+	}
+
+	.func-trening-section .functional-info .vacancy-box {
+		max-width: 400px;
 	}
 
 	.func-trening-section .main-title {
@@ -7986,8 +7994,7 @@ span.wpcf7-not-valid-tip {
 	}
 
 	.func-video-section {
-		padding: 0;
-		margin-top: -60px;
+		padding-top: 100px;
 		position: relative;
 		z-index: 10;
 	}
@@ -7996,9 +8003,6 @@ span.wpcf7-not-valid-tip {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-align: end;
-		-ms-flex-align: end;
-		align-items: flex-end;
 	}
 
 	.func-video-section .functional-text {
