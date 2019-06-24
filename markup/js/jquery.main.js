@@ -7,7 +7,17 @@ jQuery(function() {
 	initCardsIsLast();
 	initAnchors();
 	initCustomForms();
+	initStickyScrollBlock();
 });
+
+// initialize fixed blocks on scroll
+function initStickyScrollBlock() {
+	jQuery('#header').stickyScrollBlock({
+		setBoxHeight: true,
+		activeClass: 'fixed-position',
+		positionType: 'fixed'
+	});
+}
 
 // initialize custom form elements
 function initCustomForms() {
@@ -99,13 +109,15 @@ function initSlickCarousel() {
 	jQuery('.vacancy-carousel').slick({
 		slidesToScroll: 1,
 		rows: 2,
-		slidesToShow: 3,
 		infinite: false,
+		slidesPerRow: 3,
+		slidesToShow: 1,
 		prevArrow: '<button class="slick-prev"></button>',
 		nextArrow: '<button class="slick-next"></button>',
 		responsive: [{
 			breakpoint: 992,
 			settings: {
+				slidesPerRow: 1,
 				slidesToShow: 2,
 				rows: 1,
 			}
@@ -113,6 +125,7 @@ function initSlickCarousel() {
 		{
 			breakpoint: 768,
 			settings: {
+				slidesPerRow: 1,
 				slidesToShow: 1,
 				rows: 1,
 			}
@@ -179,7 +192,7 @@ function initFancybox() {
 }
 
 ;(function(root, factory) {
-
+	
 	'use strict';
 	if (typeof define === 'function' && define.amd) {
 		define(['jquery'], factory);
@@ -189,15 +202,15 @@ function initFancybox() {
 		root.jcf = factory(jQuery);
 	}
 }(this, function($) {
-
+	
 	'use strict';
-
+	
 	// define version
 	var version = '1.1.3';
-
+	
 	// private variables
 	var customInstances = [];
-
+	
 	// default global options
 	var commonOptions = {
 		optionsKey: 'jcf',
@@ -210,21 +223,21 @@ function initFancybox() {
 		resetAppearanceClass: 'jcf-reset-appearance',
 		unselectableClass: 'jcf-unselectable'
 	};
-
+	
 	// detect device type
 	var isTouchDevice = ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch,
-		isWinPhoneDevice = /Windows Phone/.test(navigator.userAgent);
+	isWinPhoneDevice = /Windows Phone/.test(navigator.userAgent);
 	commonOptions.isMobileDevice = !!(isTouchDevice || isWinPhoneDevice);
 	
 	var isIOS = /(iPad|iPhone).*OS ([0-9_]*) .*/.exec(navigator.userAgent);
 	if(isIOS) isIOS = parseFloat(isIOS[2].replace(/_/g, '.'));
 	commonOptions.ios = isIOS;
-
+	
 	// create global stylesheet if custom forms are used
 	var createStyleSheet = function() {
 		var styleTag = $('<style>').appendTo('head'),
-			styleSheet = styleTag.prop('sheet') || styleTag.prop('styleSheet');
-
+		styleSheet = styleTag.prop('sheet') || styleTag.prop('styleSheet');
+		
 		// crossbrowser style handling
 		var addCSSRule = function(selector, rules, index) {
 			if (styleSheet.insertRule) {
@@ -233,36 +246,36 @@ function initFancybox() {
 				styleSheet.addRule(selector, rules, index);
 			}
 		};
-
+		
 		// add special rules
 		addCSSRule('.' + commonOptions.hiddenClass, 'position:absolute !important;left:-9999px !important;height:1px !important;width:1px !important;margin:0 !important;border-width:0 !important;-webkit-appearance:none;-moz-appearance:none;appearance:none');
 		addCSSRule('.' + commonOptions.rtlClass + ' .' + commonOptions.hiddenClass, 'right:-9999px !important; left: auto !important');
 		addCSSRule('.' + commonOptions.unselectableClass, '-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0);');
 		addCSSRule('.' + commonOptions.resetAppearanceClass, 'background: none; border: none; -webkit-appearance: none; appearance: none; opacity: 0; filter: alpha(opacity=0);');
-
+		
 		// detect rtl pages
 		var html = $('html'), body = $('body');
 		if (html.css('direction') === 'rtl' || body.css('direction') === 'rtl') {
 			html.addClass(commonOptions.rtlClass);
 		}
-
+		
 		// handle form reset event
 		html.on('reset', function() {
 			setTimeout(function() {
 				api.refreshAll();
 			}, 0);
 		});
-
+		
 		// mark stylesheet as created
 		commonOptions.styleSheetCreated = true;
 	};
-
+	
 	// simplified pointer events handler
 	(function() {
 		var pointerEventsSupported = navigator.pointerEnabled || navigator.msPointerEnabled,
-			touchEventsSupported = ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch,
-			eventList, eventMap = {}, eventPrefix = 'jcf-';
-
+		touchEventsSupported = ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch,
+		eventList, eventMap = {}, eventPrefix = 'jcf-';
+		
 		// detect events to attach
 		if (pointerEventsSupported) {
 			eventList = {
@@ -279,14 +292,14 @@ function initFancybox() {
 				pointerup: 'mouseup' + (touchEventsSupported ? ' touchend' : '')
 			};
 		}
-
+		
 		// create event map
 		$.each(eventList, function(targetEventName, fakeEventList) {
 			$.each(fakeEventList.split(' '), function(index, fakeEventName) {
 				eventMap[fakeEventName] = targetEventName;
 			});
 		});
-
+		
 		// jQuery event hooks
 		$.each(eventList, function(eventName, eventHandlers) {
 			eventHandlers = eventHandlers.split(' ');
@@ -307,28 +320,28 @@ function initFancybox() {
 				}
 			};
 		});
-
+		
 		// check that mouse event are not simulated by mobile browsers
 		var lastTouch = null;
 		var mouseEventSimulated = function(e) {
 			var dx = Math.abs(e.pageX - lastTouch.x),
-				dy = Math.abs(e.pageY - lastTouch.y),
-				rangeDistance = 25;
-
+			dy = Math.abs(e.pageY - lastTouch.y),
+			rangeDistance = 25;
+			
 			if (dx <= rangeDistance && dy <= rangeDistance) {
 				return true;
 			}
 		};
-
+		
 		// normalize event
 		var fixEvent = function(e) {
 			var origEvent = e || window.event,
-				touchEventData = null,
-				targetEventName = eventMap[origEvent.type];
-
+			touchEventData = null,
+			targetEventName = eventMap[origEvent.type];
+			
 			e = $.event.fix(origEvent);
 			e.type = eventPrefix + targetEventName;
-
+			
 			if (origEvent.pointerType) {
 				switch (origEvent.pointerType) {
 					case 2: e.pointerType = 'touch'; break;
@@ -339,13 +352,13 @@ function initFancybox() {
 			} else {
 				e.pointerType = origEvent.type.substr(0, 5); // "mouse" or "touch" word length
 			}
-
+			
 			if (!e.pageX && !e.pageY) {
 				touchEventData = origEvent.changedTouches ? origEvent.changedTouches[0] : origEvent;
 				e.pageX = touchEventData.pageX;
 				e.pageY = touchEventData.pageY;
 			}
-
+			
 			if (origEvent.type === 'touchend') {
 				lastTouch = { x: e.pageX, y: e.pageY };
 			}
@@ -356,12 +369,12 @@ function initFancybox() {
 			}
 		};
 	}());
-
+	
 	// custom mousewheel/trackpad handler
 	(function() {
 		var wheelEvents = ('onwheel' in document || document.documentMode >= 9 ? 'wheel' : 'mousewheel DOMMouseScroll').split(' '),
-			shimEventName = 'jcf-mousewheel';
-
+		shimEventName = 'jcf-mousewheel';
+		
 		$.event.special[shimEventName] = {
 			setup: function() {
 				var self = this;
@@ -378,18 +391,18 @@ function initFancybox() {
 				});
 			}
 		};
-
+		
 		var fixEvent = function(e) {
 			var origEvent = e || window.event;
 			e = $.event.fix(origEvent);
 			e.type = shimEventName;
-
+			
 			// old wheel events handler
 			if ('detail'      in origEvent) { e.deltaY = -origEvent.detail;      }
 			if ('wheelDelta'  in origEvent) { e.deltaY = -origEvent.wheelDelta;  }
 			if ('wheelDeltaY' in origEvent) { e.deltaY = -origEvent.wheelDeltaY; }
 			if ('wheelDeltaX' in origEvent) { e.deltaX = -origEvent.wheelDeltaX; }
-
+			
 			// modern wheel event handler
 			if ('deltaY' in origEvent) {
 				e.deltaY = origEvent.deltaY;
@@ -397,7 +410,7 @@ function initFancybox() {
 			if ('deltaX' in origEvent) {
 				e.deltaX = origEvent.deltaX;
 			}
-
+			
 			// handle deltaMode for mouse wheel
 			e.delta = e.deltaY || e.deltaX;
 			if (origEvent.deltaMode === 1) {
@@ -406,11 +419,11 @@ function initFancybox() {
 				e.deltaY *= lineHeight;
 				e.deltaX *= lineHeight;
 			}
-
+			
 			return ($.event.dispatch || $.event.handle).call(this, e);
 		};
 	}());
-
+	
 	// extra module methods
 	var moduleMixin = {
 		// provide function for firing native events
@@ -441,7 +454,7 @@ function initFancybox() {
 			});
 		}
 	};
-
+	
 	// public API
 	var api = {
 		version: version,
@@ -468,22 +481,22 @@ function initFancybox() {
 					options.element.data(commonOptions.dataKey, this);
 				}
 				customInstances.push(this);
-
+				
 				// save options
 				this.options = $.extend({}, commonOptions, this.options, getInlineOptions(options.element), options);
-
+				
 				// bind event handlers to instance
 				this.bindHandlers();
-
+				
 				// call constructor
 				this.init.apply(this, arguments);
 			};
-
+			
 			// parse options from HTML attribute
 			var getInlineOptions = function(element) {
 				var dataOptions = element.data(commonOptions.optionsKey),
-					attrOptions = element.attr(commonOptions.optionsKey);
-
+				attrOptions = element.attr(commonOptions.optionsKey);
+				
 				if (dataOptions) {
 					return dataOptions;
 				} else if (attrOptions) {
@@ -494,10 +507,10 @@ function initFancybox() {
 					}
 				}
 			};
-
+			
 			// set proto as prototype for new module
 			Module.prototype = proto;
-
+			
 			// add mixin methods to module proto
 			$.extend(proto, moduleMixin);
 			if (proto.plugins) {
@@ -505,24 +518,24 @@ function initFancybox() {
 					$.extend(plugin.prototype, moduleMixin);
 				});
 			}
-
+			
 			// override destroy method
 			var originalDestroy = Module.prototype.destroy;
 			Module.prototype.destroy = function() {
 				this.options.element.removeData(this.options.dataKey);
-
+				
 				for (var i = customInstances.length - 1; i >= 0; i--) {
 					if (customInstances[i] === this) {
 						customInstances.splice(i, 1);
 						break;
 					}
 				}
-
+				
 				if (originalDestroy) {
 					originalDestroy.apply(this, arguments);
 				}
 			};
-
+			
 			// save module to list
 			this.modules[proto.name] = Module;
 		},
@@ -531,16 +544,16 @@ function initFancybox() {
 		},
 		replace: function(elements, moduleName, customOptions) {
 			var self = this,
-				instance;
-
+			instance;
+			
 			if (!commonOptions.styleSheetCreated) {
 				createStyleSheet();
 			}
-
+			
 			$(elements).each(function() {
 				var moduleOptions,
-					element = $(this);
-
+				element = $(this);
+				
 				instance = element.data(commonOptions.dataKey);
 				if (instance) {
 					instance.refresh();
@@ -620,16 +633,16 @@ function initFancybox() {
 			}
 		}
 	};
-
+	
 	// always export API to the global window object
 	window.jcf = api;
-
+	
 	return api;
 })); 
 
 ;(function($, window) {
 	'use strict';
-
+	
 	jcf.addModule({
 		name: 'Scrollable',
 		selector: '.jcf-scrollable',
@@ -657,7 +670,7 @@ function initFancybox() {
 			this.win = $(window);
 			this.realElement = $(this.options.element);
 			this.scrollWrapper = $(this.options.scrollAreaStructure).insertAfter(this.realElement);
-
+			
 			// set initial styles
 			this.scrollWrapper.css('position', 'relative');
 			// this.realElement.css('overflow', 'hidden');
@@ -681,13 +694,13 @@ function initFancybox() {
 					self.realElement.scrollLeft(scrollLeft);
 				}
 			});
-
+			
 			// add event handlers
 			this.realElement.on('scroll', this.onScroll);
 			if (this.options.handleResize) {
 				this.win.on('resize orientationchange load', this.onResize);
 			}
-
+			
 			// add pointer/wheel event handlers
 			this.realElement.on('jcf-mousewheel', this.onMouseWheel);
 			this.realElement.on('jcf-pointerdown', this.onTouchBody);
@@ -717,14 +730,14 @@ function initFancybox() {
 		},
 		onMoveBody: function(e) {
 			var targetScrollTop,
-				targetScrollLeft,
-				verticalScrollAllowed = this.verticalScrollActive,
-				horizontalScrollAllowed = this.horizontalScrollActive;
-
+			targetScrollLeft,
+			verticalScrollAllowed = this.verticalScrollActive,
+			horizontalScrollAllowed = this.horizontalScrollActive;
+			
 			if (e.pointerType === 'touch') {
 				targetScrollTop = this.touchData.scrollTop - e.pageY + this.touchData.top;
 				targetScrollLeft = this.touchData.scrollLeft - e.pageX + this.touchData.left;
-
+				
 				// check that scrolling is ended and release outer scrolling
 				if (this.verticalScrollActive && (targetScrollTop < 0 || targetScrollTop > this.vBar.maxValue)) {
 					verticalScrollAllowed = false;
@@ -732,10 +745,10 @@ function initFancybox() {
 				if (this.horizontalScrollActive && (targetScrollLeft < 0 || targetScrollLeft > this.hBar.maxValue)) {
 					horizontalScrollAllowed = false;
 				}
-
+				
 				this.realElement.scrollTop(targetScrollTop);
 				this.realElement.scrollLeft(targetScrollLeft);
-
+				
 				if (verticalScrollAllowed || horizontalScrollAllowed) {
 					e.preventDefault();
 				} else {
@@ -754,11 +767,11 @@ function initFancybox() {
 		},
 		onMouseWheel: function(e) {
 			var currentScrollTop = this.realElement.scrollTop(),
-				currentScrollLeft = this.realElement.scrollLeft(),
-				maxScrollTop = this.realElement.prop('scrollHeight') - this.embeddedDimensions.innerHeight,
-				maxScrollLeft = this.realElement.prop('scrollWidth') - this.embeddedDimensions.innerWidth,
-				extraLeft, extraTop, preventFlag;
-
+			currentScrollLeft = this.realElement.scrollLeft(),
+			maxScrollTop = this.realElement.prop('scrollHeight') - this.embeddedDimensions.innerHeight,
+			maxScrollLeft = this.realElement.prop('scrollWidth') - this.embeddedDimensions.innerWidth,
+			extraLeft, extraTop, preventFlag;
+			
 			// check edge cases
 			if (!this.options.alwaysPreventMouseWheel) {
 				if (this.verticalScrollActive && e.deltaY) {
@@ -775,17 +788,17 @@ function initFancybox() {
 					return;
 				}
 			}
-
+			
 			// prevent default action and scroll item
 			if (preventFlag || this.options.alwaysPreventMouseWheel) {
 				e.preventDefault();
 			} else {
 				return;
 			}
-
+			
 			extraLeft = e.deltaX / 100 * this.options.mouseWheelStep;
 			extraTop = e.deltaY / 100 * this.options.mouseWheelStep;
-
+			
 			this.realElement.scrollTop(currentScrollTop + extraTop);
 			this.realElement.scrollLeft(currentScrollLeft + extraLeft);
 		},
@@ -826,10 +839,10 @@ function initFancybox() {
 		getContainerDimensions: function() {
 			// save current styles
 			var desiredDimensions,
-				currentStyles,
-				currentHeight,
-				currentWidth;
-
+			currentStyles,
+			currentHeight,
+			currentWidth;
+			
 			if (this.isModifiedStyles) {
 				desiredDimensions = {
 					width: this.realElement.innerWidth() + this.vBar.getThickness(),
@@ -840,12 +853,12 @@ function initFancybox() {
 				this.saveElementDimensions().saveScrollOffsets();
 				this.realElement.insertAfter(this.scrollWrapper);
 				this.scrollWrapper.detach();
-
+				
 				// measure element
 				currentStyles = this.realElement.prop('style');
 				currentWidth = parseFloat(currentStyles.width);
 				currentHeight = parseFloat(currentStyles.height);
-
+				
 				// reset styles if needed
 				if (this.embeddedDimensions && currentWidth && currentHeight) {
 					this.isModifiedStyles |= (currentWidth !== this.embeddedDimensions.width || currentHeight !== this.embeddedDimensions.height);
@@ -855,29 +868,29 @@ function initFancybox() {
 						height: ''
 					});
 				}
-
+				
 				// calculate desired dimensions for real element
 				desiredDimensions = {
 					width: this.realElement.outerWidth(),
 					height: this.realElement.outerHeight()
 				};
-
+				
 				// restore structure and original scroll offsets
 				this.scrollWrapper.insertAfter(this.realElement);
 				this.realElement.css('overflow', this.options.ios && this.options.ios >= 10 ? 'auto' : 'hidden').prependTo(this.scrollWrapper);
 				this.restoreElementDimensions().restoreScrollOffsets();
 			}
-
+			
 			return desiredDimensions;
 		},
 		getEmbeddedDimensions: function(dimensions) {
 			// handle scrollbars cropping
 			var fakeBarWidth = this.vBar.getThickness(),
-				fakeBarHeight = this.hBar.getThickness(),
-				paddingWidth = this.realElement.outerWidth() - this.realElement.width(),
-				paddingHeight = this.realElement.outerHeight() - this.realElement.height(),
-				resultDimensions;
-
+			fakeBarHeight = this.hBar.getThickness(),
+			paddingWidth = this.realElement.outerWidth() - this.realElement.width(),
+			paddingHeight = this.realElement.outerHeight() - this.realElement.height(),
+			resultDimensions;
+			
 			if (this.options.alwaysShowScrollbars) {
 				// simply return dimensions without custom scrollbars
 				this.verticalScrollActive = true;
@@ -891,16 +904,16 @@ function initFancybox() {
 				this.saveElementDimensions();
 				this.verticalScrollActive = false;
 				this.horizontalScrollActive = false;
-
+				
 				// fill container with full size
 				this.realElement.css({
 					width: dimensions.width - paddingWidth,
 					height: dimensions.height - paddingHeight
 				});
-
+				
 				this.horizontalScrollActive = this.realElement.prop('scrollWidth') > this.containerDimensions.width;
 				this.verticalScrollActive = this.realElement.prop('scrollHeight') > this.containerDimensions.height;
-
+				
 				this.restoreElementDimensions();
 				resultDimensions = {
 					innerWidth: dimensions.width - (this.verticalScrollActive ? fakeBarWidth : 0),
@@ -917,42 +930,42 @@ function initFancybox() {
 			// resize wrapper according to real element styles
 			this.containerDimensions = this.getContainerDimensions();
 			this.embeddedDimensions = this.getEmbeddedDimensions(this.containerDimensions);
-
+			
 			// resize wrapper to desired dimensions
 			this.scrollWrapper.css({
 				width: this.containerDimensions.width,
 				height: this.containerDimensions.height
 			});
-
+			
 			// resize element inside wrapper excluding scrollbar size
 			this.realElement.css({
 				overflow: this.options.ios && this.options.ios >= 10 ? 'auto' : 'hidden',
 				width: this.embeddedDimensions.width,
 				height: this.embeddedDimensions.height
 			});
-
+			
 			// redraw scrollbar offset
 			this.redrawScrollbars();
 		},
 		redrawScrollbars: function() {
 			var viewSize, maxScrollValue;
-
+			
 			// redraw vertical scrollbar
 			if (this.verticalScrollActive) {
 				viewSize = this.vBarEdge ? this.containerDimensions.height - this.vBarEdge : this.embeddedDimensions.innerHeight;
 				maxScrollValue = Math.max(this.realElement.prop('offsetHeight'), this.realElement.prop('scrollHeight')) - this.vBarEdge;
-
+				
 				this.vBar.show().setMaxValue(maxScrollValue - viewSize).setRatio(viewSize / maxScrollValue).setSize(viewSize);
 				this.vBar.setValue(this.realElement.scrollTop());
 			} else {
 				this.vBar.hide();
 			}
-
+			
 			// redraw horizontal scrollbar
 			if (this.horizontalScrollActive) {
 				viewSize = this.embeddedDimensions.innerWidth;
 				maxScrollValue = this.realElement.prop('scrollWidth');
-
+				
 				if (maxScrollValue === viewSize) {
 					this.horizontalScrollActive = false;
 				}
@@ -961,7 +974,7 @@ function initFancybox() {
 			} else {
 				this.hBar.hide();
 			}
-
+			
 			// set "touch-action" style rule
 			var touchAction = '';
 			if (this.verticalScrollActive && this.horizontalScrollActive) {
@@ -987,7 +1000,7 @@ function initFancybox() {
 				'jcf-pointermove': this.onMoveBody,
 				'jcf-pointerup': this.onReleaseBody
 			});
-
+			
 			// restore structure
 			this.saveScrollOffsets();
 			this.vBar.destroy();
@@ -1002,7 +1015,7 @@ function initFancybox() {
 			this.restoreScrollOffsets();
 		}
 	});
-
+	
 	// custom scrollbar
 	function ScrollBar(options) {
 		this.options = $.extend({
@@ -1036,13 +1049,13 @@ function initFancybox() {
 			this.thicknessMeasureMethod = 'outer' + this.invertedSizeProperty.charAt(0).toUpperCase() + this.invertedSizeProperty.substr(1);
 			this.offsetProperty = this.isVertical ? 'top' : 'left';
 			this.offsetEventProperty = this.isVertical ? 'pageY' : 'pageX';
-
+			
 			// initialize variables
 			this.value = this.options.value || 0;
 			this.maxValue = this.options.maxValue || 0;
 			this.currentSliderSize = 0;
 			this.handleSize = 0;
-
+			
 			// find elements
 			this.holder = $(this.options.holder);
 			this.scrollbar = $(this.options.scrollbarStructure).appendTo(this.holder);
@@ -1050,7 +1063,7 @@ function initFancybox() {
 			this.btnInc = this.scrollbar.find(this.options.btnIncSelector);
 			this.slider = this.scrollbar.find(this.options.sliderSelector);
 			this.handle = this.slider.find(this.options.handleSelector);
-
+			
 			// set initial styles
 			this.scrollbar.addClass(this.isVertical ? this.options.verticalClass : this.options.horizontalClass).css({
 				touchAction: this.isVertical ? 'pan-x' : 'pan-y',
@@ -1077,7 +1090,7 @@ function initFancybox() {
 				this.handleDragActive = true;
 				this.sliderOffset = this.slider.offset()[this.offsetProperty];
 				this.innerHandleOffset = e[this.offsetEventProperty] - this.handle.offset()[this.offsetProperty];
-
+				
 				this.doc.on('jcf-pointermove', this.onHandleDrag);
 				this.doc.on('jcf-pointerup', this.onHandleRelease);
 			}
@@ -1121,30 +1134,30 @@ function initFancybox() {
 		},
 		startPageScrolling: function(direction, clickOffset) {
 			var self = this,
-				stepValue = direction * self.currentSize;
-
+			stepValue = direction * self.currentSize;
+			
 			// limit checker
 			var isFinishedScrolling = function() {
 				var handleTop = (self.value / self.maxValue) * (self.currentSliderSize - self.handleSize);
-
+				
 				if (direction > 0) {
 					return handleTop + self.handleSize >= clickOffset;
 				} else {
 					return handleTop <= clickOffset;
 				}
 			};
-
+			
 			// scroll by page when track is pressed
 			var doPageScroll = function() {
 				self.value += stepValue;
 				self.setValue(self.value);
 				self.triggerScrollEvent(self.value);
-
+				
 				if (isFinishedScrolling()) {
 					clearInterval(self.pageScrollTimer);
 				}
 			};
-
+			
 			// start scrolling
 			this.pageScrollTimer = setInterval(doPageScroll, this.options.scrollInterval);
 			doPageScroll();
@@ -1155,7 +1168,7 @@ function initFancybox() {
 		startSmoothScrolling: function(direction) {
 			var self = this, dt;
 			this.stopSmoothScrolling();
-
+			
 			// simple animation functions
 			var raf = window.requestAnimationFrame || function(func) {
 				setTimeout(func, 16);
@@ -1163,7 +1176,7 @@ function initFancybox() {
 			var getTimestamp = function() {
 				return Date.now ? Date.now() : new Date().getTime();
 			};
-
+			
 			// set animation limit
 			var isFinishedScrolling = function() {
 				if (direction > 0) {
@@ -1172,23 +1185,23 @@ function initFancybox() {
 					return self.value <= 0;
 				}
 			};
-
+			
 			// animation step
 			var doScrollAnimation = function() {
 				var stepValue = (getTimestamp() - dt) / 1000 * self.options.scrollStep;
-
+				
 				if (self.smoothScrollActive) {
 					self.value += stepValue * direction;
 					self.setValue(self.value);
 					self.triggerScrollEvent(self.value);
-
+					
 					if (!isFinishedScrolling()) {
 						dt = getTimestamp();
 						raf(doScrollAnimation);
 					}
 				}
 			};
-
+			
 			// start animation
 			self.smoothScrollActive = true;
 			dt = getTimestamp();
@@ -1208,20 +1221,20 @@ function initFancybox() {
 		setSize: function(size) {
 			// resize scrollbar
 			var btnDecSize = this.btnDec[this.fullSizeProperty](),
-				btnIncSize = this.btnInc[this.fullSizeProperty]();
-
+			btnIncSize = this.btnInc[this.fullSizeProperty]();
+			
 			// resize slider
 			this.currentSize = size;
 			this.currentSliderSize = size - btnDecSize - btnIncSize;
 			this.scrollbar.css(this.sizeProperty, size);
 			this.slider.css(this.sizeProperty, this.currentSliderSize);
 			this.currentSliderSize = this.slider[this.sizeProperty]();
-
+			
 			// resize handle
 			this.handleSize = Math.round(this.currentSliderSize * this.ratio);
 			this.handle.css(this.sizeProperty, this.handleSize);
 			this.handleSize = this.handle[this.fullSizeProperty]();
-
+			
 			return this;
 		},
 		setRatio: function(ratio) {
@@ -1262,7 +1275,7 @@ function initFancybox() {
 				this.calcOffset = (this.value / this.maxValue) * (this.currentSliderSize - this.handleSize);
 			}
 			this.handle.css(this.offsetProperty, this.calcOffset);
-
+			
 			// toggle inactive classes
 			this.btnDec.toggleClass(this.options.inactiveClass, this.value === 0);
 			this.btnInc.toggleClass(this.options.inactiveClass, this.value === this.maxValue);
@@ -1280,7 +1293,7 @@ function initFancybox() {
 			this.scrollbar.remove();
 		}
 	});
-
+	
 }(jQuery, this));
 
 /*
@@ -1999,3 +2012,380 @@ function initFancybox() {
 			// export module
 			exports.SmoothScroll = SmoothScroll;
 		}(jQuery, this));
+
+		/*
+ * jQuery sticky box plugin 
+ */
+;(function($, $win) {
+	'use strict';
+
+	function StickyScrollBlock($stickyBox, options) {
+		this.options = options;
+		this.$stickyBox = $stickyBox;
+		this.init();
+	}
+
+	var StickyScrollBlockPrototype = {
+		init: function() {
+			this.findElements();
+			this.attachEvents();
+			this.makeCallback('onInit');
+		},
+
+		findElements: function() {
+			// find parent container in which will be box move 
+			this.$container = this.$stickyBox.closest(this.options.container);
+			// define box wrap flag
+			this.isWrap = this.options.positionType === 'fixed' && this.options.setBoxHeight;
+			// define box move flag
+			this.moveInContainer = !!this.$container.length;
+			// wrapping box to set place in content
+			if (this.isWrap) {
+				this.$stickyBoxWrap = this.$stickyBox.wrap('<div class="' + this.getWrapClass() + '"/>').parent();
+			}
+			//define block to add active class
+			this.parentForActive = this.getParentForActive();
+			this.isInit = true;
+		},
+
+		attachEvents: function() {
+			var self = this;
+
+			// bind events
+			this.onResize = function() {
+				if (!self.isInit) return;
+				self.resetState();
+				self.recalculateOffsets();
+				self.checkStickyPermission();
+				self.scrollHandler();
+			};
+
+			this.onScroll = function() {
+				self.scrollHandler();
+			};
+
+			// initial handler call
+			this.onResize();
+
+			// handle events
+			$win.on('load resize orientationchange', this.onResize)
+				.on('scroll', this.onScroll);
+		},
+
+		defineExtraTop: function() {
+			// define box's extra top dimension
+			var extraTop;
+
+			if (typeof this.options.extraTop === 'number') {
+				extraTop = this.options.extraTop;
+			} else if (typeof this.options.extraTop === 'function') {
+				extraTop = this.options.extraTop();
+			}
+
+			this.extraTop = this.options.positionType === 'absolute' ?
+				extraTop :
+				Math.min(this.winParams.height - this.data.boxFullHeight, extraTop);
+		},
+
+		checkStickyPermission: function() {
+			// check the permission to set sticky
+			this.isStickyEnabled = this.moveInContainer ?
+				this.data.containerOffsetTop + this.data.containerHeight > this.data.boxFullHeight + this.data.boxOffsetTop + this.options.extraBottom :
+				true;
+		},
+
+		getParentForActive: function() {
+			if (this.isWrap) {
+				return this.$stickyBoxWrap;
+			}
+
+			if (this.$container.length) {
+				return this.$container;
+			}
+
+			return this.$stickyBox;
+		},
+
+		getWrapClass: function() {
+			// get set of container classes
+			try {
+				return this.$stickyBox.attr('class').split(' ').map(function(name) {
+					return 'sticky-wrap-' + name;
+				}).join(' ');
+			} catch (err) {
+				return 'sticky-wrap';
+			}
+		},
+
+		resetState: function() {
+			// reset dimensions and state
+			this.stickyFlag = false;
+			this.$stickyBox.css({
+				'-webkit-transition': '',
+				'-webkit-transform': '',
+				transition: '',
+				transform: '',
+				position: '',
+				width: '',
+				left: '',
+				top: ''
+			}).removeClass(this.options.activeClass);
+
+			if (this.isWrap) {
+				this.$stickyBoxWrap.removeClass(this.options.activeClass).removeAttr('style');
+			}
+
+			if (this.moveInContainer) {
+				this.$container.removeClass(this.options.activeClass);
+			}
+		},
+
+		recalculateOffsets: function() {
+			// define box and container dimensions
+			this.winParams = this.getWindowParams();
+
+			this.data = $.extend(
+				this.getBoxOffsets(),
+				this.getContainerOffsets()
+			);
+
+			this.defineExtraTop();
+		},
+
+		getBoxOffsets: function() {
+			function offetTop(obj){
+				obj.top = 0;
+				return obj
+			}
+			var boxOffset = this.$stickyBox.css('position') ==='fixed' ? offetTop(this.$stickyBox.offset()) : this.$stickyBox.offset();
+			var boxPosition = this.$stickyBox.position();
+
+			return {
+				// sticky box offsets
+				boxOffsetLeft: boxOffset.left,
+				boxOffsetTop: boxOffset.top,
+				// sticky box positions
+				boxTopPosition: boxPosition.top,
+				boxLeftPosition: boxPosition.left,
+				// sticky box width/height
+				boxFullHeight: this.$stickyBox.outerHeight(true),
+				boxHeight: this.$stickyBox.outerHeight(),
+				boxWidth: this.$stickyBox.outerWidth()
+			};
+		},
+
+		getContainerOffsets: function() {
+			var containerOffset = this.moveInContainer ? this.$container.offset() : null;
+
+			return containerOffset ? {
+				// container offsets
+				containerOffsetLeft: containerOffset.left,
+				containerOffsetTop: containerOffset.top,
+				// container height
+				containerHeight: this.$container.outerHeight()
+			} : {};
+		},
+
+		getWindowParams: function() {
+			return {
+				height: window.innerHeight || document.documentElement.clientHeight
+			};
+		},
+
+		makeCallback: function(name) {
+			if (typeof this.options[name] === 'function') {
+				var args = Array.prototype.slice.call(arguments);
+				args.shift();
+				this.options[name].apply(this, args);
+			}
+		},
+
+		destroy: function() {
+			this.isInit = false;
+			// remove event handlers and styles
+			$win.off('load resize orientationchange', this.onResize)
+				.off('scroll', this.onScroll);
+			this.resetState();
+			this.$stickyBox.removeData('StickyScrollBlock');
+			if (this.isWrap) {
+				this.$stickyBox.unwrap();
+			}
+			this.makeCallback('onDestroy');
+		}
+	};
+
+	var stickyMethods = {
+		fixed: {
+			scrollHandler: function() {
+				this.winScrollTop = $win.scrollTop();
+				var isActiveSticky = this.winScrollTop -
+					(this.options.showAfterScrolled ? this.extraTop : 0) -
+					(this.options.showAfterScrolled ? this.data.boxHeight + this.extraTop : 0) >
+					this.data.boxOffsetTop - this.extraTop;
+
+				if (isActiveSticky) {
+					this.isStickyEnabled && this.stickyOn();
+				} else {
+					this.stickyOff();
+				}
+			},
+
+			stickyOn: function() {
+				if (!this.stickyFlag) {
+					this.stickyFlag = true;
+					this.parentForActive.addClass(this.options.activeClass);
+					this.$stickyBox.css({
+						width: this.data.boxWidth,
+						position: this.options.positionType
+					});
+					if (this.isWrap) {
+						this.$stickyBoxWrap.css({
+							height: this.data.boxFullHeight
+						});
+					}
+					this.makeCallback('fixedOn');
+				}
+				this.setDynamicPosition();
+			},
+
+			stickyOff: function() {
+				if (this.stickyFlag) {
+					this.stickyFlag = false;
+					this.resetState();
+					this.makeCallback('fixedOff');
+				}
+			},
+
+			setDynamicPosition: function() {
+				this.$stickyBox.css({
+					top: this.getTopPosition(),
+					left: this.data.boxOffsetLeft - $win.scrollLeft()
+				});
+			},
+
+			getTopPosition: function() {
+				if (this.moveInContainer) {
+					var currScrollTop = this.winScrollTop + this.data.boxHeight + this.options.extraBottom;
+
+					return Math.min(this.extraTop, (this.data.containerHeight + this.data.containerOffsetTop) - currScrollTop);
+				} else {
+					return this.extraTop;
+				}
+			}
+		},
+		absolute: {
+			scrollHandler: function() {
+				this.winScrollTop = $win.scrollTop();
+				var isActiveSticky = this.winScrollTop > this.data.boxOffsetTop - this.extraTop;
+
+				if (isActiveSticky) {
+					this.isStickyEnabled && this.stickyOn();
+				} else {
+					this.stickyOff();
+				}
+			},
+
+			stickyOn: function() {
+				if (!this.stickyFlag) {
+					this.stickyFlag = true;
+					this.parentForActive.addClass(this.options.activeClass);
+					this.$stickyBox.css({
+						width: this.data.boxWidth,
+						transition: 'transform ' + this.options.animSpeed + 's ease',
+						'-webkit-transition': 'transform ' + this.options.animSpeed + 's ease',
+					});
+
+					if (this.isWrap) {
+						this.$stickyBoxWrap.css({
+							height: this.data.boxFullHeight
+						});
+					}
+
+					this.makeCallback('fixedOn');
+				}
+
+				this.clearTimer();
+				this.timer = setTimeout(function() {
+					this.setDynamicPosition();
+				}.bind(this), this.options.animDelay * 1000);
+			},
+
+			stickyOff: function() {
+				if (this.stickyFlag) {
+					this.clearTimer();
+					this.stickyFlag = false;
+
+					this.timer = setTimeout(function() {
+						this.setDynamicPosition();
+						setTimeout(function() {
+							this.resetState();
+						}.bind(this), this.options.animSpeed * 1000);
+					}.bind(this), this.options.animDelay * 1000);
+					this.makeCallback('fixedOff');
+				}
+			},
+
+			clearTimer: function() {
+				clearTimeout(this.timer);
+			},
+
+			setDynamicPosition: function() {
+				var topPosition = Math.max(0, this.getTopPosition());
+
+				this.$stickyBox.css({
+					transform: 'translateY(' + topPosition + 'px)',
+					'-webkit-transform': 'translateY(' + topPosition + 'px)'
+				});
+			},
+
+			getTopPosition: function() {
+				var currTopPosition = this.winScrollTop - this.data.boxOffsetTop + this.extraTop;
+
+				if (this.moveInContainer) {
+					var currScrollTop = this.winScrollTop + this.data.boxHeight + this.options.extraBottom;
+					var diffOffset = Math.abs(Math.min(0, (this.data.containerHeight + this.data.containerOffsetTop) - currScrollTop - this.extraTop));
+
+					return currTopPosition - diffOffset;
+				} else {
+					return currTopPosition;
+				}
+			}
+		}
+	};
+
+	// jQuery plugin interface
+	$.fn.stickyScrollBlock = function(opt) {
+		var args = Array.prototype.slice.call(arguments);
+		var method = args[0];
+
+		var options = $.extend({
+			container: null,
+			positionType: 'fixed', // 'fixed' or 'absolute'
+			activeClass: 'fixed-position',
+			setBoxHeight: true,
+			showAfterScrolled: false,
+			extraTop: 0,
+			extraBottom: 0,
+			animDelay: 0.1,
+			animSpeed: 0.2
+		}, opt);
+
+		return this.each(function() {
+			var $stickyBox = jQuery(this);
+			var instance = $stickyBox.data('StickyScrollBlock');
+
+			if (typeof opt === 'object' || typeof opt === 'undefined') {
+				StickyScrollBlock.prototype = $.extend(stickyMethods[options.positionType], StickyScrollBlockPrototype);
+				$stickyBox.data('StickyScrollBlock', new StickyScrollBlock($stickyBox, options));
+			} else if (typeof method === 'string' && instance) {
+				if (typeof instance[method] === 'function') {
+					args.shift();
+					instance[method].apply(instance, args);
+				}
+			}
+		});
+	};
+
+	// module exports
+	window.StickyScrollBlock = StickyScrollBlock;
+}(jQuery, jQuery(window)));

@@ -31,8 +31,8 @@
 	padding-top: 40px;
 	.slick-slide {
 		@include media ('>=tablet') {
-			padding: 0 15px;
-		}
+            padding: 0 10px;
+        }
 	}
 	.slick-track {
         padding: 0 0 45px;
@@ -54,11 +54,11 @@
 		font-size: 1.2rem;
 		z-index: 99;
 		cursor: pointer;
+		@include media ('>=tablet') {
+            left: 45%;
+        }
         @include media ('>=desktop') {
             font-size: 1.5rem;
-        }
-        @include media ('>=tablet') {
-            left: 45%;
         }
         @include media ('>=widescreen') {
             left: 48%;
@@ -110,8 +110,9 @@
 		padding: 30px;
 	}
 	@include media ('>=desktop') {
-		margin: 0 0 30px;
-		padding: 35px 40px 40px;
+		margin: 0 10px 30px;
+		padding: 35px 20px 40px;
+		width: calc(33.33% - 20px) !important;
 	}
 	p {
 		margin: 0;

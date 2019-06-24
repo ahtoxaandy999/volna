@@ -174,7 +174,7 @@ a {
             font-size: 150px;
         }
         @include media ('>=widescreen') {
-            font-size: 240px;
+            font-size: 180px;
             line-height: 0.65;
             letter-spacing: -10px;
         }
@@ -1730,12 +1730,13 @@ a {
         margin: 0 0 20px;
         font-family: $font-family-gotham;
         font-weight: 900;
+        width: 100%;
         @include media ('>=phone') {
-            width: 47%;
             margin: 0 10px 20px;
         }
         @include media ('>=tablet') {
             padding: 15px 22px;
+            width: 47%;
         }
         @include media ('>=desktop') {
             padding: 22px 30px;
@@ -1746,9 +1747,53 @@ a {
             margin: 0 40px 60px;
             width: 42%;
         }
-        &:before {
-            content: '';
-            background-image: url(images/icon3.svg);
+        &.difficulty-easy {
+            .difficulty-indicators {
+                li {
+                    &:first-child {
+                        border-color: $gray-900;
+                        background-color: $gray-900;
+                    }
+                }
+            }
+        }
+        &.difficulty-medium {
+            .difficulty-indicators {
+                li {
+                    border-color: $gray-900;
+                    background-color: $gray-900;
+                    &:last-child {
+                        border-color: #d7d7d7;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        &.difficulty-hard {
+            .difficulty-indicators {
+                li {
+                    border-color: $gray-900;
+                    background-color: $gray-900;
+                }
+            }
+        }
+        &.style-2 {
+            border-color: $blue;
+            h3,
+            h6 {
+                color: $blue;
+                border-color: $blue;
+            }
+        }
+        &.style-3 {
+            border-color: $green;
+            h3,
+            h6 {
+                color: $green;
+                border-color: $green;
+            }
+        }
+        .schedule-icon {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: 100% 0;
@@ -1765,67 +1810,6 @@ a {
             @include media ('>=desktop') {
                 top: 25px;
                 right: 35px;
-            }
-        }
-        &.difficulty-easy {
-            .difficulty-indicators {
-                li {
-                    &:first-child {
-                        border-color: $gray-900;
-                        background-color: $gray-900;
-                    }
-                }
-                &:after {
-                    content: 'низкая';
-                }
-            }
-        }
-        &.difficulty-medium {
-            .difficulty-indicators {
-                li {
-                    border-color: $gray-900;
-                    background-color: $gray-900;
-                    &:last-child {
-                        border-color: #d7d7d7;
-                        background-color: $white;
-                    }
-                }
-                &:after {
-                    content: 'средняя';
-                }
-            }
-        }
-        &.difficulty-hard {
-            .difficulty-indicators {
-                li {
-                    border-color: $gray-900;
-                    background-color: $gray-900;
-                }
-                &:after {
-                    content: 'высокая';
-                }
-            }
-        }
-        &.style-2 {
-            border-color: $blue;
-            &:before {
-                background-image: url(images/icon4.svg);
-            }
-            h3,
-            h6 {
-                color: $blue;
-                border-color: $blue;
-            }
-        }
-        &.style-3 {
-            border-color: $green;
-            &:before {
-                background-image: url(images/icon2.svg);
-            }
-            h3,
-            h6 {
-                color: $green;
-                border-color: $green;
             }
         }
     }
@@ -1928,6 +1912,11 @@ a {
             min-width: 155px;
         }
     }
+    
+    .difficulty-txt  {
+        content: '';
+        margin: 0 0 0 10px;
+    }
     .difficulty-indicators {
         display: flex;
         justify-content: center;
@@ -1936,6 +1925,7 @@ a {
         list-style: none;
         @include media ('>=phone') {
             justify-content: flex-start;
+            flex-grow: 0;
         }
         li {
             width: 16px;
@@ -1944,10 +1934,6 @@ a {
             border: 1px solid #d7d7d7;
             margin: 0 5px 0 0;
             background-color: $white;
-        }
-        &:after {
-            content: '';
-            margin: 0 0 0 10px;
         }
     }
 }
@@ -2611,6 +2597,9 @@ a {
                 left: 15px;
                 bottom: 0;
                 transform: translate(0, -16%);
+            }
+            @include media ('>=tablet') {
+                transform: translate(0, -40%);
             }
         }
     }

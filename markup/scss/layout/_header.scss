@@ -1,6 +1,8 @@
 #header {
     position: relative;
     font-family: $font-family-bebas;
+    background: $white;
+    z-index: 9999;
     .navbar-brand {
         @include media ('>=desktop') {
             width: 16%;
@@ -87,17 +89,31 @@
     font-family: $font-family-gotham;
     font-weight: 900;
     font-size: 0.9rem;
+    transition: padding .3s ease-in-out;
     @include media ('>=desktop') {
         position: absolute;
         z-index: 16;
         top: 100%;
-        left: 0;
-        margin: rem-calc(0 -15);
+        left: -15px;
         font-size: rem-calc(12);
         padding: rem-calc(20 20 0);
+        width: calc(100% + 40px) !important;
     }
-    @include media ('>=widescreen') {
-        padding: rem-calc(40 0 0 20);
+    &:before {
+        @include media ('>=desktop') {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -9999px;
+            right: -9999px;
+            background-color: $white;
+            height: 100%;
+        }
+    }
+    .fixed-position & {
+        @include media ('>=desktop') {
+            padding-top: 0;
+        }
     }
     li {
         &.active {
@@ -120,6 +136,7 @@
         display: block;
         padding: rem-calc(10 15);
         position: relative;
+        z-index: 10;
         &:hover {
             background-color: $white;
             color: $blue;
