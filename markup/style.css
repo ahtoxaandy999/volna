@@ -2663,7 +2663,8 @@ body.compensate-for-scrollbar {
       width: 45%;
       padding-top: 45px; } }
   .func-trening-section .functional-info .vacancy-box {
-    text-align: left; }
+    text-align: left;
+    width: 100% !important; }
     @media (min-width: 992px) {
       .func-trening-section .functional-info .vacancy-box {
         max-width: 400px; } }
