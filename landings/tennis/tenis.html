@@ -11,6 +11,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous" defer></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" defer></script>
 	<script src="js/jquery.main.js" defer></script>
+	<link rel="icon" href="https://clubvolna.com.ua/wp-content/uploads/2019/06/cropped-favicon-1-32x32.jpg" sizes="32x32">
 </head>
 <body>
 	<div id="wrapper">
@@ -18,7 +19,7 @@
 			<div class="container">
 				<nav class="navbar navbar-expand-lg text-uppercase justify-content-lg-between">
 					<div class="visual-box d-none d-lg-flex">
-						<a href="#servise-popup" class="txt lightbox">Все Услуги</a>
+						<a href="​https://clubvolna.com.ua/" class="txt" target="_blank">Все Услуги</a>
 					</div>
 					<div class="address-box icon-pin d-none d-lg-block">
 						<span class=" txt">ул.Астрономическая 7A</span>
@@ -35,30 +36,22 @@
 						</div>
 						<div class="phone-numbers mb-3 mb-lg-0 text-center">
 							<a class="opener icon-phone" data-toggle="collapse" href="#collapsePhoneNumbers" role="button" aria-expanded="false" aria-controls="collapsePhoneNumbers">
-								+38 (050) 403 34 00
+								+380 (50) 403 34 00
 							</a>
 							<div class="collapse" id="collapsePhoneNumbers">
 								<ul class="numbers-list list-unstyled mb-0">
-									<li><a href="tel:380504033400">+38 (050) 403 34 00</a></li>
-									<li><a href="tel:380504033400">+38 (050) 403 34 00</a></li>
-									<li><a href="tel:380504033400">+38 (050) 403 34 00</a></li>
+									<li><a href="tel:380504033400"> +380 (93) 403 34 00</a></li>
 								</ul>
 							</div>	
 						</div>
-						<div class="search-holder mb-3 mb-lg-0 text-center ml-lg-5">
-							<a class="opener icon-search" data-toggle="collapse" href="#collapseSearch" role="button" aria-expanded="false" aria-controls="collapseSearch"></a>
-							<div class="collapse" id="collapseSearch">
-								<form class="form-inline" action="#">
-									<input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
-									<button class="submit icon-search" type="submit"></button>
-								</form>
-							</div>
-						</div>
 						<ul class="social-list d-flex justify-content-center list-unstyled mb-3 mb-lg-0 ml-lg-3">
-							<li><a href="#" class="icon-fb"></a></li>
-							<li><a href="#" class="icon-insta"></a></li>
-							<li><a href="#" class="icon-youtube"></a></li>
+							<li><a href="https://www.facebook.com/AFK.Volna" class="icon-fb" target="_blank"></a></li>
+							<li><a href="https://www.instagram.com/volnafit/" class="icon-insta" target="_blank"></a></li>
+							<li><a href="https://www.youtube.com/channel/UC-GnqVzkwei4J1BGzB5IGVw?view_as=subscriber" class="icon-youtube" target="_blank"></a></li>
 						</ul>
+						<div class="d-lg-none visual-mobile">
+							<a href="​https://clubvolna.com.ua/" class="txt" target="_blank">Все Услуги</a>
+						</div>
 					</div>
 				</nav>  
 			</div> 
@@ -77,7 +70,7 @@
 									<p>
 										Теннис - интеллектуальный вид спорта, который отлично развивает не только Ваше тело, ни и Ваш интеллект. Этот игровой вид спорта держит в напряжении всю игру, ведь Вы должны будете продемонстрировать не только отличную физическую подготовку, но и свой уровень мышления, умение продумать тактику своего соперника, для одержания победы. Именно это притягивает и заставляет полюбить теннис навсегда!
 									</p>
-									<a href="#" class="btn btn-primary text-uppercase mb-3 mb-5">подробнее</a>
+									<a href="#subscribe-form" class="btn btn-primary text-uppercase mb-3 mb-5 anchor-link">заказать</a>
 								</div>
 								<div class="img-holder">
 									<img src="images/baner-tenis.png" alt="Image description">
@@ -108,7 +101,7 @@
 						</div>
 						<div class="advantage">
 							<img src="images/Rost.png" alt="Image description">
-							<span>Мотивирует стать лучше, кем ты есть</span>
+							<span>Мотивирует стать лучше, чем ты есть</span>
 						</div>
 					</div>
 				</div>
@@ -326,7 +319,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="cards-section subscribe-style line-decore-10 text-center">
+		<section class="cards-section subscribe-style line-decore-10 text-center" id="subscribe-form">
 			<div class="container">
 				<h2 class="main-title text-light">
 					<b>заказать</b>услугу
@@ -412,190 +405,6 @@
 			</div>
 		</div>
 	</footer>
-</div>
-<div class="popups-holder">
-	<div class="servise-popup" id="servise-popup">
-		<div class="container">
-			<div class="title">
-				<a href="#" data-fancybox-close class="close-btn"></a>
-				<h2>Каталог наших услуг</h2>
-			</div>
-			<ul class="servise-content">
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon32.svg" alt="Фитнес">
-						</div>
-						<h5>Фитнес</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Аэробный интенсив</a></li>
-						<li><a href="#">Суставная гимнастика</a></li>
-						<li><a href="#">ХАДУ</a></li>
-						<li><a href="#">Спиральная гимнастика</a></li>
-						<li><a href="#">Латиноамериканские танцы</a></li>
-						<li><a href="#">Дыхательная гимнастика</a></li>
-						<li><a href="#">Фейсбилдинг</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon33.svg" alt="Детский фитнес">
-						</div>
-						<h5>Детский фитнес</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Аквагимнастика для малышей </a></li>
-						<li><a href="#">Футбол</a></li>
-						<li><a href="#">Функциональный тренинг</a></li>
-						<li><a href="#">Латиноамериканские и бальные</a></li>
-						<li><a href="#">танцы</a></li>
-						<li><a href="#">Художественная гимнастика</a></li>
-						<li><a href="#">Легкая атлетика</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon34.svg" alt="Бассейн">
-						</div>
-						<h5>Бассейн</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Плавание</a></li>
-						<li><a href="#">Спортивное плавание</a></li>
-						<li><a href="#">Обучение по системе ASCA</a></li>
-						<li><a href="#">Индивидуальное обучение</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon35.svg" alt="Функциональный тренинг">
-						</div>
-						<h5>Функциональный тренинг</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Кроcсфит</a></li>
-						<li><a href="#">Функциональный фитнес</a></li>
-						<li><a href="#">TRX</a></li>
-						<li><a href="#">Утренняя пробежка</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon36.svg" alt="Реабилитационные программы">
-						</div>
-						<h5>Реабилитационные программы</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Реабилитационные программы</a></li>
-						<li><a href="#">Похудение</a></li>
-						<li><a href="#">Кинезиотерапия</a></li>
-						<li><a href="#">Возрастная (ЖОГ)</a></li>
-						<li><a href="#">ЛФК</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon37.svg" alt="Аква-фитнес">
-						</div>
-						<h5>Аква-фитнес</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">АкваМама</a></li>
-						<li><a href="#">Aquadeep</a></li>
-						<li><a href="#">Аква Хаду</a></li>
-						<li><a href="#">Аквашейп</a></li>
-						<li><a href="#">Aquaintensiv</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon38.svg" alt="Диетология">
-						</div>
-						<h5>Диетология</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Оценка состояния тела </a></li>
-						<li><a href="#">Составление программ</a></li>
-						<li><a href="#">Питания</a></li>
-						<li><a href="#">Антропометрические измерения </a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon39.svg" alt="Йога">
-						</div>
-						<h5>Йога</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Флай йога </a></li>
-						<li><a href="#">Хатха йога</a></li>
-						<li><a href="#">Энергетическая йога</a></li>
-						<li><a href="#">Ци Гун</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon40.svg" alt="Ракетлон">
-						</div>
-						<h5>Ракетлон</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Теннис </a></li>
-						<li><a href="#">Сквош</a></li>
-						<li><a href="#">Бадминтон</a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon41.svg" alt="Борьба">
-						</div>
-						<h5>Борьба</h5>
-					</div>
-					<ul class="category-links">
-						<li><a href="#">Тхэквондо (самооборона) </a></li>
-					</ul>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon42.svg" alt="Тренажерный зал">
-						</div>
-						<h5>Тренажерный зал</h5>
-					</div>
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon43.svg" alt="Футбольные поля">
-						</div>
-						<h5>Футбольные поля</h5>
-					</div>
-				</li>
-				<li class="servise-col">
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon44.svg" alt="Скалодром">
-						</div>
-						<h5>Скалодром</h5>
-					</div>
-					<div class="category-title">
-						<div class="img-holder">
-							<img src="images/icon45.svg" alt="Теннисные корты">
-						</div>
-						<h5>Теннисные корты</h5>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
 </div>	
 </body>
 </html>
