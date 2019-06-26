@@ -2954,8 +2954,11 @@ body.compensate-for-scrollbar {
 
 @media (min-width: 992px) {
   .visual-box {
-    width: 9%;
-    text-align: center; } }
+    width: 14%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 .visual-box .txt {
   color: #fff;
@@ -2984,7 +2987,7 @@ body.compensate-for-scrollbar {
   font-size: 1rem; }
   @media (min-width: 768px) {
     .address-box {
-      width: 33%; } }
+      width: 30%; } }
   @media (min-width: 992px) {
     .address-box {
       font-size: 1.25rem;
@@ -5002,7 +5005,6 @@ a {
     color: #ff4800;
     line-height: 1;
     display: inline-block;
-    border-bottom: 1px solid #ff4800;
     font-weight: 900; }
     .schedule-content h3 a,
     .schedule-content h6 a {
@@ -5061,7 +5063,8 @@ a {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      color: #0d1b27; }
+      color: #0d1b27;
+      text-decoration: underline; }
       @media (min-width: 576px) {
         .schedule-content .trainer-txt a {
           -webkit-box-align: start;
@@ -5072,7 +5075,6 @@ a {
   .schedule-content .first-name,
   .schedule-content .second-name {
     font-size: 14px;
-    border-bottom: 1px solid #878a8d;
     line-height: 1.2;
     letter-spacing: -0.2px; }
   .schedule-content .second-name {
@@ -6843,6 +6845,49 @@ span.wpcf7-not-valid-tip {
 
 .fancybox-slide {
   padding: 0 !important; }
+
+#menu-pereklyuchatel-yazykov {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%; }
+  #menu-pereklyuchatel-yazykov a {
+    color: #0d1b27; }
+    #menu-pereklyuchatel-yazykov a:hover {
+      color: #21e19d; }
+  #menu-pereklyuchatel-yazykov > .menu-item {
+    position: relative; }
+    #menu-pereklyuchatel-yazykov > .menu-item:hover .sub-menu {
+      display: block; }
+    #menu-pereklyuchatel-yazykov > .menu-item > a {
+      position: relative; }
+      #menu-pereklyuchatel-yazykov > .menu-item > a:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 6px);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 3px 0 3px;
+        border-color: #0d1b27 transparent transparent transparent; }
+  #menu-pereklyuchatel-yazykov .sub-menu {
+    display: none;
+    padding: 0;
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    padding: 5px 0;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 5px; }
 
 #footer {
   position: relative; }

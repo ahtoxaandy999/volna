@@ -21,8 +21,9 @@
 
 .visual-box {
     @include media ('>=desktop') {
-        width: 9%;
+        width: 14%;
         text-align: center;
+        align-items: center;
     }
     .txt {
         color: $white; 
@@ -50,7 +51,7 @@
     width: 50%;
     font-size: 1rem;
     @include media ('>=tablet') {
-        width: 33%;
+        width: 30%;
     }
     @include media ('>=desktop') {
         font-size: rem-calc(20);

@@ -1,8 +1,8 @@
 <?php 
 
 if(isset($_POST['submit'])){ 
-$to = "tolkanec96@gmail.com"; // Здесь нужно написать e-mail, куда будут приходить письма   
-$from = "no-reply@volna.net"; // Здесь нужно написать e-mail, от кого будут приходить письма, например no-reply(собака)epicblog.net
+$to = "glushko.aleksandr@gmail.com"; // Здесь нужно написать e-mail, куда будут приходить письма   
+$from = "volna@volna.net"; // Здесь нужно написать e-mail, от кого будут приходить письма, например no-reply(собака)epicblog.net
  
 /* Указываем переменные, в которые будет записываться информация с формы */
 $first_name = $_POST['name1'];
