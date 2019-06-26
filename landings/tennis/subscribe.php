@@ -1,23 +1,34 @@
-<?php 
+<?php
+	//****************************************
+	//edit here
+	$senderName = 'VOLNA';                          // имя отправителя
+	$senderEmail = 'site@example.com';            // от кого будет отправлено письмо
+	$targetEmail = 'glushko.aleksandr@gmail.com';           // куда отправлять письмо
+	$messageSubject = 'Новый подписчик теннис';    // тема письма
+	$redirectToReferer = true;              
 
-if(isset($_POST['submit'])){ 
-$to = "glushko.aleksandr@gmail.com"; // Здесь нужно написать e-mail, куда будут приходить письма   
-$from = "volna@volna.net"; // Здесь нужно написать e-mail, от кого будут приходить письма, например no-reply(собака)epicblog.net
- 
-/* Указываем переменные, в которые будет записываться информация с формы */
-$first_name = $_POST['name1'];
-$phone = $_POST['tel1'];
-$subject = "ПОДПИСКА ТЕННИС";
-     
-/* Переменная, которая будет отправлена на почту со значениями, вводимых в поля */
-$mail_to_myemail = "Здравствуйте!
-У вас новая пописка на теннис!
-Имя отправителя: $first_name
-Номер телефона: $phone";
-$headers = "From: $from \r\n";
-     
-/* Отправка сообщения, с помощью функции mail() */
-mail($to, $subject, $mail_to_myemail, $headers . 'Content-type: text/plain; charset=utf-8');
-header("Location: ".@$_SERVER['HTTP_REFERER'].'#sent');
-}
+	// mail content
+	$ufname = $_POST['name1'];
+	$uphone = $_POST['tel1'];
+
+	// prepare message text
+	$messageText =	'Имя: '.$ufname."\n".
+					'Телефон: '.$uphone."\n";
+
+	// send email
+	$senderName = "base64_encode($senderName)";
+	$messageSubject = "base64_encode($messageSubject)";
+	$messageHeaders = "From: " . $senderName . " <" . $senderEmail . ">\r\n"
+				. "MIME-Version: 1.0" . "\r\n"
+				. "Content-type: text/plain; charset=UTF-8" . "\r\n";
+
+	if (preg_match('/^[_.0-9a-z-]+@([0-9a-z][0-9a-z-]+.)+[a-z]{2,4}$/',$targetEmail,$matches))
+	mail($targetEmail, $messageSubject, $messageText, $messageHeaders);
+
+	// redirect
+	if($redirectToReferer) {
+		header("Location: ".@$_SERVER['HTTP_REFERER'].'#sent');
+	} else {
+		header("Location: ".$redirectURL);
+	}
 ?>
