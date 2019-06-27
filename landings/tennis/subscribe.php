@@ -5,7 +5,8 @@
 	$senderEmail = 'site@example.com';            // от кого будет отправлено письмо
 	$targetEmail = 'glushko.aleksandr@gmail.com';           // куда отправлять письмо
 	$messageSubject = 'Новый подписчик теннис';    // тема письма
-	$redirectToReferer = true;              
+	$redirectToReferer = false;
+	$redirectURL = 'thankyou.html';              
 
 	// mail content
 	$ufname = $_POST['name1'];
