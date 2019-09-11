@@ -2258,6 +2258,7 @@ a {
     .close {
         float: none;
         display: inline-block;
+        flex-shrink: 0;
     }
 }
 
@@ -2324,6 +2325,7 @@ a {
     }
     .skill-icon {
         margin: 0 10px 0 0;
+        flex-shrink: 0;
         .number {
             font-size: 33px;
             color: $gray-900;
@@ -2708,6 +2710,10 @@ a {
 .vacancy-popup {
     .modal-content {
         background: $white;
+        padding: 20px;
+        @include media ('>=desktop') {
+            padding: 40px;
+        }
     }
     .file-row {
         padding: 15px 0;
@@ -3259,17 +3265,28 @@ a {
         z-index: 3;
         h2 {
             color: $white;
-            font-size: 42px;
+            font-size: 32px;
+
+            @include media ('>=tablet') {
+                font-size: 42px;
+            }
         }
     }
     .close-btn {
         display: inline-block;
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         background-color: $orange;
         position: relative;
         border-radius: 50%;
-        margin: 0 44px 0 0;
+        margin: 0 15px 0 0;
+        flex-shrink: 0;
+
+        @include media ('>=tablet') {
+            margin: 0 44px 0 0;
+            width: 45px;
+            height: 45px;
+        }
         &:before,
         &:after {
             content: '';
@@ -3299,8 +3316,16 @@ a {
         margin: 0;
         flex-wrap: wrap;
         .servise-col {
-            width: 33.33%;
+            width: 100%;
             margin: 0 0 10px;
+
+            @include media ('>=phone') {
+                width: 50%;
+            }
+
+            @include media ('>=tablet') {
+                width: 33.33%;
+            }
         }
         .category-title {
             display: flex;

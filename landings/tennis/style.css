@@ -1751,7 +1751,7 @@ a {
         -ms-flex-align: start;
             align-items: flex-start; }
     .club-section .section-head h2 {
-      min-width: 30%; }
+      min-width: 20%; }
     .club-section .section-head p {
       width: 105%; }
     .club-section .section-head h3 {
@@ -1894,7 +1894,7 @@ a {
               align-items: center; } }
   @media (min-width: 992px) {
     .section-head {
-      max-width: 790px;
+      max-width: none;
       padding: 40px 0; } }
   @media (min-width: 1200px) {
     .section-head {

@@ -1,10 +1,10 @@
 <?php
 	//****************************************
 	//edit here
-	$senderName = 'VOLNA';                          // имя отправителя
+	$senderName = 'Волна подписчик Сквош';                          // имя отправителя
 	$senderEmail = 'site@example.com';            // от кого будет отправлено письмо
 	$targetEmail = 'glushko.aleksandr@gmail.com';           // куда отправлять письмо
-	$messageSubject = 'Новый подписчик сквош';    // тема письма
+	$messageSubject = 'Новый подписчик Сквош';    // тема письма
 	$redirectToReferer = false;
 	$redirectURL = 'thankyou.html';              
 
@@ -17,8 +17,8 @@
 					'Телефон: '.$uphone."\n";
 
 	// send email
-	$senderName = "base64_encode($senderName)";
-	$messageSubject = "base64_encode($messageSubject)";
+	$senderName = "$senderName";
+	$messageSubject = "$messageSubject";
 	$messageHeaders = "From: " . $senderName . " <" . $senderEmail . ">\r\n"
 				. "MIME-Version: 1.0" . "\r\n"
 				. "Content-type: text/plain; charset=UTF-8" . "\r\n";

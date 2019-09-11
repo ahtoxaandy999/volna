@@ -164,6 +164,7 @@
 	}
 	&__desc-img {
 		margin-right: 25px;
+		flex-shrink: 0;
 	}
 	&__desc {
 		display: flex;
